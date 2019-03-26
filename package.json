@@ -18,11 +18,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "directories": {
-    "test": "test",
-    "webpack": "webpack --watch --mode=development"
+    "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack --watch --mode=development"
   },
   "repository": {
     "type": "git",

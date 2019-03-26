@@ -1,2 +1,12 @@
-/tmp
-/log
+/.bundle
+
+/log/
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+/storage/*
+!/storage/.keep
+
+/node_modules
+bundle.js*

@@ -544,3 +544,10 @@ Processing by Api::SessionsController#create as JSON
 Completed 200 OK in 81ms (Views: 8.4ms | ActiveRecord: 4.4ms)
 
 
+Started GET "/" for ::1 at 2019-03-26 17:16:00 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 125ms (Views: 112.4ms | ActiveRecord: 0.0ms)
+
+

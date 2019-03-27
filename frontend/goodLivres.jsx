@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {logout, login, signup} from './util/session_api_util'
-// import {login} from './actions/session_actions'
+// import {logout, login, signup} from './util/session_api_util'
+import {signup, login, logout} from './actions/session_actions'
 import configureStore from './store/store';
 
 document.addEventListener('DOMContentLoaded', () => {

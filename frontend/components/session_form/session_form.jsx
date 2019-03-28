@@ -19,7 +19,7 @@ class SessionForm extends React.Component {
         });
     }
     handleSubmit(e){
-        debugger
+        
         e.preventDefault();
         // this.state = a user (bc we're in session) - and so the state is one user, which we merge with an empty object and then return as user
         const user = Object.assign({}, this.state);
@@ -27,9 +27,8 @@ class SessionForm extends React.Component {
     }
     executeDemo(e) {
         debugger
-        this.setState({ email: "demo", password: "starwars" });
-        debugger
-        this.handleSubmit(e)          
+        this.props.processForm({ email: "demo", password: "starwars" });
+    
     }
 
     renderErrors() {

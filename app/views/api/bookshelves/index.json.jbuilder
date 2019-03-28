@@ -1,1 +1,1 @@
-json.partial! "api/users/user", bookshelves: @bookshelves
+json.extract! bookshelf, :title

@@ -6,13 +6,13 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
   validates :username, uniqueness: true
   validates :password, length: { minimum: 6 }, allow_nil: true
-
+  
   after_initialize :ensure_session_token
 
-  # has_many :bookshelves,
-  #   primary_key: :id,
-  #   foreign_key: :user_id,
-  #   classname: :Bookshelf
+  has_many :bookshelves,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: :Bookshelf
     
 #   has_many :favorites
 #   has_many :favorite_benches,

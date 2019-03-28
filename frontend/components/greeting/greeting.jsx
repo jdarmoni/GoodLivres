@@ -9,7 +9,6 @@ const Greeting = ({ currentUser, logout }) => {
             <Link to="/" className="header-link">
                 <img src={window.logoURL} />
             </Link>
-
             <LoginFormContainer />
         </header>
     );

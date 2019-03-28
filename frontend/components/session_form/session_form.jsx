@@ -26,7 +26,7 @@ class SessionForm extends React.Component {
         this.props.processForm(user)
     }
     executeDemo(e) {
-        debugger
+        // debugger
         this.props.processForm({ email: "demo", password: "starwars" });
     
     }

@@ -9,8 +9,10 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
-#   has_many :reviews,
-#     foreign_key: :author_id
+  # has_many :bookshelves,
+  #   primary_key: :id,
+  #   foreign_key: :user_id,
+  #   classname: :Bookshelf
     
 #   has_many :favorites
 #   has_many :favorite_benches,

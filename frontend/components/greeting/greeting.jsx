@@ -15,7 +15,6 @@ const Greeting = ({ currentUser, logout }) => {
 
     //LOGGED IN!
     const personalGreeting = () =>{ 
-        debugger
         return (
         <header>
             <Link to="/" className="header-link">

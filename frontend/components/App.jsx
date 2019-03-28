@@ -7,17 +7,13 @@ import { AuthRoute } from '../util/route_util';
 
 const App = ()=>{
     return (
-    <div>
-        <header>
-            <Link to="/" className="header-link">
-        <h1>GoodLivres</h1>
-            </Link>
-        <GreetingContainer />
-        </header>
-
-        <AuthRoute exact path="/login" component={LoginFormContainer} />
-        <AuthRoute exact path="/signup" component={SignupFormContainer} />
-
+    <div className="container">
+        <div className="masthead">
+            <GreetingContainer /> 
+            {/* 15 has no specified route so will always display */}
+            {/* specified path will display at that pathx */}
+            <AuthRoute className="bodymain" exact path="/" component={SignupFormContainer} />
+        </div>
     </div>
 )}
 

@@ -16,4 +16,77 @@
 
  body {
      background-color: rgba(244,241,234,0.5);
+     margin: 0;
  }
+
+ .masthead {
+     width: 970px;
+     margin: 0 auto;
+ }
+.container {
+    background-image: url("background.jpg");
+
+}
+ header {
+     padding-top: 10px;
+    border-bottom: solid 1px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+ }
+
+ .login-nav {
+    padding: 10px;
+    border-radius: 2px;
+    background-color: brown;
+    color: white;
+ }
+.signup-form-container{
+    height: 500px;
+}
+
+.signup-input {
+    margin-top: 5px;
+    font-size: 12px;
+    width: 100%;
+}
+
+ .login-form-container {
+    display: flex;
+ }
+
+ .login-form {
+     display: flex;
+     margin-top: -22px;
+ }
+
+ .signup-form {
+    float: right;
+    width: 280px;
+    color: red;
+    margin: 25px 20px 0 0;
+
+}
+.login-submit {
+    background-color: #382110; 
+    color: white;
+    border-radius: 3px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 12px;
+    padding: 10px;
+    margin-left: 8px;
+}
+
+.signup-submit {
+    margin-top: 5px;
+    background-color: #fdd05f;
+    padding: 8px;
+    border: 0px;
+    border-radius: 4px;
+    font-size: 18px;
+    line-height: 22px;
+    width: 85px;
+    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+
+}

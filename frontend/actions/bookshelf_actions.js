@@ -20,7 +20,13 @@ export const removeBookshelf = (bookshelf) => ({
 });
 
 export const requestBookshelves = () => (dispatch)=>{ 
-    return APIUtil.fetchBookshelves().then((bookshelves)=>dispatch(RECEIVE_ALL_BOOKSHELVES(bookshelves)) )
+    debugger
+    return (
+        APIUtil.fetchBookshelves().then((bookshelves)=> {
+            debugger
+            return dispatch(RECEIVE_ALL_BOOKSHELVES(bookshelves))  
+            })
+        )
 }
 
 export const requestBookshelf = (id) => (dispatch) => {

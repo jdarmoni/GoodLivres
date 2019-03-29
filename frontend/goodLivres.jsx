@@ -4,7 +4,7 @@ import Root from './components/root'
 // import {logout, login, signup} from './util/session_api_util'
 import {signup, login, logout} from './actions/session_actions'
 import configureStore from './store/store';
-
+import {fetchBookshelves} from './util/bookshelf_api_utils'
 document.addEventListener('DOMContentLoaded', () => {
     let store;
     if (window.currentUser) {
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ********TESTING START
     window.getState = store.getState;
     window.dispatch = store.dispatch;
-
+    window.fetchBookshelves = fetchBookshelves
     window.login = login
     window.logout = logout
     window.signup = signup

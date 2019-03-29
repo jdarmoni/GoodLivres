@@ -4700,3 +4700,21 @@ Migrating to CreateBookshelves (20190328145625)
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
   [1m[36mBookshelf Create (0.5ms)[0m  [1m[32mINSERT INTO "bookshelves" ("user_id", "title") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 23], ["title", "eggs"]]
   [1m[35m (322.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mBookshelf Create (0.6ms)[0m  [1m[32mINSERT INTO "bookshelves" ("user_id", "title") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 23], ["title", "WANT TO READ"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mBookshelf Create (41.0ms)[0m  [1m[32mINSERT INTO "bookshelves" ("user_id", "title") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 23], ["title", "WANT TO READ"]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mBookshelf Create (0.5ms)[0m  [1m[32mINSERT INTO "bookshelves" ("user_id", "title") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 23], ["title", "READ"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookshelf Load (0.3ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" ORDER BY "bookshelves"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mBookshelf Load (0.4ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 23]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mBookshelf Load (0.4ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 23]]

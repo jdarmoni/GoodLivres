@@ -1,5 +1,4 @@
-class Api::SessionsController < ApplicationController
-    before_action :ensure_logged_in, except: [:index]
+class Api::BookshelfController < ApplicationController
 
     def index
         @bookshelves = Bookshelf.all

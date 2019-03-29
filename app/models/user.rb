@@ -12,7 +12,7 @@ class User < ApplicationRecord
   has_many :bookshelves,
     primary_key: :id,
     foreign_key: :user_id,
-    class_name: :Bookshelf
+    class_name: :Bookshelf  
     
 #   has_many :favorites
 #   has_many :favorite_benches,

@@ -29,7 +29,9 @@
     width: 80%;
 
 }
-
+#myBooksCol h2 {
+    color: #00635d;
+}
 .login-nav {
     padding: 10px;
     border-radius: 2px;

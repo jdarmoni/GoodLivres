@@ -20,6 +20,9 @@ class BookshelfIndex extends React.Component{
             // <section>
             // <h1 className="Eggs">EGGS!</h1>
             <div>
+                <div id="myBooksCol">
+                    <h2>My Books</h2>
+                </div>
 
                 <ul className ="bookShelves">
                     {bookshelves}

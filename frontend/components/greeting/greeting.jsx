@@ -25,7 +25,7 @@ class Greeting extends React.Component{
         this.props.history.replace('/')    
     }
     
-    personalGreeting()  { 
+    myBooks()  { 
         //LOGGED IN!
         
         return (
@@ -38,6 +38,7 @@ class Greeting extends React.Component{
                 <form className="searchbooks">
                     <input type="text" placeholder="Search books" />
                 </form> 
+
                 <hgroup className="header-group">
                     <h2 className="header-name">Hi, {this.props.currentUser.username}!</h2> 
                     <button className="header-button" onClick={this.logOut}>Log Out</button>
@@ -47,7 +48,7 @@ class Greeting extends React.Component{
     
     render(){
         
-        return this.props.currentUser ? this.personalGreeting() : this.sessionLinks();
+        return this.props.currentUser ? this.myBooks() : this.sessionLinks();
     } 
 };
 

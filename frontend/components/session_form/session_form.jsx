@@ -23,12 +23,14 @@ class SessionForm extends React.Component {
         e.preventDefault();
         // this.state = a user (bc we're in session) - and so the state is one user, which we merge with an empty object and then return as user
         const user = Object.assign({}, this.state);
-        this.props.processForm(user)
+        this.props.processForm(user);
+        this.props.history.push('/books');
+
     }
     executeDemo(e) {
         debugger
         this.props.processForm({ email: "demo", password: "starwars" });
-        this.props.history.push('/books')
+        this.props.history.push('/books');
     }
 
     renderErrors() {

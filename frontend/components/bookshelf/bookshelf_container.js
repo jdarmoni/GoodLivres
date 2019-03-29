@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
-import { fetchBookshelves } from '../../util/bookshelf_api_utils';
-import Bookshelf from './bookshelf';
+import { requestBookshelves } from '../../actions/bookshelf_actions';
+import BookshelfIndex from './bookshelf_index';
 
 const mapStateToProps = (state) => {
-    debugger
+    
     return {
         bookshelves: Object.values(state.entities.bookshelves),
         users: Object.values(state.entities.users),
@@ -13,10 +13,10 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-    fetchBookshelves: () => dispatch(fetchBookshelves())
+    requestBookshelves: () => dispatch(requestBookshelves())
 });
 
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Bookshelf);
+)(BookshelfIndex);

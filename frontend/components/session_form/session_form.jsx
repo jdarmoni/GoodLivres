@@ -26,9 +26,9 @@ class SessionForm extends React.Component {
         this.props.processForm(user)
     }
     executeDemo(e) {
-        
+        debugger
         this.props.processForm({ email: "demo", password: "starwars" });
-    
+        this.props.history.push('/books')
     }
 
     renderErrors() {

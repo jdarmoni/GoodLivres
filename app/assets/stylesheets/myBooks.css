@@ -1,0 +1,51 @@
+
+.logged-in-header-link {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    border-bottom: solid 1px;
+ }
+
+.logged-in-header-link img {
+    height: 29px;
+}
+.header-group {
+    display: flex;
+    justify-content: right;
+}
+.header-name {
+    margin: 0;
+}
+.header-button {
+    border-radius: 45px;
+    height: 24px;
+}
+.searchbooks {
+    width: 50%;
+}
+.searchbooks input {
+    height: 64%;
+    width: 80%;
+
+}
+
+.login-nav {
+    padding: 10px;
+    border-radius: 2px;
+    background-color: brown;
+    color: white;
+}
+
+.logged-in-header-link ul {
+    margin-top: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between; 
+    width: 25%;
+}
+
+.logged-in-header-link ul li:not(:first-child) {
+    margin: 5px;
+    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+}

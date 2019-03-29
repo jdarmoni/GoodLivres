@@ -5,7 +5,7 @@ export const RECEIVE_BOOKSHELF = "RECEIVE_BOOKSHELF";
 export const REMOVE_BOOKSHELF = "REMOVE_BOOKSHELF";
 
 export const receiveAllBookshelves = (bookshelves) => {
-    debugger
+    
     return ({
         type: RECEIVE_ALL_BOOKSHELVES,
         bookshelves
@@ -25,10 +25,10 @@ export const removeBookshelf = (bookshelf) => ({
 
 
 export const requestBookshelves = () => (dispatch) => {
-    debugger
+    
     return (
         APIUtil.fetchBookshelves().then((bookshelves) => {
-            debugger
+            
             return dispatch(receiveAllBookshelves(bookshelves))
         })
     )

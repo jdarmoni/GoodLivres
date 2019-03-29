@@ -5,7 +5,7 @@ import BookshelfIndexItem from './bookshelf_index_item'
 class BookshelfIndex extends React.Component{
     
     componentDidMount(){
-        debugger
+        
         this.props.requestBookshelves()
         
     }
@@ -15,7 +15,7 @@ class BookshelfIndex extends React.Component{
         let bookshelves = this.props.bookshelves.map((bookshelf)=>{
             return <BookshelfIndexItem key={bookshelf.id} bookshelf={bookshelf} />
         });
-        debugger
+        
         return (
             // <section>
             // <h1 className="Eggs">EGGS!</h1>

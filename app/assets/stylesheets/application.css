@@ -23,24 +23,18 @@
      width: 970px;
      margin: 0 auto;
  }
+
 .container {
     background-image: url("background.jpg");
-
 }
 
-header {
-     padding-top: 10px;
+.splash-nav {
+    padding-top: 10px;
     display: flex;
     justify-content: space-between;
     padding-bottom: 20px;
  }
 
- .login-nav {
-    padding: 10px;
-    border-radius: 2px;
-    background-color: brown;
-    color: white;
- }
 .signup-form-container{
     height: 500px;
 }
@@ -93,5 +87,4 @@ header {
     line-height: 22px;
     width: 85px;
     font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
-
 }

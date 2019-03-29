@@ -9,11 +9,13 @@ import BookshelfContainer from './bookshelf/bookshelf_container';
 const App = ()=>{
     return (
     <div className="container">
+            <GreetingContainer/> 
         <div className="masthead">
-            <GreetingContainer /> 
+            
+            {/* <BooksContainer exact path="books" component={}/> */}
             {/* 15 has no specified route so will always display */}
             {/* specified path will display at that pathx */}
-            <ProtectedRoute className="bookShelves" exact path="/" component={BookshelfContainer} />
+            <ProtectedRoute className="bookShelves" exact path="/books" component={BookshelfContainer} />
             <AuthRoute className="bodymain" exact path="/" component={SignupFormContainer} />
         </div>
     </div>

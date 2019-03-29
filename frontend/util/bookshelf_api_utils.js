@@ -1,5 +1,5 @@
 export const fetchBookshelves =()=> {
-    debugger
+    
     return $.ajax({
         method: 'get',
         url: '/api/bookshelf'

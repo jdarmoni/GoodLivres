@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-import BookshelfIndexItem from './bookshelf_index_item'
+import BookshelfIndexItem from './bookshelf_index_eggs'
 
 class BookshelfIndex extends React.Component{
     

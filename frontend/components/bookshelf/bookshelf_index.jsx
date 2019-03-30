@@ -28,7 +28,7 @@ class BookshelfIndex extends React.Component{
         return (
             <div>
                 <div id="myBooksCol">
-                    <h2 onClick={this.update}> {this.props.bookshelf.title}</h2> {/*  this is defined by the state*/}
+                    <h2 onClick={this.update}>My Books</h2> {/*  this is defined by the state*/}
 
                 </div>
 

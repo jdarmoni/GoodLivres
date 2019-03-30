@@ -3,25 +3,33 @@ import {Link} from 'react-router-dom'
 import BookshelfIndexItem from './bookshelf_index_item'
 
 class BookshelfIndex extends React.Component{
-    
-    componentDidMount(){
-        
-        this.props.requestBookshelves()
-        
+    constructor(props) {
+        super(props);
+        this.state = this.props.bookshelf;
+        this.update = this.update.bind(this);
     }
-    
-    render (){
 
+    componentDidMount(){
+        this.props.requestBookshelves()       
+    }
+
+    update() {
+        debugger
+        
+        // this.props.history.push(`/books/${this.props.bookshelf.id}`);
+        // this.setState({ [this.props.bookshelf.id]: this.props.bookshelf })
+    } 
+
+    render (){
         let bookshelves = this.props.bookshelves.map((bookshelf)=>{
             return <BookshelfIndexItem key={bookshelf.id} bookshelf={bookshelf} />
         });
         
         return (
-            // <section>
-            // <h1 className="Eggs">EGGS!</h1>
             <div>
                 <div id="myBooksCol">
-                    <h2>My Books</h2>
+                    <h2 onClick={this.update}> {this.props.bookshelf.title}</h2> {/*  this is defined by the state*/}
+
                 </div>
 
                 <ul className ="bookShelves">

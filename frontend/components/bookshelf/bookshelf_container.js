@@ -2,8 +2,8 @@ import { connect } from 'react-redux';
 import { requestBookshelves } from '../../actions/bookshelf_actions';
 import BookshelfIndex from './bookshelf_index';
 
-const mapStateToProps = (state) => {
-    
+const mapStateToProps = (state, ownProps) => {
+    debugger
     return {
         bookshelves: Object.values(state.entities.bookshelves),
         users: Object.values(state.entities.users),

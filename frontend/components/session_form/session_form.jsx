@@ -29,6 +29,7 @@ class SessionForm extends React.Component {
     }
     executeDemo(e) {
         debugger
+        e.preventDefault();
         this.props.processForm({ email: "demo", password: "starwars" });
         this.props.history.push('/books');
     }

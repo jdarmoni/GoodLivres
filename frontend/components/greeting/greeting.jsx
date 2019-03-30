@@ -8,17 +8,24 @@ class Greeting extends React.Component{
         super(props);
         this.logOut = this.logOut.bind(this)
     }
-    sessionLinks() {
+    splashPage() {
         //LOGGED OUT
         return (
-            <div className="masthead">
-                <header className="splash-nav">
-                        <img src={window.logoURL} />
-                    <LoginFormContainer />
-                </header>
-            </div>
-            )}
+            <>
+                <div className="background-image">
 
+                </div>
+
+                <div className="masthead">
+                {/* extra masthead here */}
+                    <header className="splash-nav">
+                            <img src={window.logoURL} />
+                        <LoginFormContainer />
+                    </header>
+                </div>
+            </>
+            )}
+            
     logOut() {
         debugger
         this.props.logout()
@@ -48,7 +55,7 @@ class Greeting extends React.Component{
     
     render(){
         
-        return this.props.currentUser ? this.myBooks() : this.sessionLinks();
+        return this.props.currentUser ? this.myBooks() : this.splashPage();
     } 
 };
 

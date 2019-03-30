@@ -39,7 +39,12 @@
     color: white;
 }
 
+.logged-in-header-link {
+    background-color: rgba(244,241,234,0.5);
+}
+
 .logged-in-header-link ul {
+    
     margin-top: 0;
     list-style-type: none;
     display: flex;

@@ -3,11 +3,7 @@ import { requestBookshelves, requestBookshelf } from '../../actions/bookshelf_ac
 import BookshelfIndex from './bookshelf_index';
 
 const mapStateToProps = (state, ownProps) => {
-   console.log('eggs')
-   console.log(state.entities.bookshelves) 
    debugger
-//    
-    // console.log(bookshelvesObj)
     return {
         bookshelves: state.entities.bookshelves,
         users: Object.values(state.entities.users),
@@ -18,7 +14,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => ({
     requestBookshelves: () => dispatch(requestBookshelves()),
-    requestBookshelf: (id)=> dispatch(requestBookshelf(id))
+    requestBookshelf: (id)=> dispatch(requestBookshelf(id)),
+    createBookshelf: (bookshelf)=>dispatch(createBookshelf(bookshelf))
 });
 
 export default connect(

@@ -27,7 +27,7 @@ class Greeting extends React.Component{
             )}
             
     logOut() {
-        debugger
+        // debugger
         this.props.logout()
         this.props.history.replace('/')    
     }

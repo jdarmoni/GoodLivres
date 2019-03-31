@@ -17,7 +17,7 @@ const App = ()=>{
             {/* 15 has no specified route so will always display */}
             {/* specified path will display at that pathx */}
             <ProtectedRoute className="bookShelves" exact path="/books" component={BookshelfContainer} />
-            <ProtectedRoute exact path ={`/books/:id`} component={BookshelfIndexItem}/>
+            <ProtectedRoute exact path ={`/books/:id`} component={BookshelfContainer}/>
             <AuthRoute className="bodymain" exact path="/" component={SignupFormContainer} />
         </div>
     </div>

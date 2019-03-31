@@ -1,11 +1,15 @@
 import { connect } from 'react-redux';
-import { requestBookshelves } from '../../actions/bookshelf_actions';
+import { requestBookshelves, requestBookshelf } from '../../actions/bookshelf_actions';
 import BookshelfIndex from './bookshelf_index';
 
 const mapStateToProps = (state, ownProps) => {
-    debugger
+   console.log('eggs')
+   console.log(state.entities.bookshelves) 
+   debugger
+//    
+    // console.log(bookshelvesObj)
     return {
-        bookshelves: Object.values(state.entities.bookshelves),
+        bookshelves: state.entities.bookshelves,
         users: Object.values(state.entities.users),
         session: Object.values(state.session),
         currentUser: state.entities.users[state.session.id]
@@ -13,7 +17,8 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-    requestBookshelves: () => dispatch(requestBookshelves())
+    requestBookshelves: () => dispatch(requestBookshelves()),
+    requestBookshelf: (id)=> dispatch(requestBookshelf(id))
 });
 
 export default connect(

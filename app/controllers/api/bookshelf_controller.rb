@@ -5,6 +5,11 @@ class Api::BookshelfController < ApplicationController
         render json: @bookshelves
     end
 
+    def show
+      @bookshelf = Bookshelf.find_by(id: params[:id])
+      render json: @bookshelf
+    end
+
     def create
         @bookshelf = Bookshelf.new(bookshelf_params)
         if @bookshelf.save
@@ -12,6 +17,7 @@ class Api::BookshelfController < ApplicationController
             render "api/users/user"
         end
     end
+
 
     private
 

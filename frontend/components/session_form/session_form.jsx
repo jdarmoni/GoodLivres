@@ -77,6 +77,13 @@ class SessionForm extends React.Component {
             );
         }
     }
+    renderBlurb(){
+        if (this.props.formType==="signup"){
+            return (
+                <p className="lilBlurb">By clicking 'Sign Up' you are agreeing that you are <span className="cherry">a cherry who </span> wears small earmuffs.</p>
+            )
+        }
+    }
     renderDemo(){
         if (this.props.formType==="signup"){
             return
@@ -86,6 +93,13 @@ class SessionForm extends React.Component {
 
             )
         }
+    }
+    renderTopBlurb(){
+        if (this.props.formType === "signup") {
+            return(
+                <h2 className="topBlurb">We don't take kindly to strangers</h2>
+                )
+            }
     }
 
     render() {
@@ -109,7 +123,8 @@ class SessionForm extends React.Component {
                     {/* Please {this.props.formType} or {this.props.navLink} */}
                     {this.renderErrors()}
                     <div className={`${this.props.formType}-form`}>
-                        <br />
+                            {this.renderTopBlurb()}
+                        {/* <br /> */}
                             {this.renderUsername()}
                         <label>
               <input type="text"
@@ -132,6 +147,7 @@ class SessionForm extends React.Component {
                         </label>
                         <br />
                         <input className={`${this.props.formType}-submit`} type="submit" value={inputText} />
+                        {this.renderBlurb()}
                         {this.renderDemo()}
 
                     </div>

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     # 5 should be resources :users
     resource :user, only: [:create]
     resource :session, only: [:create, :destroy] 
-    resources :bookshelf, only: [:index, :create]
+    resources :bookshelf, only: [:index, :show, :create]
 
   end
   root "static_pages#root"

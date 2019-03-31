@@ -3,3 +3,27 @@
     width: 100px;
     color: #00635d;
 }
+
+.bookshelfContainer{
+    height: 400px;
+    border: solid 1px black;
+}
+
+.bookShelves{
+    margin: 0;
+    float: left;
+    border: solid 1px black;
+}
+
+.bookList {
+    height: 50%;
+    float: right;
+    background-color: blue;
+    width: 75%;
+    border: solid 1px black;    
+}
+
+.bookList h1 {
+    font-size: 100px;
+    text-align: center;
+}

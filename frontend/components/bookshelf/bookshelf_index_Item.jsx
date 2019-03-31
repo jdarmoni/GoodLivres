@@ -1,32 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { deleteBookshelf } from '../../actions/bookshelf_actions';
 import { withRouter } from 'react-router-dom';
 
 
 class BookshelfIndexItem extends React.Component {
     constructor(props){
         super(props);
-        this.state = {
-            [this.props.bookshelf.id]: this.props.bookshelf
+        if (this.props.bookshelf) {
+            this.state= {bookshelf: this.props.bookshelf }
+        } else {
+            this.state = {
+            }
         };
-
         this.update = this.update.bind(this);
     }
-    componentDidMount(){
-    
-    }
+
     update(){
-        debugger
+        // debugger
+        this.setState({[this.props.bookshelf]: this.props.bookshelf})
         this.props.history.push(`/books/${this.props.bookshelf.id}`);
-        this.setState({[this.props.bookshelf.id]: this.props.bookshelf })
     }   
 
-    //if there 
     render() {
-        return (
-            <li onClick={this.update}>{this.props.bookshelf.title}</li>);
+        // debugger
+        // if you hit render after having hit update, return (<li>{this.props.match.params.id} </>)
+        return (<li onClick={this.update}> {this.props.bookshelf.title}</li>)
         }
+
 };
 
 export default withRouter(BookshelfIndexItem);

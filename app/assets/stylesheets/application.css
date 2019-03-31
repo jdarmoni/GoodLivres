@@ -14,8 +14,9 @@
  *= require_self
  */
 
+
+ /* SPLASH AND NAVS */
  body {
-     /* background-color: rgba(244,241,234,0.5); */
      margin: 0;
  }
 
@@ -30,62 +31,27 @@
     height: 1000px;
     z-index: -1;
     position: absolute;     
-
  }
-.container-splash {
-}
 
 .splash-nav {
-    
     padding-top: 10px;
     display: flex;
     justify-content: space-between;
     padding-bottom: 20px;
  }
+ 
+ .slogan {
+     margin: 50px 0 0 95px;
+     float: left;
+ }
+
+    /* SIGN UP */
 
 .signup-form-container{
     height: 500px;
 }
 
-.slogan {
-    margin: 50px 0 0 95px;
-    float: left;
-}
-
-.signup-input {
-    margin-top: 5px;
-    font-size: 12px;
-    width: 100%;
-}
-
- .login-form-container {
-    display: flex;
- }
-
- .login-form {
-     display: flex;
-     margin-top: -22px;
- }
-
- .signup-form {
-    float: right;
-    width: 280px;
-    color: red;
-    margin: 25px 20px 0 0;
-
-}
-.login-submit {
-    background-color: #382110; 
-    color: white;
-    border-radius: 3px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    font-size: 12px;
-    padding: 10px;
-    margin-left: 8px;
-}
-
-.signup-submit {
+.signup-submit { /* button */
     margin-top: 5px;
     background-color: #fdd05f;
     padding: 8px;
@@ -96,3 +62,84 @@
     width: 85px;
     font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
 }
+.signup-submit:hover {
+    background-color: #f7bf31;   
+}
+
+.signup-input {
+    margin-top: 5px;
+    font-size: 12px;
+    width: 100%;
+}
+
+.signup-form {
+   float: right;
+   width: 280px;
+   color: red;
+   /* margin: 25px 20px 0 0; */
+}
+
+.signup-form label input {
+    height: 35px;
+    border: #DCD6CC 1px solid;
+}
+
+.signup-form label input::placeholder {
+    font-size: 16px;
+    /* font-weight: lighter; */
+    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+}
+
+.topBlurb {
+    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+    color: black;
+    font-size: 18px;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-weight: normal;
+}
+.lilBlurb{
+    margin-top: 5px;
+    color: #706b5f;
+    width: 60%;
+    float: right;
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.cherry {
+    color: black;
+}
+ 
+    /* LOGIN */
+
+.login-form-container {
+    display: flex;
+ }
+
+ .login-form {
+     display: flex;
+     margin-top: -22px;
+ }
+ 
+.login-form label input {
+    height: 20px;
+    margin-top: 8px;
+    margin-right: 8px;
+}
+ 
+.login-submit {  /* button */
+    background-color: #382110; 
+    color: white;
+    border-radius: 5px;
+    /* padding-bottom: 5px;
+    padding-top: 5px; */
+    font-size: 12px;
+    padding: 8px;
+    width: 19%;
+    margin-left: 8px;
+}
+.login-submit:hover {
+    background-color: #804e2b;   
+}
+

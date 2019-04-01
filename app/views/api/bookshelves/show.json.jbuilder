@@ -1,4 +1,3 @@
-json.bookshelf do
-  json.extract! @bookshelf, :id, :title
-end
+  json.extract! @bookshelf, :title, :id
+
 

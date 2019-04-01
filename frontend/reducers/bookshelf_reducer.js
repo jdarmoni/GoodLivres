@@ -14,11 +14,13 @@ export default (state={}, action)=> {
             }, {} )
             return bookshelvesObj
         case RECEIVE_BOOKSHELF:
-            
+            debugger
             return merge({}, state, {[action.payload.id]: action.payload});
         case REMOVE_BOOKSHELF:
+        debugger
             let newState = merge({}, state);
             delete newState[action.bookshelfId];
+            debugger
             return newState
         default:
             return state;

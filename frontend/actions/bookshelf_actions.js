@@ -53,7 +53,11 @@ export const requestBookshelf = (id) => (dispatch) => {
 }
 
 export const createBookshelf = (bookshelf) => (dispatch) => {
-    return APIUtil.createBookshelf(bookshelf).then((bookshelf) => dispatch(receiveBookshelf(bookshelf)))
+    
+    return APIUtil.createBookshelf(bookshelf).then((bookshelf) => {
+        
+        dispatch(receiveBookshelf(bookshelf))}
+        )
 }
 
 export const updateBookshelf = (id)=> (dispatch)=> {
@@ -61,5 +65,11 @@ export const updateBookshelf = (id)=> (dispatch)=> {
 }
 
 export const deleteBookshelf = (bookshelfId)=>(dispatch)=>{
-    return APIUtil.removeBookshelf(bookshelfId).then( (bookshelf)=>dispatch(removeBookshelf(bookshelf)))
+    
+    return APIUtil.removeBookshelf(bookshelfId).then( (bookshelf)=> {
+        
+        dispatch(removeBookshelf(bookshelf))
+            }
+        )
+    
 }

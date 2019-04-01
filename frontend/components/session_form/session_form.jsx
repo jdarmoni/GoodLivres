@@ -28,7 +28,7 @@ class SessionForm extends React.Component {
 
     }
     executeDemo(e) {
-        debugger
+        
         e.preventDefault();
         this.props.processForm({ email: "demo", password: "starwars" });
         this.props.history.push('/books');
@@ -97,7 +97,7 @@ class SessionForm extends React.Component {
     renderTopBlurb(){
         if (this.props.formType === "signup") {
             return(
-                <h2 className="topBlurb">We don't take kindly to strangers</h2>
+                <h2 className="topBlurb">New here? Create a free account!</h2>
                 )
             }
     }

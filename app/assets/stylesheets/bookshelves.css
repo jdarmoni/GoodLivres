@@ -10,6 +10,7 @@
     list-style: none;
     padding-left: 0;
     border-bottom: solid 1px #00635d;
+    float: left;
 }
 
 .bookShelves li:nth-child(5)  {
@@ -82,6 +83,16 @@
 .bookList h1 {
     font-size: 100px;
     text-align: center;
+}
+
+.deleteMe {
+    color: white;
+}
+
+.deleteMe:hover {
+    border-radius: 48px;
+    border: solid 1px red;
+    color: red;
 }
 #myBooksCol {
     border-bottom: solid 1px #BBB596;

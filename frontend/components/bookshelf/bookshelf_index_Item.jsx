@@ -12,11 +12,17 @@ class BookshelfIndexItem extends React.Component {
             this.state = {
             }
         };
+        this.deleteBookshelf = this.deleteBookshelf.bind(this);
         this.update = this.update.bind(this);
     }
 
+    deleteBookshelf(){
+        this.props.deleteBookshelf(this.props.bookshelf.id)
+        debugger
+    }
+
     update(){
-        // debugger
+        debugger
         this.setState({[this.props.bookshelf]: this.props.bookshelf})
         this.props.history.push(`/books/${this.props.bookshelf.id}`);
     }   
@@ -24,7 +30,7 @@ class BookshelfIndexItem extends React.Component {
     render() {
         // debugger
         // if you hit render after having hit update, return (<li>{this.props.match.params.id} </>)
-        return (<li onClick={this.update}> {this.props.bookshelf.title}</li>)
+        return (<li ><span onClick={this.update}> {this.props.bookshelf.title} </span> <span className="deleteMe" onClick={this.deleteBookshelf}> x </span></li>)
         }
 
 };

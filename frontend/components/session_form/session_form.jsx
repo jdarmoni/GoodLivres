@@ -23,12 +23,15 @@ class SessionForm extends React.Component {
         e.preventDefault();
         // this.state = a user (bc we're in session) - and so the state is one user, which we merge with an empty object and then return as user
         const user = Object.assign({}, this.state);
-        this.props.processForm(user)
+        this.props.processForm(user);
+        this.props.history.push('/books');
+
     }
     executeDemo(e) {
-        debugger
+        
+        e.preventDefault();
         this.props.processForm({ email: "demo", password: "starwars" });
-        this.props.history.push('/books')
+        this.props.history.push('/books');
     }
 
     renderErrors() {
@@ -74,6 +77,13 @@ class SessionForm extends React.Component {
             );
         }
     }
+    renderBlurb(){
+        if (this.props.formType==="signup"){
+            return (
+                <p className="lilBlurb">By clicking 'Sign Up' you are agreeing that you are <span className="cherry">a cherry who </span> wears small earmuffs.</p>
+            )
+        }
+    }
     renderDemo(){
         if (this.props.formType==="signup"){
             return
@@ -83,6 +93,13 @@ class SessionForm extends React.Component {
 
             )
         }
+    }
+    renderTopBlurb(){
+        if (this.props.formType === "signup") {
+            return(
+                <h2 className="topBlurb">New here? Create a free account!</h2>
+                )
+            }
     }
 
     render() {
@@ -106,7 +123,8 @@ class SessionForm extends React.Component {
                     {/* Please {this.props.formType} or {this.props.navLink} */}
                     {this.renderErrors()}
                     <div className={`${this.props.formType}-form`}>
-                        <br />
+                            {this.renderTopBlurb()}
+                        {/* <br /> */}
                             {this.renderUsername()}
                         <label>
               <input type="text"
@@ -129,6 +147,7 @@ class SessionForm extends React.Component {
                         </label>
                         <br />
                         <input className={`${this.props.formType}-submit`} type="submit" value={inputText} />
+                        {this.renderBlurb()}
                         {this.renderDemo()}
 
                     </div>

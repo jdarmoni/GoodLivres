@@ -14,9 +14,10 @@ export const fetchBookshelf = (id)=> {
 }
 
 export const createBookshelf = (bookshelf)=> {
+    
     return $.ajax({
         method: 'post',
-        url: `/api/bookshelf/${bookshelf.id}`,
+        url: `/api/bookshelf`,
         data: {bookshelf}
     })
 }
@@ -30,6 +31,7 @@ export const updateBookshelf = (bookshelf)=>{
 }
 
 export const removeBookshelf = (bookshelfId)=>{
+    
     return $.ajax({
         method: 'delete',
         url: `api/bookshelf/${bookshelfId}`,

@@ -13,15 +13,22 @@ export const receiveAllBookshelves = (bookshelves) => {
 }
 ;
 
-export const receiveBookshelf = (payload) => ({
-    type: RECEIVE_BOOKSHELF,
-    payload: payload
-});
+export const receiveBookshelf = (payload) => {
+   
+   return {
+       type: RECEIVE_BOOKSHELF,
+        payload: payload
+   } 
+};
 
-export const removeBookshelf = (bookshelf) => ({
-    type: REMOVE_BOOKSHELF,
-    bookshelfId: bookshelf.id
-});
+export const removeBookshelf = (bookshelf) => {
+    
+    return {
+
+        type: REMOVE_BOOKSHELF,
+        bookshelfId: bookshelf.id
+    }
+};
 
 
 export const requestBookshelves = () => (dispatch) => {
@@ -34,16 +41,23 @@ export const requestBookshelves = () => (dispatch) => {
     )
 }
 
-// export const requestBookshelves = () => (dispatch)=>{ 
-//         APIUtil.fetchBookshelves().then((bookshelves)=> dispatch(receiveAllBookshelves(bookshelves)) )
-// }
-
 export const requestBookshelf = (id) => (dispatch) => {
-    return APIUtil.fetchBookshelf(id).then((bookshelf) => dispatch(receiveBookshelf(bookshelf)))
+    
+    return (
+        APIUtil.fetchBookshelf(id).then((bookshelf) => {
+            
+            return dispatch(receiveBookshelf(bookshelf))}
+        
+        )
+    )
 }
 
 export const createBookshelf = (bookshelf) => (dispatch) => {
-    return APIUtil.createBookshelf(bookshelf).then((bookshelf) => dispatch(receiveBookshelf(bookshelf)))
+    
+    return APIUtil.createBookshelf(bookshelf).then((bookshelf) => {
+        
+        dispatch(receiveBookshelf(bookshelf))}
+        )
 }
 
 export const updateBookshelf = (id)=> (dispatch)=> {
@@ -51,5 +65,11 @@ export const updateBookshelf = (id)=> (dispatch)=> {
 }
 
 export const deleteBookshelf = (bookshelfId)=>(dispatch)=>{
-    return APIUtil.removeBookshelf(bookshelfId).then( (bookshelf)=>dispatch(removeBookshelf(bookshelf)))
+    
+    return APIUtil.removeBookshelf(bookshelfId).then( (bookshelf)=> {
+        
+        dispatch(removeBookshelf(bookshelf))
+            }
+        )
+    
 }

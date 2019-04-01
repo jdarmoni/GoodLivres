@@ -5,10 +5,11 @@ import SignupFormContainer from './session_form/signup_form_container';
 import {Route, Switch, Link} from 'react-router-dom'
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import BookshelfContainer from './bookshelf/bookshelf_container';
+import BookshelfIndexItem from './bookshelf/bookshelf_index_item';
 
 const App = ()=>{
     return (
-    <div className="container">
+    <div className="container-splash">
             <GreetingContainer/> 
         <div className="masthead">
             
@@ -16,6 +17,7 @@ const App = ()=>{
             {/* 15 has no specified route so will always display */}
             {/* specified path will display at that pathx */}
             <ProtectedRoute className="bookShelves" exact path="/books" component={BookshelfContainer} />
+            <ProtectedRoute exact path ={`/books/:id`} component={BookshelfContainer}/>
             <AuthRoute className="bodymain" exact path="/" component={SignupFormContainer} />
         </div>
     </div>

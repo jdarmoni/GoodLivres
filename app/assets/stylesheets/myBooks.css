@@ -1,18 +1,18 @@
-
 .logged-in-header-link {
-    padding-top: 10px;
+    /* padding-top: 10px; */
     display: flex;
     justify-content: space-between;
     height: 40px;
     border-bottom: solid 1px;
  }
 
-.logged-in-header-link img {
-    height: 29px;
-}
+
 .header-group {
+    padding-top: .7%;
     display: flex;
     justify-content: right;
+    margin-right: 3%;
+    margin-top: .1%;
 }
 .header-name {
     margin: 0;
@@ -20,16 +20,20 @@
 .header-button {
     border-radius: 45px;
     height: 24px;
+    margin-top: 1%;
 }
 .searchbooks {
+    padding-top: 1%;
     width: 50%;
 }
 .searchbooks input {
     height: 64%;
-    width: 80%;
-
+    width: 65%;
 }
 
+#myBooksCol h2 {
+    color: #00635d;
+}
 .login-nav {
     padding: 10px;
     border-radius: 2px;
@@ -37,15 +41,33 @@
     color: white;
 }
 
+.logged-in-header-link {
+    height: 50px;
+    background-color: rgba(244,241,234,0.5);
+}
+
 .logged-in-header-link ul {
+    height: 100%;
     margin-top: 0;
     list-style-type: none;
     display: flex;
     justify-content: space-between; 
     width: 25%;
+    /* padding-top: 10px; */
+}
+
+.logged-in-header-link li:hover:not(:first-child) {
+    color: white;
+    background-color: #382110
+ }
+
+.logged-in-header-link img {
+    padding-top: 7%;
+    height: 29px;
 }
 
 .logged-in-header-link ul li:not(:first-child) {
-    margin: 5px;
+    /* margin: 5px; */
+    padding: 15px 15px 10px 15px;
     font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
 }

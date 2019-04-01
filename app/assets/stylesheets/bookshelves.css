@@ -91,7 +91,7 @@
 
 .deleteMe:hover {
     border-radius: 48px;
-    border: solid 1px red;
+    border: solid 1px red; 
     color: red;
 }
 #myBooksCol {

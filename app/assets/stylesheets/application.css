@@ -143,3 +143,17 @@
     background-color: #804e2b;   
 }
 
+.error-pop-ups{
+        background-color: white;
+    font-size: 17px;
+    display: block;
+    margin-top: -3%;
+    float: right;
+    border-radius: 20px;
+    color: red;
+}
+
+.error-pop-ups li {
+    list-style: none;
+
+}

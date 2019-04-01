@@ -19,26 +19,31 @@ class SessionForm extends React.Component {
         });
     }
     handleSubmit(e){
-        
+        debugger
         e.preventDefault();
         // this.state = a user (bc we're in session) - and so the state is one user, which we merge with an empty object and then return as user
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
-        this.props.history.push('/books');
+        debugger
+        // if (this.props.errors.length === 0 {this.props.history.push('/books');
+        // this.props.history.push('/books');
+ 
 
     }
     executeDemo(e) {
         
         e.preventDefault();
         this.props.processForm({ email: "demo", password: "starwars" });
+        //on success
         this.props.history.push('/books');
     }
 
     renderErrors() {
+        debugger
         if (this.props.formType==="signup") {
 
             return (
-                <ul>
+                <ul className="error-pop-ups">
                 {this.props.errors.map((error, i) => (
                     <li key={`error-${i}`}>
                         {error}
@@ -119,8 +124,6 @@ class SessionForm extends React.Component {
 
                 <form onSubmit={this.handleSubmit} className={`${this.props.formType}-form-box`}>
           <br />
-                    {/* Please Signup/Login! or signup/login (formtype vs navlink)*/}
-                    {/* Please {this.props.formType} or {this.props.navLink} */}
                     {this.renderErrors()}
                     <div className={`${this.props.formType}-form`}>
                             {this.renderTopBlurb()}

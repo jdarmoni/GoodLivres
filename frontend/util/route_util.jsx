@@ -7,7 +7,7 @@ const Auth = ({ component: Component, path, loggedIn, exact }) => (
         !loggedIn ? (
             <Component {...props} />
         ) : (
-              null  // <Redirect to="/" />
+                <Redirect to="/books" />
             )
     )} />
 );
@@ -17,7 +17,7 @@ const Protected = ({ component: Component, path, loggedIn, exact }) => (
         loggedIn ? (
             <Component {...props} />
         ) : (
-              null  // <Redirect to="/" />
+                 <Redirect to="/" /> // before I deleted, this was returning null
             )
     )} />
 );

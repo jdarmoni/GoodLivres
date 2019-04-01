@@ -1,7 +1,16 @@
 class Api::BookshelfController < ApplicationController
 
     def index
-        @bookshelves = Bookshelf.all
+      
+        @bookshelves = Bookshelf.where(user_id: current_user.id)
+        # debugger
+        if @bookshelves.first === nil
+            # debugger
+            Bookshelf.new({user_id: current_user.id, title: "All"}).save;
+            Bookshelf.new({user_id: current_user.id, title: "Read"}).save;
+            Bookshelf.new({user_id: current_user.id, title: "Current Read"}).save;
+            Bookshelf.new({user_id: current_user.id, title: "Want to Read"}).save;
+        end
         render json: @bookshelves
     end
 

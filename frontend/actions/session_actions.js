@@ -29,6 +29,7 @@ export const signup = user => dispatch => (
 export const login = user => dispatch => {
     // so that you can debug
     // need to put dispatch on the window
+    debugger
     return (
         APIUtil.login(user).then(user => (
             

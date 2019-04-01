@@ -24,6 +24,7 @@ class BookshelfIndex extends React.Component{
         e.preventDefault();
         
         this.props.createBookshelf({title: this.state.title, user_id: this.state.user_id});
+        // this.setState({title: ""})
     }
 
     update(title){

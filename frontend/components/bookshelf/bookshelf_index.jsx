@@ -22,7 +22,7 @@ class BookshelfIndex extends React.Component{
     }
     handleSubmit(e){
         e.preventDefault();
-        debugger
+        
         this.props.createBookshelf({title: this.state.title, user_id: this.state.user_id});
     }
 
@@ -33,7 +33,7 @@ class BookshelfIndex extends React.Component{
         });
     }
     addBookShelf(){
-        debugger
+        
         this.setState({addBookShelf: true, user_id: this.props.currentUser.id})
     }    
     // renderAddBookshelfButton(){
@@ -44,7 +44,7 @@ class BookshelfIndex extends React.Component{
     // }
     // }
     renderAddBookshelfInput(){
-        debugger
+        
 
         // set a value in the state that starts false; then setState to true when this is called;
         if (this.state.addBookShelf===true){

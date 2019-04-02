@@ -2,10 +2,11 @@ class Api::BookshelfController < ApplicationController
 
   def index
     @books = Book.all
-
+    debugger
   end
 
   def show
+    debugger
     @book = Book.find(id: params[:id])
     render json: @book
   end

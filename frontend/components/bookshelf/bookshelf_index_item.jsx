@@ -10,7 +10,7 @@ class BookshelfIndexItem extends React.Component {
             this.state= {bookshelf: this.props.bookshelf }
         } else {
             this.state = {
-            }
+            };
         };
         this.deleteBookshelf = this.deleteBookshelf.bind(this);
         this.update = this.update.bind(this);

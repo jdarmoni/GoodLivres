@@ -9,16 +9,15 @@ export const receiveAllBookshelves = (bookshelves) => {
     return ({
         type: RECEIVE_ALL_BOOKSHELVES,
         bookshelves
-    })
-}
-;
+    });
+};
 
 export const receiveBookshelf = (payload) => {
    
    return {
        type: RECEIVE_BOOKSHELF,
         payload: payload
-   } 
+   };
 };
 
 export const removeBookshelf = (bookshelf) => {
@@ -27,7 +26,7 @@ export const removeBookshelf = (bookshelf) => {
 
         type: REMOVE_BOOKSHELF,
         bookshelfId: bookshelf.id
-    }
+    };
 };
 
 
@@ -38,8 +37,8 @@ export const requestBookshelves = () => (dispatch) => {
             
             return dispatch(receiveAllBookshelves(bookshelves))
         })
-    )
-}
+    );
+};
 
 export const requestBookshelf = (id) => (dispatch) => {
     
@@ -49,27 +48,27 @@ export const requestBookshelf = (id) => (dispatch) => {
             return dispatch(receiveBookshelf(bookshelf))}
         
         )
-    )
-}
+    );
+};
 
 export const createBookshelf = (bookshelf) => (dispatch) => {
     
     return APIUtil.createBookshelf(bookshelf).then((bookshelf) => {
         
         dispatch(receiveBookshelf(bookshelf))}
-        )
-}
+        );
+};
 
 export const updateBookshelf = (id)=> (dispatch)=> {
     return APIUtil.updateBookshelf(id).then((bookshelf) => dispatch(receiveBookshelf(bookshelf)))
-}
+};
 
 export const deleteBookshelf = (bookshelfId)=>(dispatch)=>{
     
     return APIUtil.removeBookshelf(bookshelfId).then( (bookshelf)=> {
         
-        dispatch(removeBookshelf(bookshelf))
+        dispatch(removeBookshelf(bookshelf));
             }
-        )
+        );
     
-}
+};

@@ -24,7 +24,7 @@ class BookshelfIndexItem extends React.Component {
     update(){
         debugger
         this.setState({[this.props.bookshelf]: this.props.bookshelf})
-        this.props.history.push(`/books/${this.props.bookshelf.id}`);
+        this.props.history.push(`/bookshelf/${this.props.bookshelf.id}`);
     }   
 
     render() {

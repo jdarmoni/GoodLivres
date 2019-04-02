@@ -9,8 +9,8 @@ class Bookshelf < ApplicationRecord
         foreign_key: :user_id
 
     has_many :shelvings,
-        className :shelvings,
-        foreign_key :bookshelf_id
+        class_name: :Shelving,
+        foreign_key: :bookshelf_id
 
     has_many :books,
         through: :shelvings,

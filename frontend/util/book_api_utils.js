@@ -1,5 +1,5 @@
 export const fetchBooks = () => {
-  debugger
+  
   return $.ajax({
     method: 'get',
     url: '/api/books'
@@ -7,7 +7,7 @@ export const fetchBooks = () => {
 };
 
 export const fetchBook = (id) => {
-  debugger
+  
   return $.ajax({
     method: 'get',
     url: `/api/books/${id}`

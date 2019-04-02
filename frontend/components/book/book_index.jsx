@@ -8,19 +8,15 @@ class BookIndex extends React.Component {
   }
 
   componentDidMount(){
-    debugger
+    
     this.props.requestBooks();
   }
 
   render(){
-    debugger
       let books = Object.values(this.props.books).map((book)=>{
         return <BookIndexItem book={book} key={book.id}/>
       });
     
-
-    debugger
-
     return (
         <table className="bookIndexTable">
           <thead className ="BookIndexTableHeader"> 

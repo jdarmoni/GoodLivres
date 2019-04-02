@@ -2,6 +2,7 @@ class Api::BookshelfController < ApplicationController
 
     def index
         #no id for when current user is nil 
+        
         @bookshelves = Bookshelf.where(user_id: current_user.id)
         # debugger
         if @bookshelves.first === nil
@@ -12,6 +13,7 @@ class Api::BookshelfController < ApplicationController
             Bookshelf.new({user_id: current_user.id, title: "Want to Read"}).save;
         end
         render json: @bookshelves
+        # shelvings
     end
 
     def show

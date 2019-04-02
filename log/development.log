@@ -54298,3 +54298,1498 @@ SyntaxError - syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '
 Completed 200 OK in 86ms (Views: 3.2ms | ActiveRecord: 82.4ms)
 
 
+Started GET "/api/books/1" for ::1 at 2019-04-02 16:40:26 -0400
+Processing by Api::BooksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/books_controller.rb:11
+Completed 200 OK in 13ms (Views: 1.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/books" for ::1 at 2019-04-02 16:40:28 -0400
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 16:40:28 -0400
+Processing by Api::BooksController#index as JSON
+Processing by Api::BookshelfController#index as JSON
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+        className :shelvings,
+                  ^:
+  app/models/bookshelf.rb:12:in `'
+  app/controllers/api/bookshelf_controller.rb:5:in `index'
+
+  [1m[36mBook Load (63.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+Completed 200 OK in 70ms (Views: 5.5ms | ActiveRecord: 63.7ms)
+
+
+Started GET "/" for ::1 at 2019-04-02 16:40:45 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (1.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 286ms (Views: 272.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/books" for ::1 at 2019-04-02 16:40:46 -0400
+Processing by Api::BooksController#index as JSON
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 16:40:46 -0400
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.8ms)
+
+
+Processing by Api::BookshelfController#index as JSON
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+        className :shelvings,
+                  ^:
+  app/models/bookshelf.rb:12:in `'
+  app/controllers/api/bookshelf_controller.rb:5:in `index'
+
+Started GET "/" for ::1 at 2019-04-02 16:40:57 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 93ms (Views: 55.4ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/" for ::1 at 2019-04-02 16:41:41 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (1.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 693ms (Views: 680.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/books" for ::1 at 2019-04-02 16:41:42 -0400
+Processing by Api::BooksController#index as JSON
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 16:41:42 -0400
+  [1m[36mBook Load (1.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+Completed 200 OK in 47ms (Views: 44.7ms | ActiveRecord: 1.7ms)
+
+
+Processing by Api::BookshelfController#index as JSON
+Completed 500 Internal Server Error in 153ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+        className :shelvings,
+                  ^:
+  app/models/bookshelf.rb:12:in `'
+  app/controllers/api/bookshelf_controller.rb:5:in `index'
+
+Started GET "/" for ::1 at 2019-04-02 16:42:36 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (1.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 1033ms (Views: 1006.1ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 16:42:37 -0400
+Started GET "/api/books" for ::1 at 2019-04-02 16:42:37 -0400
+Processing by Api::BookshelfController#index as JSON
+Processing by Api::BooksController#index as JSON
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+        className :shelvings,
+                  ^:
+  app/models/bookshelf.rb:12:in `'
+  app/controllers/api/bookshelf_controller.rb:5:in `index'
+
+  [1m[36mBook Load (64.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+Completed 200 OK in 176ms (Views: 88.7ms | ActiveRecord: 86.6ms)
+
+
+Started GET "/api/books" for ::1 at 2019-04-02 16:42:38 -0400
+Processing by Api::BooksController#index as JSON
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 16:42:38 -0400
+  [1m[36mBook Load (2.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+Processing by Api::BookshelfController#index as JSON
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+        className :shelvings,
+                  ^:
+  app/models/bookshelf.rb:12:in `'
+  app/controllers/api/bookshelf_controller.rb:5:in `index'
+
+Completed 200 OK in 32ms (Views: 4.7ms | ActiveRecord: 26.6ms)
+
+
+Started GET "/" for ::1 at 2019-04-02 16:43:32 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (74.6ms)
+Completed 200 OK in 333ms (Views: 307.0ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/api/books" for ::1 at 2019-04-02 16:43:34 -0400
+Processing by Api::BooksController#index as JSON
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 16:43:34 -0400
+Started GET "/favicon.ico" for ::1 at 2019-04-02 16:43:34 -0400
+  [1m[36mBook Load (1.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Completed 200 OK in 86ms (Views: 24.8ms | ActiveRecord: 10.6ms)
+
+
+Processing by Api::BookshelfController#index as JSON
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+        className :shelving,
+                  ^:
+  app/models/bookshelf.rb:12:in `'
+  app/controllers/api/bookshelf_controller.rb:5:in `index'
+
+Started GET "/" for ::1 at 2019-04-02 16:44:10 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (53.2ms)
+Completed 200 OK in 253ms (Views: 235.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/books" for ::1 at 2019-04-02 16:44:11 -0400
+Processing by Api::BooksController#index as JSON
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 16:44:11 -0400
+Processing by Api::BookshelfController#index as JSON
+Started GET "/favicon.ico" for ::1 at 2019-04-02 16:44:11 -0400
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBook Load (52.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  
+  ↳ app/controllers/api/books_controller.rb:6
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Completed 200 OK in 114ms (Views: 12.6ms | ActiveRecord: 71.5ms)
+
+
+  [1m[36mBookshelf Load (1.7ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:7
+  [1m[36mBookshelf Load (1.2ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:14
+Completed 200 OK in 96ms (Views: 4.9ms | ActiveRecord: 35.7ms)
+
+
+Started POST "/api/bookshelf" for ::1 at 2019-04-02 16:44:37 -0400
+Processing by Api::BookshelfController#create as JSON
+  Parameters: {"bookshelf"=>{"title"=>"the eggs of Dorchester", "user_id"=>"1"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/bookshelf_controller.rb:24
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:24
+  [1m[36mBookshelf Create (58.3ms)[0m  [1m[32mINSERT INTO "bookshelves" ("user_id", "title") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 1], ["title", "the eggs of Dorchester"]]
+  ↳ app/controllers/api/bookshelf_controller.rb:24
+  [1m[35m (141.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/bookshelf_controller.rb:24
+  Rendering api/bookshelves/show.json.jbuilder
+  Rendered api/bookshelves/show.json.jbuilder (2.3ms)
+Completed 200 OK in 369ms (Views: 22.9ms | ActiveRecord: 201.7ms)
+
+
+Started GET "/" for ::1 at 2019-04-02 16:47:10 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (77.6ms)
+Completed 200 OK in 299ms (Views: 275.5ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/api/books" for ::1 at 2019-04-02 16:47:11 -0400
+Processing by Api::BooksController#index as JSON
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 16:47:12 -0400
+Processing by Api::BookshelfController#index as JSON
+  [1m[36mBook Load (64.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+Started GET "/favicon.ico" for ::1 at 2019-04-02 16:47:12 -0400
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+  [1m[36mBookshelf Load (2.6ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  ↳ app/controllers/api/bookshelf_controller.rb:7
+  [1m[36mBookshelf Load (1.2ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:14
+Completed 200 OK in 98ms (Views: 3.5ms | ActiveRecord: 5.9ms)
+
+
+Completed 200 OK in 192ms (Views: 23.8ms | ActiveRecord: 99.4ms)
+
+
+Started GET "/" for ::1 at 2019-04-02 16:47:21 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 88ms (Views: 85.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/books" for ::1 at 2019-04-02 16:47:21 -0400
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 16:47:21 -0400
+Processing by Api::BooksController#index as JSON
+Processing by Api::BookshelfController#index as JSON
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+Completed 200 OK in 31ms (Views: 19.1ms | ActiveRecord: 1.1ms)
+
+
+  [1m[36mUser Load (19.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Started GET "/favicon.ico" for ::1 at 2019-04-02 16:47:21 -0400
+  [1m[36mBookshelf Load (1.2ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:7
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  [1m[36mBookshelf Load (1.9ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:14
+  
+Completed 200 OK in 46ms (Views: 2.3ms | ActiveRecord: 22.7ms)
+
+
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/api/bookshelf" for ::1 at 2019-04-02 16:47:33 -0400
+Processing by Api::BookshelfController#create as JSON
+  Parameters: {"bookshelf"=>{"title"=>"YA for turtles", "user_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/bookshelf_controller.rb:24
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:24
+  [1m[36mBookshelf Create (63.2ms)[0m  [1m[32mINSERT INTO "bookshelves" ("user_id", "title") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 1], ["title", "YA for turtles"]]
+  ↳ app/controllers/api/bookshelf_controller.rb:24
+  [1m[35m (36.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/bookshelf_controller.rb:24
+  Rendering api/bookshelves/show.json.jbuilder
+  Rendered api/bookshelves/show.json.jbuilder (0.5ms)
+Completed 200 OK in 138ms (Views: 16.7ms | ActiveRecord: 114.8ms)
+
+
+Started DELETE "/api/bookshelf/20" for ::1 at 2019-04-02 16:47:36 -0400
+Processing by Api::BookshelfController#destroy as JSON
+  Parameters: {"bookshelfId"=>"20", "id"=>"20"}
+  [1m[36mBookshelf Load (0.4ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/bookshelf_controller.rb:37
+  [1m[36mBookshelf Destroy (0.4ms)[0m  [1m[31mDELETE FROM "bookshelves" WHERE "bookshelves"."id" = $1[0m  [["id", 20]]
+  ↳ app/controllers/api/bookshelf_controller.rb:37
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/bookshelf_controller.rb:37
+  Rendering api/bookshelves/show.json.jbuilder
+  Rendered api/bookshelves/show.json.jbuilder (0.4ms)
+Completed 200 OK in 13ms (Views: 4.6ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/api/books/1" for ::1 at 2019-04-02 16:47:40 -0400
+Processing by Api::BooksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/books_controller.rb:11
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/books" for ::1 at 2019-04-02 16:47:42 -0400
+Processing by Api::BooksController#index as JSON
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 16:47:42 -0400
+Processing by Api::BookshelfController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBookshelf Load (1.3ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:7
+  [1m[36mBookshelf Load (0.8ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:14
+Completed 200 OK in 10ms (Views: 1.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/books/4" for ::1 at 2019-04-02 16:47:43 -0400
+Processing by Api::BooksController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/books_controller.rb:11
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/books" for ::1 at 2019-04-02 16:47:45 -0400
+Processing by Api::BooksController#index as JSON
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 16:47:45 -0400
+  [1m[36mBook Load (2.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 2.4ms)
+
+
+Processing by Api::BookshelfController#index as JSON
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBookshelf Load (0.8ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:7
+  [1m[36mBookshelf Load (0.7ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:14
+Completed 200 OK in 8ms (Views: 1.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/api/books/5" for ::1 at 2019-04-02 16:47:48 -0400
+Processing by Api::BooksController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/books_controller.rb:11
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 16:47:50 -0400
+Started GET "/api/books" for ::1 at 2019-04-02 16:47:50 -0400
+Processing by Api::BooksController#index as JSON
+Processing by Api::BookshelfController#index as JSON
+  [1m[36mBook Load (1.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 1.8ms)
+
+
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBookshelf Load (0.8ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:7
+  [1m[36mBookshelf Load (0.9ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:14
+Completed 200 OK in 9ms (Views: 2.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/api/books/4" for ::1 at 2019-04-02 16:48:18 -0400
+Processing by Api::BooksController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/books_controller.rb:11
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/books" for ::1 at 2019-04-02 16:48:20 -0400
+Processing by Api::BooksController#index as JSON
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 16:48:20 -0400
+  [1m[36mBook Load (2.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+Processing by Api::BookshelfController#index as JSON
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 2.7ms)
+
+
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBookshelf Load (3.2ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:7
+  [1m[36mBookshelf Load (0.7ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:14
+Completed 200 OK in 13ms (Views: 2.1ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/api/books/4" for ::1 at 2019-04-02 16:48:21 -0400
+Processing by Api::BooksController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/books_controller.rb:11
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/books" for ::1 at 2019-04-02 16:48:23 -0400
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 16:48:23 -0400
+Processing by Api::BooksController#index as JSON
+Processing by Api::BookshelfController#index as JSON
+  [1m[36mBook Load (4.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+Completed 200 OK in 7ms (Views: 2.6ms | ActiveRecord: 4.3ms)
+
+
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBookshelf Load (3.7ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:7
+  [1m[36mBookshelf Load (3.7ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:14
+Completed 200 OK in 36ms (Views: 18.7ms | ActiveRecord: 13.5ms)
+
+
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Load (11.3ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBookshelf Load (14.5ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShelving Create (85.4ms)[0m  [1m[32mINSERT INTO "shelvings" ("book_id", "bookshelf_id") VALUES ($1, $2) RETURNING "id"[0m  [["book_id", 1], ["bookshelf_id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 17:04:19 -0400
+Started GET "/api/books" for ::1 at 2019-04-02 17:04:19 -0400
+Processing by Api::BooksController#index as JSON
+Processing by Api::BookshelfController#index as JSON
+  [1m[36mBook Load (2.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 100ms (Views: 88.7ms | ActiveRecord: 9.0ms)
+
+
+  [1m[36mBookshelf Load (1.4ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:7
+  [1m[36mBookshelf Load (0.5ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:14
+Completed 200 OK in 25ms (Views: 1.7ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/" for ::1 at 2019-04-02 17:15:24 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (2.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (120.1ms)
+Completed 200 OK in 429ms (Views: 358.5ms | ActiveRecord: 37.8ms)
+
+
+Started GET "/api/books" for ::1 at 2019-04-02 17:15:25 -0400
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 17:15:25 -0400
+Processing by Api::BooksController#index as JSON
+  [1m[36mBook Load (3.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+Completed 200 OK in 90ms (Views: 18.3ms | ActiveRecord: 19.6ms)
+
+
+Processing by Api::BookshelfController#index as JSON
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBookshelf Load (1.4ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:7
+  [1m[36mBookshelf Load (0.5ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:14
+Completed 200 OK in 44ms (Views: 2.5ms | ActiveRecord: 23.3ms)
+
+
+  [1m[36mShelving Load (29.9ms)[0m  [1m[34mSELECT  "shelvings".* FROM "shelvings" ORDER BY "shelvings"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2019-04-02 17:47:45 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (101.4ms)
+Completed 200 OK in 313ms (Views: 273.0ms | ActiveRecord: 19.9ms)
+
+
+Started GET "/api/books" for ::1 at 2019-04-02 17:47:46 -0400
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 17:47:46 -0400
+Processing by Api::BooksController#index as JSON
+Processing by Api::BookshelfController#index as JSON
+Started GET "/favicon.ico" for ::1 at 2019-04-02 17:47:46 -0400
+  [1m[36mBook Load (3.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Completed 200 OK in 381ms (Views: 27.8ms | ActiveRecord: 48.0ms)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBookshelf Load (2.2ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:7
+  [1m[36mBookshelf Load (0.6ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:14
+Completed 200 OK in 2271ms (Views: 2.5ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-02 17:47:56 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (4.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 193ms (Views: 172.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/books" for ::1 at 2019-04-02 17:47:57 -0400
+Processing by Api::BooksController#index as JSON
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 17:47:57 -0400
+Processing by Api::BookshelfController#index as JSON
+  [1m[36mBook Load (7.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 38ms (Views: 9.5ms | ActiveRecord: 28.0ms)
+
+
+  [1m[36mBookshelf Load (4.6ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:7
+  [1m[36mBookshelf Load (0.8ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:14
+Completed 200 OK in 39ms (Views: 2.9ms | ActiveRecord: 23.5ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-04-02 17:47:57 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-04-02 17:58:54 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (1.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 864ms (Views: 842.0ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/api/books" for ::1 at 2019-04-02 17:58:56 -0400
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 17:58:56 -0400
+Processing by Api::BooksController#index as JSON
+Processing by Api::BookshelfController#index as JSON
+  [1m[36mBook Load (3.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 200 OK in 34ms (Views: 11.3ms | ActiveRecord: 18.2ms)
+
+
+  [1m[36mBookshelf Load (1.6ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:7
+  [1m[36mBookshelf Load (0.8ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:14
+Completed 200 OK in 41ms (Views: 2.3ms | ActiveRecord: 31.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-04-02 17:58:56 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-04-02 18:04:20 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (2.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 385ms (Views: 355.7ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/api/books" for ::1 at 2019-04-02 18:04:21 -0400
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 18:04:21 -0400
+Processing by Api::BooksController#index as JSON
+  [1m[36mBook Load (2.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+Completed 200 OK in 19ms (Views: 9.7ms | ActiveRecord: 7.0ms)
+
+
+Processing by Api::BookshelfController#index as JSON
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBookshelf Load (1.3ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:7
+  [1m[36mBookshelf Load (0.6ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:14
+Completed 200 OK in 46ms (Views: 2.7ms | ActiveRecord: 33.5ms)
+
+
+Started GET "/" for ::1 at 2019-04-02 18:10:53 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 300ms (Views: 278.0ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/api/books" for ::1 at 2019-04-02 18:10:54 -0400
+Processing by Api::BooksController#index as JSON
+  [1m[36mBook Load (1.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+Completed 200 OK in 12ms (Views: 3.2ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 18:10:54 -0400
+Processing by Api::BookshelfController#index as JSON
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBookshelf Load (3.1ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:7
+  [1m[36mBookshelf Load (3.5ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:14
+Completed 200 OK in 32ms (Views: 3.0ms | ActiveRecord: 20.6ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-04-02 18:10:54 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[36mBook Load (1.4ms)[0m  [1m[34mSELECT  "books".* FROM "books" ORDER BY "books"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mShelving Load (0.7ms)[0m  [1m[34mSELECT  "shelvings".* FROM "shelvings" ORDER BY "shelvings"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT  "books".* FROM "books" ORDER BY "books"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT  "books".* FROM "books" ORDER BY "books"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBook Load (30.0ms)[0m  [1m[34mSELECT  "books".* FROM "books" ORDER BY "books"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2019-04-02 18:39:09 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (1.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (72.1ms)
+Completed 200 OK in 316ms (Views: 292.1ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/api/books" for ::1 at 2019-04-02 18:39:11 -0400
+Processing by Api::BooksController#index as JSON
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 18:39:11 -0400
+  [1m[36mBook Load (1.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+Started GET "/favicon.ico" for ::1 at 2019-04-02 18:39:11 -0400
+Processing by Api::BookshelfController#index as JSON
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Completed 200 OK in 192ms (Views: 39.9ms | ActiveRecord: 124.9ms)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBookshelf Load (1.0ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:8
+  [1m[36mBookshelf Load (0.5ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:15
+Completed 200 OK in 828ms (Views: 1.9ms | ActiveRecord: 8.3ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-04-02 18:39:27 -0400
+Processing by Api::SessionsController#destroy as JSON
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 18:39:27 -0400
+Started GET "/api/books" for ::1 at 2019-04-02 18:39:27 -0400
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Processing by Api::BookshelfController#index as JSON
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "pnQnR7X34JZ4KY1ZQRbJRg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:57
+Processing by Api::BooksController#index as JSON
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wOfhjWPZNcsEMQCtU-sxbA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Exists (16.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:41
+  [1m[36mUser Exists (2.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:41
+  [1m[36mBookshelf Load (33.6ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:8
+  [1m[36mBookshelf Load (0.6ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:15
+Completed 200 OK in 87ms (Views: 1.8ms | ActiveRecord: 52.9ms)
+
+
+  [1m[36mUser Update (17.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "pnQnR7X34JZ4KY1ZQRbJRg"], ["updated_at", "2019-04-02 22:39:27.756881"], ["id", 1]]
+  ↳ app/models/user.rb:41
+  [1m[35m (32.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:41
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  [1m[36mBookshelf Load (0.4ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/api/users/show.json.jbuilder:4
+  Rendered api/users/show.json.jbuilder (160.7ms)
+Completed 200 OK in 317ms (Views: 176.4ms | ActiveRecord: 72.8ms)
+
+
+Started POST "/api/session" for ::1 at 2019-04-02 18:39:38 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:24
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1IunllHZTeuoDKFqoEmEsA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:57
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:41
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:41
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "1IunllHZTeuoDKFqoEmEsA"], ["updated_at", "2019-04-02 22:39:38.166741"], ["id", 1]]
+  ↳ app/models/user.rb:41
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:41
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  [1m[36mBookshelf Load (0.4ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/api/users/show.json.jbuilder:4
+  Rendered api/users/show.json.jbuilder (3.3ms)
+Completed 200 OK in 136ms (Views: 7.8ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/api/books" for ::1 at 2019-04-02 18:39:38 -0400
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 18:39:38 -0400
+Processing by Api::BooksController#index as JSON
+Processing by Api::BookshelfController#index as JSON
+  [1m[36mBook Load (2.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+Completed 200 OK in 14ms (Views: 3.4ms | ActiveRecord: 9.9ms)
+
+
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1IunllHZTeuoDKFqoEmEsA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBookshelf Load (1.2ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:8
+  [1m[36mBookshelf Load (0.5ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:15
+Completed 200 OK in 19ms (Views: 2.0ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/api/books/1" for ::1 at 2019-04-02 18:39:42 -0400
+Processing by Api::BooksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/books_controller.rb:11
+Completed 200 OK in 9ms (Views: 0.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/api/books" for ::1 at 2019-04-02 18:39:45 -0400
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 18:39:45 -0400
+Processing by Api::BooksController#index as JSON
+Processing by Api::BookshelfController#index as JSON
+  [1m[36mBook Load (2.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 2.9ms)
+
+
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1IunllHZTeuoDKFqoEmEsA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBookshelf Load (2.1ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:8
+  [1m[36mBookshelf Load (1.2ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:15
+Completed 200 OK in 14ms (Views: 2.5ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/api/books/4" for ::1 at 2019-04-02 18:39:47 -0400
+Processing by Api::BooksController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/books_controller.rb:11
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/books" for ::1 at 2019-04-02 18:39:48 -0400
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 18:39:48 -0400
+Processing by Api::BooksController#index as JSON
+Processing by Api::BookshelfController#index as JSON
+  [1m[36mBook Load (1.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 1.5ms)
+
+
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1IunllHZTeuoDKFqoEmEsA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBookshelf Load (5.7ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:8
+  [1m[36mBookshelf Load (0.7ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:15
+Completed 200 OK in 19ms (Views: 3.0ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/api/books/5" for ::1 at 2019-04-02 18:39:48 -0400
+Processing by Api::BooksController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/books_controller.rb:11
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 18:39:50 -0400
+Started GET "/api/books" for ::1 at 2019-04-02 18:39:50 -0400
+Processing by Api::BookshelfController#index as JSON
+Processing by Api::BooksController#index as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1IunllHZTeuoDKFqoEmEsA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBook Load (1.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 1.8ms)
+
+
+  [1m[36mBookshelf Load (3.1ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:8
+  [1m[36mBookshelf Load (1.7ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:15
+Completed 200 OK in 13ms (Views: 2.9ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/api/books" for ::1 at 2019-04-02 18:39:56 -0400
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 18:39:56 -0400
+Processing by Api::BooksController#index as JSON
+Processing by Api::BookshelfController#index as JSON
+  [1m[36mBook Load (2.0ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 2.0ms)
+
+
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1IunllHZTeuoDKFqoEmEsA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBookshelf Load (0.7ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:8
+  [1m[36mBookshelf Load (0.6ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:15
+Completed 200 OK in 63ms (Views: 1.4ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for ::1 at 2019-04-02 18:43:38 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1IunllHZTeuoDKFqoEmEsA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (2.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 382ms (Views: 350.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/books" for ::1 at 2019-04-02 18:43:39 -0400
+Processing by Api::BooksController#index as JSON
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 18:43:39 -0400
+  [1m[36mBook Load (1.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 1.8ms)
+
+
+Processing by Api::BookshelfController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1IunllHZTeuoDKFqoEmEsA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBookshelf Load (0.6ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:8
+  [1m[36mBookshelf Load (0.7ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:15
+Completed 200 OK in 25ms (Views: 2.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/books/1" for ::1 at 2019-04-02 18:43:41 -0400
+Processing by Api::BooksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/books_controller.rb:11
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 18:43:42 -0400
+Started GET "/api/books" for ::1 at 2019-04-02 18:43:42 -0400
+Processing by Api::BookshelfController#index as JSON
+Processing by Api::BooksController#index as JSON
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1IunllHZTeuoDKFqoEmEsA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBook Load (4.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+Completed 200 OK in 24ms (Views: 19.7ms | ActiveRecord: 4.2ms)
+
+
+  [1m[36mBookshelf Load (21.2ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:8
+  [1m[36mBookshelf Load (1.0ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:15
+Completed 200 OK in 42ms (Views: 3.8ms | ActiveRecord: 25.8ms)
+
+
+Started GET "/api/books/4" for ::1 at 2019-04-02 18:43:43 -0400
+Processing by Api::BooksController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/books_controller.rb:11
+Completed 200 OK in 11ms (Views: 2.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/books" for ::1 at 2019-04-02 18:43:43 -0400
+Processing by Api::BooksController#index as JSON
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 18:43:44 -0400
+  [1m[36mBook Load (3.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+Processing by Api::BookshelfController#index as JSON
+Completed 200 OK in 23ms (Views: 9.0ms | ActiveRecord: 3.1ms)
+
+
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1IunllHZTeuoDKFqoEmEsA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBookshelf Load (1.2ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:8
+  [1m[36mBookshelf Load (0.7ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:15
+Completed 200 OK in 16ms (Views: 4.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/api/books/5" for ::1 at 2019-04-02 18:43:44 -0400
+Processing by Api::BooksController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (1.5ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/books_controller.rb:11
+Completed 200 OK in 32ms (Views: 6.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/books" for ::1 at 2019-04-02 18:43:45 -0400
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 18:43:45 -0400
+Processing by Api::BooksController#index as JSON
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 1.0ms)
+
+
+Processing by Api::BookshelfController#index as JSON
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1IunllHZTeuoDKFqoEmEsA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBookshelf Load (1.0ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:8
+  [1m[36mBookshelf Load (0.9ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:15
+Completed 200 OK in 37ms (Views: 6.3ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/api/bookshelf" for ::1 at 2019-04-02 18:43:52 -0400
+Processing by Api::BookshelfController#create as JSON
+  Parameters: {"bookshelf"=>{"title"=>"asasdas", "user_id"=>"1"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/bookshelf_controller.rb:26
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:26
+  [1m[36mBookshelf Create (40.1ms)[0m  [1m[32mINSERT INTO "bookshelves" ("user_id", "title") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 1], ["title", "asasdas"]]
+  ↳ app/controllers/api/bookshelf_controller.rb:26
+  [1m[35m (32.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/bookshelf_controller.rb:26
+  Rendering api/bookshelves/show.json.jbuilder
+  Rendered api/bookshelves/show.json.jbuilder (2.3ms)
+Completed 200 OK in 116ms (Views: 20.1ms | ActiveRecord: 73.2ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-04-02 18:43:53 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1IunllHZTeuoDKFqoEmEsA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wPAVfPeZ9xyYczjxtJmBog"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:57
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:41
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:41
+Started GET "/api/books" for ::1 at 2019-04-02 18:43:53 -0400
+Processing by Api::BooksController#index as JSON
+  [1m[36mBook Load (1.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 18:43:53 -0400
+  [1m[36mUser Update (16.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "wPAVfPeZ9xyYczjxtJmBog"], ["updated_at", "2019-04-02 22:43:53.182990"], ["id", 1]]
+  ↳ app/models/user.rb:41
+Processing by Api::BookshelfController#index as JSON
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:41
+  [1m[36mUser Load (31.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1IunllHZTeuoDKFqoEmEsA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 500 Internal Server Error in 136ms (ActiveRecord: 31.2ms)
+
+
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/controllers/api/bookshelf_controller.rb:6:in `index'
+
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  [1m[36mBookshelf Load (0.4ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/api/users/show.json.jbuilder:4
+  Rendered api/users/show.json.jbuilder (28.4ms)
+Completed 200 OK in 218ms (Views: 141.2ms | ActiveRecord: 26.8ms)
+
+
+Started POST "/api/session" for ::1 at 2019-04-02 18:44:03 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "email"=>"jul@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jul@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:24
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "yUfZByC2917lz1--a_9Uaw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:57
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "jul@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:41
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "jul"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:41
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "yUfZByC2917lz1--a_9Uaw"], ["updated_at", "2019-04-02 22:44:03.895835"], ["id", 2]]
+  ↳ app/models/user.rb:41
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:41
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (1.0ms)
+  [1m[36mBookshelf Load (0.6ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/api/users/show.json.jbuilder:4
+  Rendered api/users/show.json.jbuilder (14.5ms)
+Completed 200 OK in 182ms (Views: 53.1ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/api/books" for ::1 at 2019-04-02 18:44:04 -0400
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 18:44:04 -0400
+Processing by Api::BooksController#index as JSON
+Processing by Api::BookshelfController#index as JSON
+  [1m[36mBook Load (2.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "yUfZByC2917lz1--a_9Uaw"], ["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 35.9ms | ActiveRecord: 2.3ms)
+
+
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBookshelf Load (2.1ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:8
+  [1m[36mBookshelf Load (6.8ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/api/bookshelf_controller.rb:15
+Completed 200 OK in 57ms (Views: 4.2ms | ActiveRecord: 12.4ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-04-02 18:44:07 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "yUfZByC2917lz1--a_9Uaw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "QUzA4IlxbO0ta9tMY086iA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:57
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "jul@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:41
+  [1m[36mUser Exists (2.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "jul"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:41
+  [1m[36mUser Update (1.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "QUzA4IlxbO0ta9tMY086iA"], ["updated_at", "2019-04-02 22:44:07.912552"], ["id", 2]]
+  ↳ app/models/user.rb:41
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 18:44:07 -0400
+Started GET "/api/books" for ::1 at 2019-04-02 18:44:07 -0400
+Processing by Api::BookshelfController#index as JSON
+Processing by Api::BooksController#index as JSON
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "yUfZByC2917lz1--a_9Uaw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBook Load (3.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+  [1m[35m (20.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBookshelf Load (5.3ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:8
+Completed 200 OK in 9ms (Views: 5.2ms | ActiveRecord: 3.5ms)
+
+
+  ↳ app/models/user.rb:41
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (3.5ms)
+  [1m[36mBookshelf Load (18.6ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/api/bookshelf_controller.rb:15
+Completed 200 OK in 43ms (Views: 8.4ms | ActiveRecord: 27.3ms)
+
+
+  [1m[36mBookshelf Load (0.6ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/api/users/show.json.jbuilder:4
+  Rendered api/users/show.json.jbuilder (25.7ms)
+Completed 200 OK in 97ms (Views: 35.4ms | ActiveRecord: 29.8ms)
+
+
+Started POST "/api/user" for ::1 at 2019-04-02 18:44:16 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"egg", "email"=>"egg", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "HkanVp_zOywobau0-XJ7Yw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:57
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "egg"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "egg"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Create (17.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "egg"], ["password_digest", "$2a$10$SjdlzsTcHoojsLrIgh9hp.hWcBIt43vssw/xkhFWUDzfZx0b0vGjW"], ["session_token", "HkanVp_zOywobau0-XJ7Yw"], ["email", "egg"], ["created_at", "2019-04-02 22:44:16.372959"], ["updated_at", "2019-04-02 22:44:16.372959"]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "nkAj-Z_ghQNYZ9q3vgSxLQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:57
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "egg"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:41
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "egg"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:41
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "nkAj-Z_ghQNYZ9q3vgSxLQ"], ["updated_at", "2019-04-02 22:44:16.403586"], ["id", 4]]
+  ↳ app/models/user.rb:41
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:41
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  [1m[36mBookshelf Load (0.4ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/views/api/users/show.json.jbuilder:4
+  Rendered api/users/show.json.jbuilder (4.5ms)
+Completed 200 OK in 178ms (Views: 9.7ms | ActiveRecord: 22.9ms)
+
+
+Started GET "/api/books" for ::1 at 2019-04-02 18:44:16 -0400
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 18:44:16 -0400
+Processing by Api::BooksController#index as JSON
+Processing by Api::BookshelfController#index as JSON
+  [1m[36mBook Load (3.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:6
+Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 3.1ms)
+
+
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "nkAj-Z_ghQNYZ9q3vgSxLQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBookshelf Load (3.9ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:8
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/bookshelf_controller.rb:10
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:10
+  [1m[36mBookshelf Create (2.4ms)[0m  [1m[32mINSERT INTO "bookshelves" ("user_id", "title") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 4], ["title", "All"]]
+  ↳ app/controllers/api/bookshelf_controller.rb:10
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/bookshelf_controller.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/bookshelf_controller.rb:11
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:11
+  [1m[36mBookshelf Create (0.5ms)[0m  [1m[32mINSERT INTO "bookshelves" ("user_id", "title") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 4], ["title", "Read"]]
+  ↳ app/controllers/api/bookshelf_controller.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/bookshelf_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/bookshelf_controller.rb:12
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:12
+  [1m[36mBookshelf Create (32.7ms)[0m  [1m[32mINSERT INTO "bookshelves" ("user_id", "title") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 4], ["title", "Current Read"]]
+  ↳ app/controllers/api/bookshelf_controller.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/bookshelf_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/bookshelf_controller.rb:13
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:13
+  [1m[36mBookshelf Create (1.2ms)[0m  [1m[32mINSERT INTO "bookshelves" ("user_id", "title") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 4], ["title", "Want to Read"]]
+  ↳ app/controllers/api/bookshelf_controller.rb:13
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/bookshelf_controller.rb:13
+  [1m[36mBookshelf Load (0.5ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/api/bookshelf_controller.rb:15
+Completed 200 OK in 157ms (Views: 1.6ms | ActiveRecord: 56.6ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-04-02 18:44:18 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "nkAj-Z_ghQNYZ9q3vgSxLQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FKiXkMQy8bvD8DRMI56Wkw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:57
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41
+  [1m[36mUser Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "egg"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:41
+  [1m[36mUser Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "egg"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:41
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "FKiXkMQy8bvD8DRMI56Wkw"], ["updated_at", "2019-04-02 22:44:18.261048"], ["id", 4]]
+  ↳ app/models/user.rb:41
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:41
+Started GET "/api/books" for ::1 at 2019-04-02 18:44:18 -0400
+  Rendering api/users/show.json.jbuilder
+Started GET "/api/bookshelf" for ::1 at 2019-04-02 18:44:18 -0400
+Processing by Api::BooksController#index as JSON
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+Processing by Api::BookshelfController#index as JSON
+  ↳ app/controllers/api/books_controller.rb:6
+  [1m[36mBookshelf Load (1.8ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 4]]
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 1.2ms)
+
+
+  ↳ app/views/api/users/show.json.jbuilder:4
+  Rendered api/users/show.json.jbuilder (11.3ms)
+Completed 200 OK in 99ms (Views: 24.7ms | ActiveRecord: 13.4ms)
+
+
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "nkAj-Z_ghQNYZ9q3vgSxLQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 12.4ms)
+
+
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/controllers/api/bookshelf_controller.rb:6:in `index'
+

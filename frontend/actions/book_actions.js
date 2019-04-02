@@ -41,10 +41,10 @@ export const requestBooks= () => (dispatch) => {
 };
 
 export const requestBook = (id) => (dispatch) => {
-  debugger
+  
   return (
     APIUtil.fetchBook(id).then((book) => {
-      debugger
+      
       return dispatch(receiveBook(book))
     }
 

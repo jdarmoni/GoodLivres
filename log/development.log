@@ -46148,3 +46148,145 @@ Processing by Api::BookshelfController#index as JSON
 Completed 200 OK in 10ms (Views: 1.6ms | ActiveRecord: 4.9ms)
 
 
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4583323447658730390)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddBooksToBookshelves (20190401202043)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190401202043"]]
+  ↳ bin/rails:9
+  [1m[35m (15.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (34.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4583323447658730390)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4583323447658730390)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateBooks (20190401203458)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (448.8ms)[0m  [1m[35mCREATE TABLE "shelvings" ("id" bigserial primary key, "book_id" integer NOT NULL, "bookshelf_id" character varying NOT NULL)[0m
+  ↳ db/migrate/20190401203458_create_books.rb:3
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_shelvings_on_book_id" ON "shelvings"  ("book_id")[0m
+  ↳ db/migrate/20190401203458_create_books.rb:8
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_shelvings_on_bookshelf_id" ON "shelvings"  ("bookshelf_id")[0m
+  ↳ db/migrate/20190401203458_create_books.rb:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190401203458"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4583323447658730390)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2019-04-01 16:55:47 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AbbeyRoad/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "w4ituzidZuRJim3Y7kAaEA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (70.4ms)
+Completed 200 OK in 578ms (Views: 498.2ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/api/bookshelf" for ::1 at 2019-04-01 16:55:48 -0400
+Processing by Api::BookshelfController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "w4ituzidZuRJim3Y7kAaEA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBookshelf Load (1.0ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:7
+  [1m[36mBookshelf Load (0.4ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 30]]
+  ↳ app/controllers/api/bookshelf_controller.rb:14
+Completed 200 OK in 28ms (Views: 1.1ms | ActiveRecord: 7.1ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-04-01 16:55:52 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "w4ituzidZuRJim3Y7kAaEA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Started GET "/api/bookshelf" for ::1 at 2019-04-01 16:55:52 -0400
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Iczh-ytoecQT0b7clOSpPw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:57
+  [1m[35m (3.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41
+  [1m[36mUser Exists (3.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "Ttttt3cpok@lordlovesme.heaven"], ["id", 30], ["LIMIT", 1]]
+  ↳ app/models/user.rb:41
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "Tyler "], ["id", 30], ["LIMIT", 1]]
+  ↳ app/models/user.rb:41
+  [1m[36mUser Update (1.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Iczh-ytoecQT0b7clOSpPw"], ["updated_at", "2019-04-01 20:55:52.754234"], ["id", 30]]
+  ↳ app/models/user.rb:41
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:41
+Processing by Api::BookshelfController#index as JSON
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "w4ituzidZuRJim3Y7kAaEA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 6.3ms)
+
+
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/controllers/api/bookshelf_controller.rb:5:in `index'
+
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  [1m[36mBookshelf Load (0.4ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 30]]
+  ↳ app/views/api/users/show.json.jbuilder:4
+  Rendered api/users/show.json.jbuilder (4.6ms)
+Completed 200 OK in 68ms (Views: 39.3ms | ActiveRecord: 18.4ms)
+
+
+Started POST "/api/session" for ::1 at 2019-04-01 16:56:02 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "email"=>"jul@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jul@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:24
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Q-0GYJ2MgCykOn4hKNQGeQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:57
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:41
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "jul@gmail.com"], ["id", 17], ["LIMIT", 1]]
+  ↳ app/models/user.rb:41
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "julgabi"], ["id", 17], ["LIMIT", 1]]
+  ↳ app/models/user.rb:41
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Q-0GYJ2MgCykOn4hKNQGeQ"], ["updated_at", "2019-04-01 20:56:02.862165"], ["id", 17]]
+  ↳ app/models/user.rb:41
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:41
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  [1m[36mBookshelf Load (0.5ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 17]]
+  ↳ app/views/api/users/show.json.jbuilder:4
+  Rendered api/users/show.json.jbuilder (6.2ms)
+Completed 200 OK in 81ms (Views: 6.9ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/api/bookshelf" for ::1 at 2019-04-01 16:56:02 -0400
+Processing by Api::BookshelfController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Q-0GYJ2MgCykOn4hKNQGeQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBookshelf Load (1.4ms)[0m  [1m[34mSELECT  "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1 ORDER BY "bookshelves"."id" ASC LIMIT $2[0m  [["user_id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/bookshelf_controller.rb:7
+  [1m[36mBookshelf Load (0.7ms)[0m  [1m[34mSELECT "bookshelves".* FROM "bookshelves" WHERE "bookshelves"."user_id" = $1[0m  [["user_id", 17]]
+  ↳ app/controllers/api/bookshelf_controller.rb:14
+Completed 200 OK in 7ms (Views: 1.4ms | ActiveRecord: 2.7ms)
+
+

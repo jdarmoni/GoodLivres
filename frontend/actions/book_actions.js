@@ -5,7 +5,7 @@ export const RECEIVE_BOOK = "RECEIVE_BOOK";
 export const REMOVE_BOOK = "REMOVE_BOOK";
 
 export const receiveAllBooks = (books) => {
-
+  debugger
   return ({
     type: RECEIVE_ALL_BOOKS,
     books
@@ -41,10 +41,10 @@ export const requestBooks= () => (dispatch) => {
 };
 
 export const requestBook = (id) => (dispatch) => {
-
+  debugger
   return (
     APIUtil.fetchBook(id).then((book) => {
-
+      debugger
       return dispatch(receiveBook(book))
     }
 

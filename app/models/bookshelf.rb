@@ -7,4 +7,12 @@ class Bookshelf < ApplicationRecord
         class_name: :User,
         primary_key: :id,
         foreign_key: :user_id
+
+    has_many :shelvings,
+        className :shelvings,
+        foreign_key :bookshelf_id
+
+    has_many :books,
+        through: :shelvings,
+        source: :book
 end

@@ -6,6 +6,8 @@ import {Route, Switch, Link} from 'react-router-dom'
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import BookshelfContainer from './bookshelf/bookshelf_container';
 import BookshelfIndexItem from './bookshelf/bookshelf_index_item';
+import BookShowContainer from './book/book_show_container';
+import BookContainer from './book/book_container';
 
 const App = ()=>{
     return (
@@ -16,6 +18,8 @@ const App = ()=>{
             {/* <BooksContainer exact path="books" component={}/> */}
             {/* 15 has no specified route so will always display */}
             {/* specified path will display at that pathx */}
+            <Route exact path="/book/:id"  component={BookShowContainer}/>
+            <Route exact path="/books" component={BookContainer}/>
             <ProtectedRoute className="bookShelves" exact path="/bookshelf" component={BookshelfContainer} />
             <ProtectedRoute exact path ={`/bookshelf/:id`} component={BookshelfContainer}/>
             <AuthRoute className="bodymain" exact path="/" component={SignupFormContainer} />

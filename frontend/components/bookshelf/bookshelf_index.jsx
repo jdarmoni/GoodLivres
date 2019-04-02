@@ -1,6 +1,6 @@
 import React from 'react';
-import BookshelfIndexItem from './bookshelf_index_item'
-
+import BookshelfIndexItem from './bookshelf_index_item';
+import BookContainer from '../book/book_container';
 class BookshelfIndex extends React.Component{
     constructor(props) {
         super(props);
@@ -84,13 +84,12 @@ class BookshelfIndex extends React.Component{
                 <ul className ="bookShelves">
                     <li className="bookShelves-header">Bookshelves:</li>
                     {bookshelves} 
-                    {/* {this.renderAddBookshelfButton()} */}
                     {this.renderAddBookshelfInput()}
                 </ul>
 
                 <div className="bookList">
-                {/***************       THIS WILL BE A BOOK INDEX COMPONENT /****************/}
-                    <h1>{book.id}</h1>
+                    <BookContainer />
+                    <h1>{book.id}</h1>  {/* SHOULD DELETE but I just look him */}
                 </div>
             </div>
         )}

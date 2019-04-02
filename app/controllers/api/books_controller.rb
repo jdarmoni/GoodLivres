@@ -1,21 +1,22 @@
-class Api::BookshelfController < ApplicationController
+class Api::BooksController < ApplicationController
 
   def index
     @books = Book.all
-    debugger
+    # debugger
+    render json: @books
   end
 
   def show
-    debugger
-    @book = Book.find(id: params[:id])
+    # debugger
+    @book = Book.find_by(id: params[:id])
     render json: @book
   end
 
   def create
     @book = Book.new(book_params)
-    if @book.save
-      render `api/book/${@book.id}` <---#this sucks
-    end
+    # if @book.save
+    #   render `api/books/${@book.id}` <---#this sucks
+    # end
   end
 
   def destroy

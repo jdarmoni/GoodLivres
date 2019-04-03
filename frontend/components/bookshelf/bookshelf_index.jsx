@@ -7,24 +7,37 @@ class BookshelfIndex extends React.Component{
         this.state = {
             addBookShelf: false,
             title: "",
-            user_id: null
+            user_id: null,
+            currentBookshelf: ""
         };
         this.update = this.update.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.addBookShelf = this.addBookShelf.bind(this)
+        this.addBookShelf = this.addBookShelf.bind(this);
+        this.renderCurrentBooks = this.renderCurrentBooks.bind(this);
     }
 
     componentDidMount(){
-        this.props.requestBookshelves();
-        // console.log(this.props.current_user.id)
-        // this.setState({[current_user]: this.props.current_user.id})
+        
+        // let bookshelfId = null;
+        // // User.find_by(id: 23).bookshelves.first.id
+        // if (this.props.bookshelves[this.props.match.params.id]) {
+        //     bookshelfId === this.props.bookshelves[this.props.match.params.id].id
+        // } else {
+        //     bookshelfId = 1
+        // }
+        this.props.requestBookshelves().then((bookshelves)=>{
+            
+            const id = this.props.match.params.id || bookshelves.bookshelves[0].id   
+             
+            this.setState({ currentBookshelf: id})
+        });
 
+        
     }
     handleSubmit(e){
         e.preventDefault();
         
         this.props.createBookshelf({title: this.state.title, user_id: this.state.user_id});
-        // this.setState({title: ""})
     }
 
     update(title){
@@ -37,13 +50,6 @@ class BookshelfIndex extends React.Component{
         
         this.setState({addBookShelf: true, user_id: this.props.currentUser.id})
     }    
-    // renderAddBookshelfButton(){
-    //     if (this.state.addBookShelf === false) {
-    //         return (
-    //             <button className="bookShelves-button" onClick={this.addBookShelf}>Add shelf:</button>
-    //             )
-    // }
-    // }
     renderAddBookshelfInput(){
         
 
@@ -61,22 +67,28 @@ class BookshelfIndex extends React.Component{
             )
         }
     }
-
+    renderCurrentBooks(){
+        debugger
+        if (this.state.currentBookshelf > 0) {
+            return (<>
+                <BookContainer currentBookshelf={this.state.currentBookshelf} />
+            </>) 
+        }
+    }
 
     render (){
+
         let bookshelves = Object.values(this.props.bookshelves).map((bookshelf)=>{
             return <BookshelfIndexItem key={bookshelf.id} bookshelf={bookshelf} requestBookshelf={this.props.requestBookshelf} deleteBookshelf={this.props.deleteBookshelf}/>
         });
-        ;
-        let book ="no title"; // <--- the first time through, it's undefined, so we'll render 'no title'.
-        if (this.props.bookshelves[this.props.match.params.id]) { // <---- checks to see if bookshelves[id] is defined
-            book = this.props.bookshelves[this.props.match.params.id] // <---- if it is, we take the title of the object that 29 returns and put it on 71 and 85
-        } 
+        
+        let currentBookshelf = this.props.match.params.id || this.state.currentBookshelf; 
+        
         return (
             <div className="bookshelfContainer">
                 <div id="myBooksCol">
                     <h2 onClick={this.update}>
-                        My Books: <span className="h2-shelf"> {book.title}</span>
+                        My Books: <span className="h2-shelf"> {currentBookshelf.title}</span>
                     </h2> 
 
                 </div>
@@ -86,13 +98,13 @@ class BookshelfIndex extends React.Component{
                     {bookshelves} 
                     {this.renderAddBookshelfInput()}
                 </ul>
-
                 <div className="bookList">
-                    <BookContainer />
-                    <h1>{book.id}</h1>  {/* SHOULD DELETE but I just look him */}
+                    {this.renderCurrentBooks()}
+                    <h1>{currentBookshelf}</h1>  {/* SHOULD DELETE but I just like him */}
                 </div>
             </div>
-        )}
+        )
+    }
     }
 
 export default BookshelfIndex

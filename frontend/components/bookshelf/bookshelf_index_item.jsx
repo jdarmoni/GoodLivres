@@ -20,6 +20,7 @@ class BookshelfIndexItem extends React.Component {
         this.props.deleteBookshelf(this.props.bookshelf.id);
     }
 
+
     update(){
         debugger
         this.setState({[this.props.bookshelf]: this.props.bookshelf})

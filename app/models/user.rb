@@ -14,10 +14,6 @@ class User < ApplicationRecord
     foreign_key: :user_id,
     class_name: :Bookshelf  
     
-#   has_many :favorites
-#   has_many :favorite_benches,
-#     through: :favorites,
-#     source: :bench
 
   def self.find_by_credentials(email, password)
     

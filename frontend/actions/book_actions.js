@@ -29,12 +29,12 @@ export const removeBook = (book) => {
   };
 };
 
-
-export const requestBooks= () => (dispatch) => {
-
+// pass bookshelf here so that can use in data tag
+export const requestBooks= (bookshelfId) => (dispatch) => {
+  debugger
   return (
-    APIUtil.fetchBooks().then((books) => {
-
+    APIUtil.fetchBooks(bookshelfId).then((books) => {
+      debugger
       return dispatch(receiveAllBooks(books))
     })
   );

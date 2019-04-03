@@ -168,6 +168,19 @@
     /* padding-top: 10px; */
 }
 
+.logged-in-header-link ul a {
+    height: 100%;
+    margin-top: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between; 
+    width: 25%;
+    text-decoration: none;
+        color: #382110;
+    /* padding-top: 10px; */
+}
+
+
 .logged-in-header-link li:hover:not(:first-child) {
     color: white;
     background-color: #382110

@@ -1,9 +1,13 @@
-export const fetchBooks = () => {
-  
+export const fetchBooks = (bookshelfId) => {
+  // now in my params I will have a key of bookshelf pointing to the current bookshelf
+  // will need to pass current bookshelfId whenever I call fetchBooks
+  debugger
   return $.ajax({
     method: 'get',
-    url: '/api/books'
+    url: `/api/books`,
+    data: {bookshelfId}
   });
+  // i tried removing curlies, since it seems to dislike those, but no dice
 };
 
 export const fetchBook = (id) => {

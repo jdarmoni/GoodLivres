@@ -1,15 +1,19 @@
 class Api::BooksController < ApplicationController
 
   def index
-    @books = Book.all
-    # debugger
-    render json: @books
+    # you only want the books associated with the bookshelf_id
+    
+    @bookshelf = Bookshelf.find_by(id: Integer(params[:bookshelfId]) )
+    
+    @books = @bookshelf.books
+    
+    render :index
   end
 
   def show
     # debugger
     @book = Book.find_by(id: params[:id])
-    render json: @book
+    render :show
   end
 
   def create

@@ -5,7 +5,7 @@ export default (state={}, action)=> {
     Object.freeze(state);
     switch(action.type){
         case RECEIVE_ALL_BOOKSHELVES:
-            
+            debugger
             console.log(action)
             // the payload came as an array and here in the reducer i'm converting it into an obj so that later I can key into the entities.bookshelves IDs (in index) and return the object.title
             let bookshelvesObj = action.bookshelves.reduce((obj, bookshelf) => {

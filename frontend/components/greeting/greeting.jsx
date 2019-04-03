@@ -38,8 +38,8 @@ class Greeting extends React.Component{
             <nav className="logged-in-header-link">
                 <ul>
                     <li><img className="logo" src={window.logoURL} /></li>
-                    <li>Home</li>
-                    <li>My Books</li>
+                    <li><Link to={`/bookshelf`}>Home</Link></li>
+                    <li><Link to={`/bookshelf`}>My Books</Link></li>
                 </ul>
                 <form className="searchbooks">
                     <input type="text" placeholder="Search books" />

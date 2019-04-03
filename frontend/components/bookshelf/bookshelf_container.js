@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { requestBookshelves, requestBookshelf, createBookshelf, deleteBookshelf } from '../../actions/bookshelf_actions';
 import BookshelfIndex from './bookshelf_index';
+import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state, ownProps) => {
    
@@ -19,7 +20,8 @@ const mapDispatchToProps = dispatch => ({
     deleteBookshelf: (bookshelfId)=>dispatch(deleteBookshelf(bookshelfId))
 });
 
-export default connect(
+export default withRouter(connect(
     mapStateToProps,
     mapDispatchToProps
-)(BookshelfIndex);
+    
+    )(BookshelfIndex));

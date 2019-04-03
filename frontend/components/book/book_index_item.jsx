@@ -19,6 +19,7 @@ class BookIndexItem extends React.Component {
         <Link to={`/book/${this.props.book.id}`} > <td> {this.props.book.title}</td></Link>
         <td>{this.props.book.author}</td>
         <td>{this.props.timestamp}</td>
+        <td className="bookshelf-button"></td>
       </tr>
       </>
       )

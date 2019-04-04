@@ -38,14 +38,15 @@ class BookIndex extends React.Component {
       });
     debugger
     return (
+      // if you had a 'th' here, have to add to book_index_item!
         <table className="bookIndexTable">
           <thead className ="BookIndexTableHeader"> 
-          <th>Image</th>
+          <th>cover</th>
           <th>title</th>
-          <th>author</th>  
+          <th>author</th>
+          <th>rating</th>  
           <th>date read</th>
-          <th></th> 
-          </thead> 
+            </thead> 
           {books}
         </table>
       )

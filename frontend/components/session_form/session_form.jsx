@@ -33,7 +33,7 @@ class SessionForm extends React.Component {
     executeDemo(e) {
         
         e.preventDefault();
-        this.props.processForm({ email: "demo", password: "starwars" });
+        this.props.processForm({ email: "demo@gmail.com", password: "starwars" });
         //on success
         this.props.history.push('/bookshelf');
     }

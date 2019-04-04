@@ -225,3 +225,7 @@
 .bookIndexTable th {
     text-align: left
 }
+
+.book-row img {
+    height: 20%;
+}

@@ -5,7 +5,7 @@ export const RECEIVE_SHELVING = "RECEIVE_SHELVING";
 export const REMOVE_SHELVING = "REMOVE_SHELVING";
 
 export const receiveAllshelvings = (shelvings) => {
-
+  debugger
   return ({
     type: RECEIVE_ALL_SHELVINGS,
     shelvings
@@ -30,11 +30,11 @@ export const removeshelving = (shelving) => {
 };
 
 
-export const requestShelvings = () => (dispatch) => {
-
+export const requestShelvings = (bookshelfId) => (dispatch) => {
+  debugger
   return (
-    APIUtil.fetchShelvings().then((shelvings) => {
-
+    APIUtil.fetchShelvings(bookshelfId).then((shelvings) => {
+      debugger
       return dispatch(receiveAllShelvings(shelvings))
     })
   );
@@ -53,9 +53,9 @@ export const requestShelving = (id) => (dispatch) => {
 };
 
 export const createShelving = (shelving) => (dispatch) => {
-
+  debugger
   return APIUtil.createShelving(shelving).then((shelving) => {
-
+    debugger
     dispatch(receiveShelving(shelving))
   }
   );

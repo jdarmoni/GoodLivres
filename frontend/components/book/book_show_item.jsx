@@ -1,5 +1,5 @@
 import React from 'react';
-import BookshelfIndexItem from '../bookshelf/bookshelf_index_item';
+import BookBookshelfContainer from './book_bookshelf_container'
 
 
 class BookShowItem extends React.Component {
@@ -19,16 +19,16 @@ class BookShowItem extends React.Component {
   renderBookShelves(){
     debugger
     let tuna = this.props.bookshelves.map((bookshelf) => {
-      debugger
-      return <div>{bookshelf.title}</div>; // bookshelf index item? is that spagetthi code?!
+      
+      return <BookBookshelfContainer bookshelf={bookshelf}/>; // bookshelf index item? is that spagetthi code?!
       
     })
-    debugger
+    
     // component did update?
     return tuna
   }
   render(){
-    debugger
+    
     if (!this.props.book.title){
       return null
     } else {

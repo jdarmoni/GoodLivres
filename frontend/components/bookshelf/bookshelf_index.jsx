@@ -36,7 +36,6 @@ class BookshelfIndex extends React.Component{
     }
     handleSubmit(e){
         e.preventDefault();
-        
         this.props.createBookshelf({title: this.state.title, user_id: this.state.user_id});
     }
 

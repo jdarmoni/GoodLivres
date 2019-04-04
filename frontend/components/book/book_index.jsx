@@ -18,6 +18,8 @@ class BookIndex extends React.Component {
       // it hits AJAX, then doesn't continue on to action creator, which suggests that it's erroring out - but I'm not sure how to debug the ajax
     }     
     debugger
+    // this.props.requestShelvings(this.state.currentBookshelf);
+    
   }
 
   componentDidUpdate(){
@@ -31,15 +33,18 @@ class BookIndex extends React.Component {
   }
 
   render(){
-    // takes these books from the initial render ({}), then the ComponentDidMount also returns {}
       let books = Object.values(this.props.books).map((book)=>{
-        return <BookIndexItem book={book} key={book.id}/>
+        return <BookIndexItem book={book} key={book.id}/> // have to pass shelvings, because you don't have a container = REFACTOR
       });
     debugger
     return (
         <table className="bookIndexTable">
           <thead className ="BookIndexTableHeader"> 
-            <th>title</th> <th>author</th>  <th>date read</th>
+          <th>Image</th>
+          <th>title</th>
+          <th>author</th>  
+          <th>date read</th>
+          <th></th> 
           </thead> 
           {books}
         </table>

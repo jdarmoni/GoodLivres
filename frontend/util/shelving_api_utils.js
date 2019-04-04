@@ -1,8 +1,9 @@
-export const fetchShelvings = () => {
-
+export const fetchShelvings = (bookshelfId) => {
+  debugger
   return $.ajax({
     method: 'get',
-    url: '/api/shelving'
+    url: '/api/shelving',
+    data: { bookshelfId}
   })
 }
 
@@ -14,7 +15,7 @@ export const fetchShelving = (id) => {
 }
 
 export const createShelving = (shelving) => {
-
+  debugger
   return $.ajax({
     method: 'post',
     url: `/api/shelving`,
@@ -31,7 +32,7 @@ export const updateShelving = (shelving) => {
 }
 
 export const removeShelving = (shelvingId) => {
-
+  debugger
   return $.ajax({
     method: 'delete',
     url: `api/shelving/${shelvingId}`,

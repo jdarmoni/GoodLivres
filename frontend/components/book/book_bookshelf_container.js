@@ -1,19 +1,21 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import { requestBookshelf } from '../../actions/bookshelf_actions';
+import BookBookshelfShow from './book_bookshelf_show'
+import { createShelving } from '../../actions/shelving_actions'
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
     debugger
     return {
-        bookshelf: state.entities.bookshelves
+        bookshelves: state.entities.bookshelves
     };
 };
 
 const mapDispatchToProps = dispatch => ({
-    fetchBookshelf: (id)=>dispatch(fetchBookshelf(id))
+    requestBookshelf: (id)=>dispatch(requestBookshelf(id)),
+    createShelving: (id)=>dispatch(createShelving(id))
 });
 
 export default withRouter(connect(
     mapStateToProps,
-    mapDispatchToProps
-
-)(BookBookshelfsShow));
+    mapDispatchToProps)(BookBookshelfShow));

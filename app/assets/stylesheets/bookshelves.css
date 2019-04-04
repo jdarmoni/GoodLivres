@@ -221,3 +221,7 @@
 .bookIndexTable {
     color: #00635d;
 }
+
+.bookIndexTable th {
+    text-align: left
+}

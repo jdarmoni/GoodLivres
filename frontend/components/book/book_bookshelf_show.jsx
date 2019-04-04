@@ -1,22 +1,29 @@
 import React from 'react';
-import { fetchBookshelf } from '../../util/bookshelf_api_utils';
+import {requestBookshelf} from '../../actions/bookshelf_actions';
 
 class BookBookshelfShow extends React.Component {
     constructor(props){
-        super(props)
+        super(props);
+        this.addToBookshelf = this.addToBookshelf.bind(this)
     }
-
     componentDidMount(){
-        this.props.fetchBookshelf(this.props.match.params.id)
+        debugger
+        requestBookshelf(this.props.bookshelf.id)
     }
 
     addToBookshelf(){
-        console.log(this.props.bookshelf.title)
+        debugger
+        this.props.createShelving({book_id: this.props.match.params.id, bookshelf_id: this.props.bookshelf.id});
+        debugger
+        // console.log(this.props.bookshelf.title),
+        // this.props.history.push(`/${this.props.bookshelf.id}`)
     }
+
     render(){
+        debugger
         return(
             <li onClick={this.addToBookshelf}>
-                {this.props.title}
+                {this.props.bookshelf.title}
             </li >
     )}
 

@@ -25,14 +25,6 @@
      margin: 0 auto;
  }
 
- .background-image {
-    background-image: url("background.jpg");
-    width: 100%;
-    height: 1000px;
-    z-index: -1;
-    position: absolute;     
- }
-
 .splash-nav {
     padding-top: 10px;
     display: flex;

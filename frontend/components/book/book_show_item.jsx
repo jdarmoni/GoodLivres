@@ -45,7 +45,7 @@ class BookShowItem extends React.Component {
           <div className = "book-image-container">
             <div className="book-image-col"> {this.getImage()} </div>
               <h1 className="book-title">{this.props.book.title}</h1>
-              <span className="book-author">by: {this.props.book.author}</span>
+              <span className="book-author">by {this.props.book.author}</span>
               <p>{this.props.book.description}</p>
           </div>
           <div className="bookshelf-button"><ul>{this.renderBookShelves()}</ul></div>

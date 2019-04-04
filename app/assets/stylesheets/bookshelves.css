@@ -164,7 +164,7 @@
     list-style-type: none;
     display: flex;
     justify-content: space-between; 
-    width: 25%;
+    width: 30%;
     /* color: white; */
     /* padding-top: 10px; */
 }
@@ -186,6 +186,11 @@
  }
 
 .logged-in-header-link li a:hover {
+    text-decoration: none;
+    color: white;
+ }
+
+.logged-in-header-link li:hover {
     text-decoration: none;
     color: white;
  }

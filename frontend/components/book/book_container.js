@@ -16,7 +16,7 @@ const mdp = (dispatch) => {
   return ({
     requestBooks: (bookshelfId) => dispatch(requestBooks(bookshelfId)),
     requestBook: (id) => dispatch(requestBook(id)),
-    // requestShelvings: (bookshelfId) => dispatch(requestShelvings(bookshelfId))
+    requestShelvings: (bookshelfId) => dispatch(requestShelvings(bookshelfId))
 
   });
 };

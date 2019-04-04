@@ -24,7 +24,7 @@
     height: 30px;
     border-radius: 4px;
 }
-
+.bookshelf-button ul { list-style: none}
 .removeBook {
     width: 40px;
     height: 20px;
@@ -35,4 +35,8 @@
 
 .bookItemTitles {
     color: red;
+}
+
+.book-row a {
+    text-decoration: none;
 }

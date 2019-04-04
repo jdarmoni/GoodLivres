@@ -99,7 +99,7 @@ class BookshelfIndex extends React.Component{
                 </ul>
                 <div className="bookList">
                     {this.renderCurrentBooks()}
-                    <h1>{currentBookshelf}</h1>  {/* SHOULD DELETE but I just like him */}
+                    {/* <h1>{currentBookshelf}</h1>  SHOULD DELETE but I just like him */}
                 </div>
             </div>
         )

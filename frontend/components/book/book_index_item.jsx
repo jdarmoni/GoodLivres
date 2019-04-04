@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {deleteShelving} from '../../actions/shelving_actions'
+import {deleteShelving} from '../../actions/shelving_actions';
+
 class BookIndexItem extends React.Component {
   constructor(props){
     super(props);
@@ -9,7 +10,8 @@ class BookIndexItem extends React.Component {
   }
 
   componentDidMount(){
-    // this.props.requestBook(parseInt(this.props.match.params.id))
+    debugger
+    // this.props.requestBook(parseInt(this.props.match.params.id)) // <---- this breaks everything!!
   }
 
   deleteThisShelf(){
@@ -36,7 +38,7 @@ class BookIndexItem extends React.Component {
 {/* title */}<Link to={`/book/${this.props.book.id}`} > <td><span className="bookItemTitle"> {this.props.book.title} </span> </td></Link>
 {/* author */}<td>{this.props.book.author}</td>
 {/* rating */}<td>1-5 rating</td>
-{/*  */}    <td>1-5 rating</td><td></td>
+{/*  */}    <td></td>
         
           <td><span onClick={this.deleteThisShelf} className="removeBook">X</span> </td> 
       </tr>

@@ -165,6 +165,7 @@
     display: flex;
     justify-content: space-between; 
     width: 25%;
+    /* color: white; */
     /* padding-top: 10px; */
 }
 
@@ -174,17 +175,21 @@
     list-style-type: none;
     display: flex;
     justify-content: space-between; 
-    width: 25%;
     text-decoration: none;
-        color: #382110;
+    color: #382110;
     /* padding-top: 10px; */
 }
 
 
 .logged-in-header-link li:hover:not(:first-child) {
-    color: white;
-    background-color: #382110
+    background-color: #382110;
  }
+
+.logged-in-header-link li a:hover {
+    text-decoration: none;
+    color: white;
+ }
+
 
 .logged-in-header-link img {
     padding-top: 7%;

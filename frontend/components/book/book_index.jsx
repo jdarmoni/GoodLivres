@@ -13,11 +13,10 @@ class BookIndex extends React.Component {
     
     if (this.props.currentBookshelf > 0) {
       debugger
-      // requestBooks errors out, I believe
       this.props.requestBooks(this.props.currentBookshelf)
-      // it hits AJAX, then doesn't continue on to action creator, which suggests that it's erroring out - but I'm not sure how to debug the ajax
     }     
     debugger
+    // why don't I have this from book_container mdp?
     // this.props.requestShelvings(this.state.currentBookshelf);
     
   }

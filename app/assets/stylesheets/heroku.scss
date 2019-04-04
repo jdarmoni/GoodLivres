@@ -1,7 +1,8 @@
  .background-image {
     background-image: image-url("background.jpg");
+    min-height: 370px;
     width: 100%;
-    height: 1000px;
+    height: 39%;
     z-index: -1;
     position: absolute;     
  }

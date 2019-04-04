@@ -4,7 +4,7 @@ class Api::BookshelfController < ApplicationController
         #no id for when current user is nil 
         
         @bookshelves = Bookshelf.where(user_id: current_user.id)
-        # debugger
+        
         if @bookshelves.first === nil
             # debugger
             Bookshelf.new({user_id: current_user.id, title: "All"}).save;

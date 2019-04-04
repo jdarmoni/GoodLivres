@@ -1,27 +1,28 @@
 import { connect } from 'react-redux';
 import BookShowItem from './book_show_item';
 import { requestBook } from '../../actions/book_actions';
-
+import { requestBookshelves } from '../../actions/bookshelf_actions'
 const msp = (state, ownProps) => {
-  debugger
+  
   let bookId = parseInt(ownProps.match.params.id);
-  debugger
+  
   let book;
   if (state.entities.books[bookId]) {
      book = state.entities.books[bookId]
   } else {
      book = state.entities.books
-  } debugger
+  } 
   return {
     book: book,
-    bookshelves: state.entities.bookshelves
+    bookshelves: Object.values(state.entities.bookshelves)
   };
 };
 
 const mdp = (dispatch) => {
 
   return ({
-    requestBook: (id) => dispatch(requestBook(id))
+    requestBook: (id) => dispatch(requestBook(id)),
+    requestBookshelves: ()=> dispatch(requestBookshelves())
   });
 };
 

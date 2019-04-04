@@ -11,7 +11,7 @@ class BookShowItem extends React.Component {
   }
 
   getImage() {
-    debugger
+    // debugger
     if (this.props.book.image !== null) {
       return <img src={this.props.book.image} />
     } else {
@@ -26,7 +26,7 @@ class BookShowItem extends React.Component {
     });
   }
   renderBookShelves(){
-    debugger
+    // debugger
     let tuna = this.props.bookshelves.map((bookshelf) => {
       return <BookBookshelfContainer bookshelf={bookshelf}/>; // bookshelf index item? is that spagetthi code?!
     })
@@ -35,7 +35,7 @@ class BookShowItem extends React.Component {
     return tuna
   }
   render(){
-    debugger
+    // debugger
     if (!this.props.book.title){
       return null
     } else {

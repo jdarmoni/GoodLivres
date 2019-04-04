@@ -22,7 +22,7 @@ class BookshelfIndexItem extends React.Component {
 
 
     update(){
-        debugger
+        // debugger
         this.setState({[this.props.bookshelf]: this.props.bookshelf})
         this.props.history.push(`/bookshelf/${this.props.bookshelf.id}`);
     }   

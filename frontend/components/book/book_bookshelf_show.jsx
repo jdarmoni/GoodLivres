@@ -7,20 +7,20 @@ class BookBookshelfShow extends React.Component {
         this.addToBookshelf = this.addToBookshelf.bind(this)
     }
     componentDidMount(){
-        debugger
+        // debugger
         requestBookshelf(this.props.bookshelf.id)
     }
 
     addToBookshelf(){
-        debugger
+        // debugger
         this.props.createShelving({book_id: this.props.match.params.id, bookshelf_id: this.props.bookshelf.id});
-        debugger
+        // debugger
         // console.log(this.props.bookshelf.title),
         // this.props.history.push(`/${this.props.bookshelf.id}`)
     }
 
     render(){
-        debugger
+        // debugger
         return(
             <li onClick={this.addToBookshelf}>
                 {this.props.bookshelf.title}

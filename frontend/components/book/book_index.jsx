@@ -9,20 +9,20 @@ class BookIndex extends React.Component {
   }
 
   componentDidMount(){
-    debugger
+    // debugger
     
     if (this.props.currentBookshelf > 0) {
-      debugger
+      // debugger
       this.props.requestBooks(this.props.currentBookshelf)
     }     
-    debugger
+    // debugger
     // why don't I have this from book_container mdp?
     this.props.requestShelvings(this.state.currentBookshelf);
     
   }
 
   componentDidUpdate(){
-    debugger
+    // debugger
     if (this.state.currentBookshelf !== this.props.match.params.id) {
       this.props.requestBooks(this.props.match.params.id).then( ()=>{
         this.setState({currentBookshelf: this.props.match.params.id})
@@ -35,7 +35,7 @@ class BookIndex extends React.Component {
       let books = Object.values(this.props.books).map((book)=>{
         return <BookIndexItem book={book} key={book.id}/> // have to pass shelvings, because you don't have a container = REFACTOR
       });
-    debugger
+    // debugger
     return (
       // if you had a 'th' here, have to add to book_index_item!
         <table className="bookIndexTable">

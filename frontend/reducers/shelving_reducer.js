@@ -2,14 +2,14 @@ import {RECEIVE_SHELVING, RECEIVE_ALL_SHELVINGS, REMOVE_SHELVING} from '../actio
 import merge from 'lodash/merge'
 
 export default (state={}, action)=> {
-    debugger
+    // debugger
     Object.freeze(state);
     switch(action.type){
         case RECEIVE_ALL_SHELVINGS:
-            debugger
+            // debugger
             return action.shelvings
         case RECEIVE_SHELVING:
-            debugger    
+            // debugger    
             return merge({}, state, {[action.payload.id]: action.payload});
         case REMOVE_SHELVING:
         

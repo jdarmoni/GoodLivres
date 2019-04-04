@@ -13,7 +13,7 @@ export const receiveAllBooks = (books) => {
 };
 
 export const receiveBook = (payload) => {
-  debugger
+  // debugger
   return {
     type: RECEIVE_BOOK,
     payload: payload
@@ -41,7 +41,7 @@ export const requestBooks= (bookshelfId) => (dispatch) => {
 };
 
 export const requestBook = (id) => (dispatch) => {
-  debugger
+  // debugger
   return (
     APIUtil.fetchBook(id).then((book) => {
       

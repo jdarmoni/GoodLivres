@@ -16,7 +16,7 @@ export default (state = {}, action) => {
       // return booksObj;
 
     case RECEIVE_BOOK:
-      debugger
+      // debugger
       return merge({}, state, { [action.payload.id]: action.payload });
     case REMOVE_BOOK:
 

@@ -10,17 +10,17 @@ class BookIndexItem extends React.Component {
   }
 
   componentDidMount(){
-    debugger
+    // debugger
     // this.props.requestBook(parseInt(this.props.match.params.id)) // <---- this breaks everything!!
   }
 
   deleteThisShelf(){
-    debugger
+    // debugger
     // this just needs to know the shelving ID - get that from mapStateToProps
     // deleteShelving
   }
   getImage(){
-    debugger
+    // debugger
     if (this.props.book.image !== null ) {
       return <img src={this.props.book.image}/>
     } else {
@@ -29,7 +29,7 @@ class BookIndexItem extends React.Component {
   }
 
   render(){
-    debugger
+    // debugger
     // these correpond to book_index.jsx!
     return (
       <>

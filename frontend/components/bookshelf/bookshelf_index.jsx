@@ -67,7 +67,7 @@ class BookshelfIndex extends React.Component{
         }
     }
     renderCurrentBooks(){
-        debugger
+        // debugger
         if (this.state.currentBookshelf > 0) {
             return (<>
                 <BookContainer currentBookshelf={this.state.currentBookshelf} />

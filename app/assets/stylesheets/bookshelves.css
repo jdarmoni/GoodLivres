@@ -93,7 +93,7 @@
     color: red;
 }
 #myBooksCol {
-    border-bottom: solid 1px #BBB596;
+    border-bottom: solid #BBB596 1px;
 }
 
 #myBooksCol h2 {
@@ -118,7 +118,7 @@
     display: flex;
     justify-content: space-between;
     height: 40px;
-    border-bottom: solid 1px;
+    border-bottom: solid #ece7dc 1px;
  }
 
 

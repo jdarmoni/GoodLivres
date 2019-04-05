@@ -42,13 +42,18 @@ class BookShowItem extends React.Component {
       
       return (
         <>
-          <div className = "book-image-container">
-            <div className="book-image-col"> {this.getImage()} </div>
+          {/* <div className = "book-image-container"> */}
+            <div className="book-image-col"> {this.getImage()}
+            <div className="bookshelf-button"><ul>{this.renderBookShelves()}</ul></div>
+            
+             </div>
+            <div className="book-content">
+
               <h1 className="book-title">{this.props.book.title}</h1>
               <span className="book-author">by {this.props.book.author}</span>
               <p>{this.props.book.description}</p>
-          </div>
-          <div className="bookshelf-button"><ul>{this.renderBookShelves()}</ul></div>
+            </div>
+          {/* </div> */}
         </>
     )
   }

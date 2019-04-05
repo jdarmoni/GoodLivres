@@ -14,7 +14,7 @@ class BookshelfIndex extends React.Component{
         this.handleSubmit = this.handleSubmit.bind(this);
         this.addBookShelf = this.addBookShelf.bind(this);
         this.renderCurrentBooks = this.renderCurrentBooks.bind(this);
-        this.renderBookshelfTitle = this.renderBookshelfTitle.bind(this);
+        // this.renderBookshelfTitle = this.renderBookshelfTitle.bind(this);
     }
 
     componentDidMount(){
@@ -67,12 +67,12 @@ class BookshelfIndex extends React.Component{
             )
         }
     }
-    renderBookshelfTitle(){
-        debugger
-        if (Object.values(this.props.bookshelves).length > 0) {
-            return this.props.bookshelves[this.props.match.params.id].title
-        }
-    }
+    // renderBookshelfTitle(){
+    //     debugger
+    //     if (Object.values(this.props.bookshelves).length > 0) {
+    //         return this.props.bookshelves[this.props.match.params.id].title
+    //     }
+    // }
     renderCurrentBooks(){
         // debugger
         if (this.state.currentBookshelf > 0) {
@@ -94,8 +94,9 @@ class BookshelfIndex extends React.Component{
         return (
             <div className="bookshelfContainer">
                 <div id="myBooksCol">
+                
                     <h2 onClick={this.update}>
-                        My Books: <span className="h2-shelf"> {this.renderBookshelfTitle()}</span>
+                        My Books: <span className="h2-shelf"> {/* {this.renderBookshelfTitle()} */}</span>
                     </h2> 
 
                 </div>

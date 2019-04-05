@@ -25,11 +25,50 @@
 }
 
 .book-content {
-    float: right;
+    float: left;
+    padding-left: 2%;
     width: 42%;
-    margin-right: 36%;
 }
 
+.Readers-Also {
+    margin-top: 3%;
+    float: right;
+    width: 30%;
+    height: 500px;
+    /* border: solid 1px black; */
+}
+
+.readers-also-text {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.Readers-Also img {
+    width: 25%;
+    margin: 0 2% 0 2%;
+    float: left;
+}
+.books-carousel {
+    height: 45%;
+    /* background-color: blue; */
+}
+
+.author-name {
+    font-size: 12px;
+    font-weight: bold;
+}
+.author-name2 {
+    font-size: 14px;
+    /* font-weight: bold; */
+}
+
+.author-section {
+
+}
+.author-photo {
+    width: 25%;
+    border-radius: 50%;
+}
 .bookshelf-button {
     width: 110px;
     background-color: #f2f2f2;

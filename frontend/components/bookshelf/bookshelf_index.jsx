@@ -82,7 +82,7 @@ class BookshelfIndex extends React.Component{
         });
         
         let currentBookshelf = this.props.match.params.id || this.state.currentBookshelf; 
-        
+        debugger
         return (
             <div className="bookshelfContainer">
                 <div id="myBooksCol">

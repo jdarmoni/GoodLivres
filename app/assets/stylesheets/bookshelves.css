@@ -136,7 +136,9 @@
 
 .searchbooks {
     padding-top: 1%;
-    width: 50%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
 }
 .searchbooks input {
     height: 64%;

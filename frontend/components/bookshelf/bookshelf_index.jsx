@@ -14,6 +14,7 @@ class BookshelfIndex extends React.Component{
         this.handleSubmit = this.handleSubmit.bind(this);
         this.addBookShelf = this.addBookShelf.bind(this);
         this.renderCurrentBooks = this.renderCurrentBooks.bind(this);
+        this.renderBookshelfTitle = this.renderBookshelfTitle.bind(this);
     }
 
     componentDidMount(){
@@ -40,7 +41,7 @@ class BookshelfIndex extends React.Component{
     }
 
     update(title){
-        
+        debugger
         return e => this.setState({
             [title]: e.target.value
         });
@@ -66,6 +67,12 @@ class BookshelfIndex extends React.Component{
             )
         }
     }
+    renderBookshelfTitle(){
+        debugger
+        if (Object.values(this.props.bookshelves).length > 0) {
+            return this.props.bookshelves[this.props.match.params.id].title
+        }
+    }
     renderCurrentBooks(){
         // debugger
         if (this.state.currentBookshelf > 0) {
@@ -80,14 +87,15 @@ class BookshelfIndex extends React.Component{
         let bookshelves = Object.values(this.props.bookshelves).map((bookshelf)=>{
             return <BookshelfIndexItem key={bookshelf.id} bookshelf={bookshelf} requestBookshelf={this.props.requestBookshelf} deleteBookshelf={this.props.deleteBookshelf}/>
         });
-        
+        // this.props.bookshelves[this.props.match.params.id].title
+
         let currentBookshelf = this.props.match.params.id || this.state.currentBookshelf; 
-        debugger
+        // debugger
         return (
             <div className="bookshelfContainer">
                 <div id="myBooksCol">
                     <h2 onClick={this.update}>
-                        My Books: <span className="h2-shelf"> {currentBookshelf.title}</span>
+                        My Books: <span className="h2-shelf"> {this.renderBookshelfTitle()}</span>
                     </h2> 
 
                 </div>

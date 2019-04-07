@@ -1,6 +1,7 @@
 import React from 'react';
 import BookshelfIndexItem from './bookshelf_index_item';
 import BookContainer from '../book/book_container';
+
 class BookshelfIndex extends React.Component{
     constructor(props) {
         super(props);
@@ -36,6 +37,7 @@ class BookshelfIndex extends React.Component{
         
     }
     handleSubmit(e){
+        debugger
         e.preventDefault();
         this.props.createBookshelf({title: this.state.title, user_id: this.state.user_id});
     }
@@ -47,18 +49,17 @@ class BookshelfIndex extends React.Component{
         });
     }
     addBookShelf(){
-        
+        debugger
         this.setState({addBookShelf: true, user_id: this.props.currentUser.id})
     }    
     renderAddBookshelfInput(){
-        
 
         // set a value in the state that starts false; then setState to true when this is called;
         if (this.state.addBookShelf===true){
             return (
                 <form onSubmit={this.handleSubmit}>    
                 <span className="addBookshelfText">Add a Shelf:</span>
-                <input type="text" className="addBookshelfInput" onChange={this.update('title')}></input>
+                <input type="text" className="addBookshelfInput" value={this.state.title} onChange={this.update('title')}></input>
                 <input type="submit" className="addBookButton" value="add"></input>
             </form>)
         } else {
@@ -67,6 +68,7 @@ class BookshelfIndex extends React.Component{
             )
         }
     }
+    // ********************* BUGGING OUT!!!!!! ********************
     // renderBookshelfTitle(){
     //     debugger
     //     if (Object.values(this.props.bookshelves).length > 0) {

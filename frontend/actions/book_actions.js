@@ -5,7 +5,7 @@ export const RECEIVE_BOOK = "RECEIVE_BOOK";
 export const REMOVE_BOOK = "REMOVE_BOOK";
 
 export const receiveAllBooks = (books) => {
-  
+  debugger
   return ({
     type: RECEIVE_ALL_BOOKS,
     books
@@ -28,6 +28,16 @@ export const removeBook = (book) => {
     bookId: book.id
   };
 };
+
+export const requestAllBooks = ()=>(dispatch)=>{
+  
+  return (
+    APIUtil.fetchAllBooks().then((books)=>{
+      
+      return dispatch(receiveAllBooks(books))
+    } )
+  )
+}
 
 // pass bookshelf here so that can use in data tag
 export const requestBooks= (bookshelfId) => (dispatch) => {

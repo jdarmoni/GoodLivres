@@ -8,6 +8,9 @@ class BookShowItem extends React.Component {
     this.state = {bookshelves: []};
     this.renderBookShelves = this.renderBookShelves.bind(this);
     this.getImage = this.getImage.bind(this);
+    this.nextBook = this.nextBook.bind(this);
+    this.previousBook = this.previousBook.bind(this);
+
   }
 
   getImage() {
@@ -19,12 +22,21 @@ class BookShowItem extends React.Component {
     }
   }
   componentDidMount(){
+    debugger
     // the second we refresh we'll lose all info in the state - hence why we need to fetch request here after mount
     this.props.requestBookshelves()
     this.props.requestBook(parseInt(this.props.match.params.id)).then((bookshelves)=>{
       this.setState({bookshelves: bookshelves})
     });
   }
+
+  componentDidUpdate() {
+    debugger
+    if (parseInt(arguments[0].match.params.id) !== parseInt(this.props.match.params.id)) {
+      this.props.requestBook(parseInt(this.props.match.params.id))
+    }
+  }
+
   renderBookShelves(){
     // debugger
     let tuna = this.props.bookshelves.map((bookshelf) => {
@@ -33,6 +45,16 @@ class BookShowItem extends React.Component {
     
     // component did update?
     return tuna
+  }
+  nextBook(){
+    debugger
+    // prompt("hey!!!!")
+    // you need to be able to see if this.props.book.id + 1 EXISTS - can't fall off the cliff!
+    this.props.history.push(`/book/${(this.props.book.id + 1)}`)
+  }
+  previousBook(){
+    this.props.history.push(`/book/${(this.props.book.id - 1)}`)
+
   }
   render(){
     // debugger
@@ -57,6 +79,9 @@ class BookShowItem extends React.Component {
               <h1 className="book-title">{this.props.book.title}</h1>
               <span className="book-author">by {this.props.book.author}</span>
               <p>{this.props.book.description}</p>
+              <button onClick={this.previousBook}>Previous</button>
+              <button onClick={this.nextBook}>Next</button>
+
             </div>
 
             <div className ="Readers-Also">

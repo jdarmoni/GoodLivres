@@ -1,3 +1,11 @@
+export const fetchAllBooks = ()=>{
+  
+  return $.ajax({
+      method: 'get',
+      url: `/api/books`
+  })
+}
+
 export const fetchBooks = (bookshelfId) => {
   // now in my params I will have a key of bookshelf pointing to the current bookshelf
   // will need to pass current bookshelfId whenever I call fetchBooks

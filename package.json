@@ -41,5 +41,6 @@
   "bugs": {
     "url": "https://github.com/jdarmoni/GoodLivres/issues"
   },
-  "homepage": "https://github.com/jdarmoni/GoodLivres#readme"
+  "homepage": "https://github.com/jdarmoni/GoodLivres#readme",
+  "devDependencies": {}
 }

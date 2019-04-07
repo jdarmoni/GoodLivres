@@ -2,12 +2,14 @@ class Api::BooksController < ApplicationController
 
   def index
     # you only want the books associated with the bookshelf_id
+    if params[:bookshelfId]
+      @bookshelf = Bookshelf.find_by(id: Integer(params[:bookshelfId]) )
     
-    @bookshelf = Bookshelf.find_by(id: Integer(params[:bookshelfId]) )
-    
-    @books = @bookshelf.books
-    
-    render :index
+      @books = @bookshelf.books
+    else
+      @books = Book.all
+    end
+      render :index
   end
 
   def show

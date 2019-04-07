@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import BookShowItem from './book_show_item';
 import { requestBook } from '../../actions/book_actions';
 import { requestBookshelves } from '../../actions/bookshelf_actions'
+import {withRouter} from 'react-router-dom';
 const msp = (state, ownProps) => {
   
   let bookId = parseInt(ownProps.match.params.id);
@@ -26,4 +27,4 @@ const mdp = (dispatch) => {
   });
 };
 
-export default connect(msp, mdp)(BookShowItem);
+export default withRouter(connect(msp, mdp)(BookShowItem));

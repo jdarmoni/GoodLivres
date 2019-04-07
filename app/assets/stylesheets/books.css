@@ -69,14 +69,24 @@
     width: 25%;
     border-radius: 50%;
 }
-.bookshelf-button {
-    width: 110px;
+/* .bookshelf-button { */
+    /* width: 110px;
     background-color: #f2f2f2;
     border-color: #dddddd;
     height: 30px;
     border-radius: 4px;
+} */
+.bookshelf-button ul { 
+    list-style: none;
+    background-color: #f2f2f2;
+    border-color: #dddddd;
+    border-radius: 4px;
+
 }
-.bookshelf-button ul { list-style: none}
+
+.bookshelf-button-item:hover {
+    color: green;
+}
 
 .removeBook {
     width: 40px;
@@ -86,8 +96,9 @@
     border-color: red;
 }
 
-.bookItemTitles {
-    color: red;
+.bookItemTitle {
+    color: #00635d;
+    font-size: 14px;
 }
 
 .book-row a {

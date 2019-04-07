@@ -235,7 +235,8 @@
 }
 
 .bookIndexTable th {
-    text-align: left
+    text-align: left;
+    color: black;
 }
 
 .book-row img {

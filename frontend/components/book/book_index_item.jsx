@@ -30,7 +30,7 @@ class BookIndexItem extends React.Component {
 
   render(){
     // debugger
-    // these correpond to book_index.jsx!
+    // these correspond to book_index.jsx!
     return (
       <>
       <tr className={`book-row`}>

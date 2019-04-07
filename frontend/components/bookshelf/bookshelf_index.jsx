@@ -19,14 +19,6 @@ class BookshelfIndex extends React.Component{
     }
 
     componentDidMount(){
-        
-        // let bookshelfId = null;
-        // // User.find_by(id: 23).bookshelves.first.id
-        // if (this.props.bookshelves[this.props.match.params.id]) {
-        //     bookshelfId === this.props.bookshelves[this.props.match.params.id].id
-        // } else {
-        //     bookshelfId = 1
-        // }
         this.props.requestBookshelves().then((bookshelves)=>{
             
             const id = this.props.match.params.id || bookshelves.bookshelves[0].id   
@@ -53,8 +45,6 @@ class BookshelfIndex extends React.Component{
         this.setState({addBookShelf: true, user_id: this.props.currentUser.id})
     }    
     renderAddBookshelfInput(){
-
-        // set a value in the state that starts false; then setState to true when this is called;
         if (this.state.addBookShelf===true){
             return (
                 <form onSubmit={this.handleSubmit}>    
@@ -68,6 +58,16 @@ class BookshelfIndex extends React.Component{
             )
         }
     }
+    renderCurrentBooks() {
+        // debugger
+        if (this.state.currentBookshelf > 0) {
+            return (<>
+                {/* should books be being rendered in BookIndex Item? Is doing everything in this component, 'spaghetti'? */}
+                <BookContainer currentBookshelf={this.state.currentBookshelf} />
+            </>)
+        }
+    }
+
     // ********************* BUGGING OUT!!!!!! ********************
     // renderBookshelfTitle(){
     //     debugger
@@ -75,21 +75,12 @@ class BookshelfIndex extends React.Component{
     //         return this.props.bookshelves[this.props.match.params.id].title
     //     }
     // }
-    renderCurrentBooks(){
-        // debugger
-        if (this.state.currentBookshelf > 0) {
-            return (<>
-                <BookContainer currentBookshelf={this.state.currentBookshelf} />
-            </>) 
-        }
-    }
 
     render (){
 
         let bookshelves = Object.values(this.props.bookshelves).map((bookshelf)=>{
             return <BookshelfIndexItem key={bookshelf.id} bookshelf={bookshelf} requestBookshelf={this.props.requestBookshelf} deleteBookshelf={this.props.deleteBookshelf}/>
         });
-        // this.props.bookshelves[this.props.match.params.id].title
 
         let currentBookshelf = this.props.match.params.id || this.state.currentBookshelf; 
         // debugger

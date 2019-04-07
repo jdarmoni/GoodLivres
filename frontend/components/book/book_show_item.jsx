@@ -41,14 +41,11 @@ class BookShowItem extends React.Component {
     // debugger
     let tuna = this.props.bookshelves.map((bookshelf) => {
       return <BookBookshelfContainer bookshelf={bookshelf}/>; // bookshelf index item? is that spagetthi code?!
-    })
-    
-    // component did update?
+    })    
     return tuna
   }
   nextBook(){
     debugger
-    // prompt("hey!!!!")
     // you need to be able to see if this.props.book.id + 1 EXISTS - can't fall off the cliff!
     this.props.history.push(`/book/${(this.props.book.id + 1)}`)
   }
@@ -56,6 +53,16 @@ class BookShowItem extends React.Component {
     this.props.history.push(`/book/${(this.props.book.id - 1)}`)
 
   }
+
+
+
+
+
+
+
+
+
+
   render(){
     // debugger
 
@@ -70,8 +77,13 @@ class BookShowItem extends React.Component {
       
       return (
         <>
+  {/* Book Show: */}
             <div className="book-image-col"> {this.getImage()}
-               <div className="bookshelf-button"><ul>{this.renderBookShelves()}</ul></div>
+               <div className="bookshelf-button">
+                  <ul>
+                      {this.renderBookShelves()}
+                  </ul>
+              </div>
             </div>
 
             <div className="book-content">
@@ -83,6 +95,8 @@ class BookShowItem extends React.Component {
               <button onClick={this.nextBook}>Next</button>
 
             </div>
+
+{/* Right Portion:  */}
 
             <div className ="Readers-Also">
               <div className ="books-carousel">

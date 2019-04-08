@@ -79,6 +79,11 @@ class BookShowItem extends React.Component {
         <>
   {/* Book Show: */}
             <div className="book-image-col"> {this.getImage()}
+            
+              <div class="rating">
+                <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+              </div>
+
                <div className="bookshelf-button">
                   <ul>
                       {this.renderBookShelves()}

@@ -29,19 +29,19 @@ class BookshelfIndex extends React.Component{
         
     }
     handleSubmit(e){
-        debugger
+        // debugger
         e.preventDefault();
         this.props.createBookshelf({title: this.state.title, user_id: this.state.user_id});
     }
 
     update(title){
-        debugger
+        // debugger
         return e => this.setState({
             [title]: e.target.value
         });
     }
     addBookShelf(){
-        debugger
+        // debugger
         this.setState({addBookShelf: true, user_id: this.props.currentUser.id})
     }    
     renderAddBookshelfInput(){

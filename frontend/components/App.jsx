@@ -9,6 +9,7 @@ import BookshelfIndexItem from './bookshelf/bookshelf_index_item';
 import BookShowContainer from './book/book_show_container';
 import BookContainer from './book/book_container';
 import BrowseContainer from './browse/browse_container'
+import ReviewsIndex from './reviews/reviews_index';
 const App = ()=>{
     return (
     <div className="container-splash">
@@ -19,6 +20,7 @@ const App = ()=>{
             {/* 15 has no specified route so will always display */}
             {/* specified path will display at that pathx */}
             <Route exact path="/book/:id"  component={BookShowContainer}/>
+            {/* <Route exact path="/book/:id"  component={ReviewsIndex} /> */}
             <Route exact path="/books" component={BookContainer}/>
             <ProtectedRoute className="bookShelves" exact path="/bookshelf" component={BookshelfContainer} />
             <ProtectedRoute exact path ={`/bookshelf/:id`} component={BookshelfContainer}/>

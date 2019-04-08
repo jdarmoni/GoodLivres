@@ -14,7 +14,7 @@ export const fetchBookshelf = (id)=> {
 }
 
 export const createBookshelf = (bookshelf)=> {
-    debugger
+    // debugger
     return $.ajax({
         method: 'post',
         url: `/api/bookshelf`,

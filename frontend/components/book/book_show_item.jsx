@@ -1,5 +1,6 @@
 import React from 'react';
 import BookBookshelfContainer from './book_bookshelf_container'
+import ReviewIndexContainer from '../reviews/reviews_index_container'
 import { Link } from 'react-router-dom';
 
 class BookShowItem extends React.Component {
@@ -22,7 +23,7 @@ class BookShowItem extends React.Component {
     }
   }
   componentDidMount(){
-    debugger
+    // debugger
     // the second we refresh we'll lose all info in the state - hence why we need to fetch request here after mount
     this.props.requestBookshelves()
     this.props.requestBook(parseInt(this.props.match.params.id)).then((bookshelves)=>{
@@ -31,7 +32,7 @@ class BookShowItem extends React.Component {
   }
 
   componentDidUpdate() {
-    debugger
+    // debugger
     if (parseInt(arguments[0].match.params.id) !== parseInt(this.props.match.params.id)) {
       this.props.requestBook(parseInt(this.props.match.params.id))
     }
@@ -45,7 +46,7 @@ class BookShowItem extends React.Component {
     return tuna
   }
   nextBook(){
-    debugger
+    // debugger
     // you need to be able to see if this.props.book.id + 1 EXISTS - can't fall off the cliff!
     this.props.history.push(`/book/${(this.props.book.id + 1)}`)
   }
@@ -80,7 +81,7 @@ class BookShowItem extends React.Component {
   {/* Book Show: */}
             <div className="book-image-col"> {this.getImage()}
             
-              <div class="rating">
+              <div className="rating">
                 <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
               </div>
 
@@ -98,8 +99,13 @@ class BookShowItem extends React.Component {
               <p>{this.props.book.description}</p>
               <button onClick={this.previousBook}>Previous</button>
               <button onClick={this.nextBook}>Next</button>
+            
+                <div className="reviews">
+                  <ReviewIndexContainer />
+                </div>
 
             </div>
+            
 
 {/* Right Portion:  */}
 

@@ -5,7 +5,7 @@ import BookBookshelfShow from './book_bookshelf_show'
 import { createShelving } from '../../actions/shelving_actions'
 
 const mapStateToProps = (state) => {
-    debugger
+    
     return {
         bookshelves: state.entities.bookshelves
     };

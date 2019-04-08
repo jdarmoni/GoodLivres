@@ -7,7 +7,7 @@ class BrowseBook extends React.Component {
         this.getImage = this.getImage.bind(this)
     }
     componentDidMount(){
-        debugger
+        // debugger
         
     }
     getImage() {

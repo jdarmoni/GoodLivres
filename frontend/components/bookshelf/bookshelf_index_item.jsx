@@ -16,7 +16,7 @@ class BookshelfIndexItem extends React.Component {
         this.update = this.update.bind(this);
     }
     componentDidMount(){
-        debugger
+        // debugger
     }
 
     deleteBookshelf(){

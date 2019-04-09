@@ -18,8 +18,8 @@ class Api::ReviewsController < ApplicationController
     end
     
     def create
-        # print 'eggs'
-        # debugger
+        print 'eggs'
+        debugger
         
         @review = Review.new(review_params)
         if @review.save
@@ -32,7 +32,10 @@ class Api::ReviewsController < ApplicationController
     end
 
     def destroy
+        # print 'eggs'
+
         @review = Review.find(params[:id])
+        logger.info(params)
         
         @review.destroy
         render :show

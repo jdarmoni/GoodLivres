@@ -90,6 +90,8 @@ class BookShowItem extends React.Component {
                       {this.renderBookShelves()}
                   </ul>
               </div>
+            <button onClick={this.previousBook}>Previous</button>
+            <button onClick={this.nextBook}>Next</button>
             </div>
 
             <div className="book-content">
@@ -97,8 +99,7 @@ class BookShowItem extends React.Component {
               <h1 className="book-title">{this.props.book.title}</h1>
               <span className="book-author">by {this.props.book.author}</span>
               <p>{this.props.book.description}</p>
-              <button onClick={this.previousBook}>Previous</button>
-              <button onClick={this.nextBook}>Next</button>
+              
             
                 <div className="reviews">
                   <ReviewIndexContainer bookId={this.props.book.id}/>

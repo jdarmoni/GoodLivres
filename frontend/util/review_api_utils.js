@@ -1,8 +1,10 @@
-export const fetchReviews = () => {
-  debugger
+export const fetchReviews = (bookId) => {
+  // debugger
+  // do you need to pass fetchReviews 'reviews' to be able to pass it as data?
   return $.ajax({
     method: 'get',
-    url: '/api/reviews'
+    url: '/api/reviews',
+    data: {bookId}
   })
 }
 
@@ -31,7 +33,7 @@ export const updateReview = (review) => {
 }
 
 export const removeReview = (reviewId) => {
-  // debugger
+  debugger
   return $.ajax({
     method: 'delete',
     url: `api/reviews/${reviewId}`,

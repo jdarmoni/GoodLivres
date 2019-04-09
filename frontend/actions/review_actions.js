@@ -5,7 +5,7 @@ export const RECEIVE_REVIEW = "RECEIVE_REVIEW";
 export const REMOVE_REVIEW = "REMOVE_REVIEW";
 
 export const receiveAllReviews = (reviews) => {
-    debugger
+    // debugger
     return ({
         type: RECEIVE_ALL_REVIEWS,
         reviews
@@ -29,11 +29,11 @@ export const removeReview = (review) => {
     };
 };
 
-export const requestReviews = () => (dispatch) => {
-    debugger
+export const requestReviews = (bookId) => (dispatch) => {
+    // debugger
     return (
-        APIUtil.fetchReviews().then((reviews) => {
-            debugger
+        APIUtil.fetchReviews(bookId).then((reviews) => {
+            // debugger
             return dispatch(receiveAllReviews(reviews))
         })
     );
@@ -52,9 +52,9 @@ export const requestReview = (id) => (dispatch) => {
 };
 
 export const createReview = (review) => (dispatch) => {
-
+    
     return APIUtil.createReview(review).then((review) => {
-
+        
         dispatch(receiveReview(review));
     }
     );
@@ -65,9 +65,9 @@ export const updatereview = (id) => (dispatch) => {
 }
 
 export const deleteReview = (reviewId) => (dispatch) => {
-
+    debugger
     return APIUtil.removeReview(reviewId).then((review) => {
-
+        debugger
         dispatch(removeReview(review));
     }
     );

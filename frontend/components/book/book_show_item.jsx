@@ -101,7 +101,7 @@ class BookShowItem extends React.Component {
               <button onClick={this.nextBook}>Next</button>
             
                 <div className="reviews">
-                  <ReviewIndexContainer />
+                  <ReviewIndexContainer bookId={this.props.book.id}/>
                 </div>
 
             </div>

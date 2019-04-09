@@ -1,14 +1,15 @@
 class Api::ReviewsController < ApplicationController
 
     def index
-        debugger
-        # need to find a book
-
-        @user = User.find_by(id: current_user.id)      
-        debugger  
-        @reviews = @user.reviews
-        debugger
-        render :index
+        # debugger
+        # we already have book_id in params
+        # print 'eggs'
+        # debugger
+            @book = Book.find_by(id: Integer(params[:bookId]))      
+        # debugger  
+            @reviews = @book.reviews
+        # debugger
+            render :index
     end
 
     def show
@@ -17,6 +18,13 @@ class Api::ReviewsController < ApplicationController
     end
     
     def create
+        # print 'eggs'
+        # debugger
+        
+        @review = Review.new(review_params)
+        if @review.save
+            render :show
+        end
     end
 
     def update
@@ -24,10 +32,13 @@ class Api::ReviewsController < ApplicationController
     end
 
     def destroy
-
+        @review = Review.find(params[:id])
+        
+        @review.destroy
+        render :show
     end
 
     def review_params
-        params.require(:review).permit(:title, :book_id, :user_id, :rating)
+        params.require(:review).permit(:content, :book_id, :user_id, :rating)
     end
 end

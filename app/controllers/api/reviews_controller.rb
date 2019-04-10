@@ -18,17 +18,23 @@ class Api::ReviewsController < ApplicationController
     end
     
     def create
-        print 'eggs'
-        debugger
+        # print 'eggs'
         
         @review = Review.new(review_params)
         if @review.save
+            # @username = @review.user.username
+            # debugger
             render :show
         end
     end
 
     def update
-
+        
+        @review = Review.find(params[:id])
+        
+        if @review.update(review_params)
+            render :show
+        end
     end
 
     def destroy

@@ -20,7 +20,7 @@ export default (state = {}, action) => {
             return merge({}, state, { [action.payload.id]: action.payload });
             
         case REMOVE_REVIEW:
-            debugger
+            
             let newState = merge({}, state);
             delete newState[action.reviewId];
 

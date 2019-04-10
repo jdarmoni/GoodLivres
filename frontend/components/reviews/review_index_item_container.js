@@ -4,11 +4,14 @@ import { requestReview, deleteReview } from '../../actions/review_actions'
 
 
 const msp = (state, ownProps) => {
-    debugger
+    
     // doesn't really need to know about other reviews
     return {
         reviews: state.entities.reviews,
-        review: ownProps.review
+        review: ownProps.review,
+        user: Object.values(state.entities.users)[0],
+        users: state.entities.users,
+        book: Object.values(state.entities.books)[0]
     }
 }
 

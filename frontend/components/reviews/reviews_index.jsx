@@ -47,14 +47,13 @@ class ReviewsIndex extends React.Component {
     render(){
         // debugger
         const reviews = Object.values(this.props.reviews).map((review) => {
-            debugger
+            
             return <ReviewsIndexItemContainer key={review.id} review={review} />
         })
         return (
             <div>
-                <button onClick={this.writeReview}>write a review</button>
                 {this.renderWriteReview()}
-                <h1>Reviews!</h1>
+                <h1 className="reviews-index-header">COMMUNITY REVIEWS <span className="reviews-showing-numbers">showing 1-{reviews.length}</span></h1>
 
                 <ul>{reviews}</ul>
             </div>

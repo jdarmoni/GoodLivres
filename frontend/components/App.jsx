@@ -10,6 +10,7 @@ import BookShowContainer from './book/book_show_container';
 import BookContainer from './book/book_container';
 import BrowseContainer from './browse/browse_container'
 import ReviewsIndex from './reviews/reviews_index';
+import EditFormContainer from './reviews/edit_form_container'
 const App = ()=>{
     return (
     <div className="container-splash">
@@ -22,6 +23,7 @@ const App = ()=>{
             <Route exact path="/book/:id"  component={BookShowContainer}/>
             {/* <Route exact path="/book/:id"  component={ReviewsIndex} /> */}
             <Route exact path="/books" component={BookContainer}/>
+            <ProtectedRoute exact path="/review/edit/:id" component={EditFormContainer} />
             <ProtectedRoute className="bookShelves" exact path="/bookshelf" component={BookshelfContainer} />
             <ProtectedRoute exact path ={`/bookshelf/:id`} component={BookshelfContainer}/>
             <Route exact path="/browse" component={BrowseContainer} />

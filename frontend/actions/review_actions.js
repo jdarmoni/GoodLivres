@@ -60,14 +60,19 @@ export const createReview = (review) => (dispatch) => {
     );
 };
 
-export const updatereview = (id) => (dispatch) => {
-    return APIUtil.updateReview(id).then((review) => dispatch(receiveReview(review)))
+export const updateReview = (review) => (dispatch) => {
+    
+    return APIUtil.updateReview(review).then((review) => {
+        
+        dispatch(receiveReview(review))
+    }
+    )
 }
 
 export const deleteReview = (reviewId) => (dispatch) => {
-    debugger
+    
     return APIUtil.removeReview(reviewId).then((review) => {
-        debugger
+        
         dispatch(removeReview(review));
     }
     );

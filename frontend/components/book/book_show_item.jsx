@@ -65,7 +65,6 @@ class BookShowItem extends React.Component {
 
 
   render(){
-    // debugger
 
     let bookImages = [<Link to={`/book/8`}><img src="https://images.gr-assets.com/books/1433739086l/33313.jpg" /></Link>, 
                       <Link to={`/book/4`}><img src="https://images.gr-assets.com/books/1529845599l/34051011.jpg" /></Link>,
@@ -77,12 +76,13 @@ class BookShowItem extends React.Component {
     } else {
       
       return (
+        
         <>
   {/* Book Show: */}
             <div className="book-image-col"> {this.getImage()}
             
               <div className="rating">
-                <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+              <Link to={`/review/edit/${this.props.book.id}`} ><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></Link>
               </div>
 
                <div className="bookshelf-button">

@@ -12,7 +12,7 @@ class BookShowItem extends React.Component {
     this.getImage = this.getImage.bind(this);
     this.nextBook = this.nextBook.bind(this);
     this.previousBook = this.previousBook.bind(this);
-
+    this.toggleShow = this.toggleShow.bind(this);
   }
 
   getImage() {
@@ -57,9 +57,11 @@ class BookShowItem extends React.Component {
   }
   previousBook(){
     this.props.history.push(`/book/${(this.props.book.id - 1)}`)
-
   }
 
+  toggleShow(){
+    document.getElementById('shelves').classList.toggle("show");
+  }
 
 
 
@@ -88,10 +90,10 @@ class BookShowItem extends React.Component {
             
               
 
-               <div className="bookshelf-button">
-                <div className="first-bookshelf"> {this.renderBookShelves()[1]}</div>
+               <div className="bookshelf-button" onClick={this.toggleShow}>
+                <div className="first-bookshelf"> {this.renderBookShelves()[1]} </div> {/* <--- to grab the first bookshelf */}
                   <button className="shelves-drop-down" ></button>
-                    <ul className="shelves">
+                    <ul className="shelves" id="shelves">
                         {this.renderBookShelves()}
                     </ul>
               </div>

@@ -5,7 +5,7 @@ export const RECEIVE_BOOK = "RECEIVE_BOOK";
 export const REMOVE_BOOK = "REMOVE_BOOK";
 
 export const receiveAllBooks = (books) => {
-  debugger
+  
   return ({
     type: RECEIVE_ALL_BOOKS,
     books

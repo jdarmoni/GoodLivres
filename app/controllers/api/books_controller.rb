@@ -13,8 +13,9 @@ class Api::BooksController < ApplicationController
   end
 
   def show
-    # debugger
-    @book = Book.find_by(id: params[:id])
+    
+     @book = Book.find_by(id: params[:id])
+    
     render :show
   end
 

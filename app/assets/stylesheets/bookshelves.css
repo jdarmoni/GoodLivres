@@ -242,3 +242,14 @@
 .book-row img {
     height: 20%;
 }
+/* 
+.shelves li:first-child{
+    color: green;
+}
+.shelves li:not(:first-child) {
+    color: blue;
+} */
+
+.shelves li:first-child:hover .shelves li:not(:first-child) {
+  color: red;
+}

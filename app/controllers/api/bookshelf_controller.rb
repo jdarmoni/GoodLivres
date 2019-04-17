@@ -2,23 +2,22 @@ class Api::BookshelfController < ApplicationController
 
     def index
         #no id for when current user is nil 
-        
         @bookshelves = Bookshelf.where(user_id: current_user.id)
-        
         if @bookshelves.first === nil
-            # debugger
+            # QUESTION: Can't use these debuggers?? debugger
             Bookshelf.new({user_id: current_user.id, title: "All"}).save;
             Bookshelf.new({user_id: current_user.id, title: "Read"}).save;
-            Bookshelf.new({user_id: current_user.id, title: "Current Read"}).save;
             Bookshelf.new({user_id: current_user.id, title: "Want to Read"}).save;
+            Bookshelf.new({user_id: current_user.id, title: "Currently Reading"}).save;
         end
         render json: @bookshelves
         # shelvings
     end
 
     def show
+
       @bookshelf = Bookshelf.find_by(id: params[:id])
-      render json: @bookshelf
+      render :show
     end
 
     def create  
@@ -36,8 +35,10 @@ class Api::BookshelfController < ApplicationController
     def destroy
       
       @bookshelf = Bookshelf.find(params[:id])
-      @bookshelf.destroy
-      render "api/bookshelves/show" 
+      if @bookshelf.title != "All" && @bookshelf.title != "Read" && @bookshelf.title != "Currently Reading" && @bookshelf.title != "Want to Read"
+        @bookshelf.destroy
+        render "api/bookshelves/show" 
+      end
     end
 
     private

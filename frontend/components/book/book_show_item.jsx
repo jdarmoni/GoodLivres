@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom';
 class BookShowItem extends React.Component {
   constructor(props){
     super(props);
-    this.state = {bookshelves: []};
+    this.state = {
+      bookshelves: []};
     this.renderBookShelves = this.renderBookShelves.bind(this);
     this.getImage = this.getImage.bind(this);
     this.nextBook = this.nextBook.bind(this);
@@ -15,7 +16,6 @@ class BookShowItem extends React.Component {
   }
 
   getImage() {
-    // debugger
     if (this.props.book.image !== null) {
       return <img src={this.props.book.image} />
     } else {
@@ -23,27 +23,32 @@ class BookShowItem extends React.Component {
     }
   }
   componentDidMount(){
-    // debugger
-    // the second we refresh we'll lose all info in the state - hence why we need to fetch request here after mount
     this.props.requestBookshelves()
-    this.props.requestBook(parseInt(this.props.match.params.id)).then((bookshelves)=>{
-      this.setState({bookshelves: bookshelves})
+    this.props.requestBook(parseInt(this.props.match.params.id)).then((book)=>{
+      this.setState({book: book.payload})
     });
   }
 
   componentDidUpdate() {
-    // debugger
     if (parseInt(arguments[0].match.params.id) !== parseInt(this.props.match.params.id)) {
       this.props.requestBook(parseInt(this.props.match.params.id))
     }
   }
 
   renderBookShelves(){
-    // debugger
-    let tuna = this.props.bookshelves.map((bookshelf) => {
-      return <BookBookshelfContainer bookshelf={bookshelf}/>; // bookshelf index item? is that spagetthi code?!
+    // QUESTION: how can I know if this Book Id is in your 'Read' shelf?  
+
+    let all = 0;
+    let shelves = this.props.bookshelves.map((bookshelf) => {
+      
+      if (bookshelf.title === 'All') {
+        all = bookshelf.id 
+      } else {
+          return <BookBookshelfContainer bookshelf={bookshelf} all={all}/>; 
+        } 
     })    
-    return tuna
+    debugger
+    return shelves;
   }
   nextBook(){
     // debugger
@@ -81,15 +86,20 @@ class BookShowItem extends React.Component {
   {/* Book Show: */}
             <div className="book-image-col"> {this.getImage()}
             
-              <div className="rating">
-              <Link to={`/review/edit/${this.props.book.id}`} ><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></Link>
-              </div>
+              
 
                <div className="bookshelf-button">
-                  <ul>
-                      {this.renderBookShelves()}
-                  </ul>
+                <div className="first-bookshelf"> {this.renderBookShelves()[1]}</div>
+                  <button className="shelves-drop-down" ></button>
+                    <ul className="shelves">
+                        {this.renderBookShelves()}
+                    </ul>
               </div>
+
+            <div className="rating">
+              <Link to={`/review/edit/${this.props.book.id}`} ><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></Link>
+            </div>
+
             <button onClick={this.previousBook}>Previous</button>
             <button onClick={this.nextBook}>Next</button>
             </div>

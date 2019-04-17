@@ -7,7 +7,7 @@ class Api::ShelvingController < ApplicationController
   end
 
   def create
-    
+    # if you are adding it to 
     @newShelf = Shelving.new(shelving_params)
     if @newShelf.save
       render json: @newShelf

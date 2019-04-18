@@ -6,6 +6,7 @@ import { withRouter } from 'react-router-dom';
 const mapStateToProps = (state, ownProps) => {
    
     return {
+        // if want (number), object.values
         bookshelves: state.entities.bookshelves,
         users: Object.values(state.entities.users),
         session: Object.values(state.session),

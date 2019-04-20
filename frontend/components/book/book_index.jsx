@@ -35,7 +35,7 @@ class BookIndex extends React.Component {
       let books = Object.values(this.props.books).map((book)=>{
         return <BookIndexItem book={book} key={book.id}/> // have to pass shelvings, because you don't have a container = REFACTOR
       });
-    // debugger
+    
     return (
       // if you had a 'th' here, have to add to book_index_item!
         <table className="bookIndexTable">
@@ -43,8 +43,8 @@ class BookIndex extends React.Component {
           <th>cover</th>
           <th>title</th>
           <th>author</th>
-          <th>rating</th>  
-          <th>date read</th>
+          <th>pages</th>  
+          <th>published date</th>
             </thead> 
           {books}
         </table>

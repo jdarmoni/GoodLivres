@@ -3,6 +3,7 @@ class Api::BooksController < ApplicationController
   def index
     # you only want the books associated with the bookshelf_id
     if params[:bookshelfId]
+
       @bookshelf = Bookshelf.find_by(id: Integer(params[:bookshelfId]) )
     
       @books = @bookshelf.books
@@ -14,7 +15,7 @@ class Api::BooksController < ApplicationController
 
   def show
     
-     @book = Book.find_by(id: params[:id])
+    @book = Book.find_by(id: params[:id])
     
     render :show
   end

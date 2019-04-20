@@ -29,7 +29,7 @@ class BookIndexItem extends React.Component {
   }
 
   render(){
-    // debugger
+    debugger
     // these correspond to book_index.jsx!
     return (
       <>
@@ -37,8 +37,8 @@ class BookIndexItem extends React.Component {
 {/* image */}<td>{this.getImage()}</td> 
 {/* title */}<Link to={`/book/${this.props.book.id}`} > <td><span className="bookItemTitle"> {this.props.book.title} </span> </td></Link>
 {/* author */}<td>{this.props.book.author}</td>
-{/* rating */}<td>1-5 rating</td>
-{/*  */}    <td></td>
+{/* rating */}<td>{this.props.book.pages}</td>
+{/*  */}    <td>{this.props.book.published_date}</td>
         
           <td><span onClick={this.deleteThisShelf} className="removeBook">X</span> </td> 
       </tr>

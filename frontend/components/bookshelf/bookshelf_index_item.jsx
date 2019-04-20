@@ -31,6 +31,7 @@ class BookshelfIndexItem extends React.Component {
     }   
 
     render() {
+        
         return (<li ><span onClick={this.update}> {this.props.bookshelf.title} </span> <span className="deleteMe" onClick={this.deleteBookshelf}> x </span></li>)
         }
 

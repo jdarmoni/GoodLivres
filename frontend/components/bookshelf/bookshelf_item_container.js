@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 import BookshelfIndexItem from './bookshelf_index_item'
 import {requestBookshelf, deleteBookshelf} from '../../actions/bookshelf_actions'
 const msp = (state)=>{
-    // debugger
+    debugger
     return {
         bookshelf: state.bookshelf
     }
@@ -15,4 +15,4 @@ const mdp = (dispatch)=>{
     }
 }
 
-connect(msp, mdp)(BookshelfIndexItem)
+export default connect(msp, mdp)(BookshelfIndexItem)

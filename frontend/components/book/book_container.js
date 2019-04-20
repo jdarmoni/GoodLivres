@@ -4,7 +4,6 @@ import { requestBooks, requestBook } from '../../actions/book_actions';
 import { withRouter } from 'react-router-dom';
 import { requestShelvings} from '../../actions/shelving_actions';
 const msp = (state) => {
-  
   return {
     books: state.entities.books,
     shelvings: state.entities.shelvings

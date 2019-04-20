@@ -25,8 +25,6 @@ class BookshelfIndex extends React.Component{
              
             this.setState({ currentBookshelf: id})
         });
-
-        
     }
     handleSubmit(e){
         // debugger
@@ -85,11 +83,12 @@ class BookshelfIndex extends React.Component{
         let currentBookshelf = this.props.match.params.id || this.state.currentBookshelf; 
         // debugger
         return (
+            // THIS IS SPGAHETTI I THINK:  HAVE OWN CONTAINER FOR BOOKSHELF INDEXITEM
             <div className="bookshelfContainer">
                 <div id="myBooksCol">
                 
                     <h2 onClick={this.update}>
-                        My Books: <span className="h2-shelf"> {/* {this.renderBookshelfTitle()} */}</span>
+                        My Books <span className="h2-shelf"> {/* {this.renderBookshelfTitle()} */}</span>
                     </h2> 
 
                 </div>

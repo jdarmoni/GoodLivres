@@ -66,6 +66,7 @@
 }
 
 .bookShelves-header {
+    /* vertical-align: middle; */
     font-weight: bold;
     color: black;
     margin-top: 10px; 
@@ -230,7 +231,7 @@
     font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
 }
 
-.logged-in-header-link ul:nth-child(3) {
+.myBooksLink a {
     width: 75px;
 }
 
@@ -243,8 +244,20 @@
     color: black;
 }
 
+.bookIndexTable td { 
+    padding-top: 0;
+    font-size: 14px;
+    vertical-align: top;
+}
+
+.bookshelfTableTitle {
+    color: #00635d;
+    font-size: 14px;
+    list-style: none;
+}
+
 .book-row img {
-    height: 20%;
+    height: 16%;
 }
 /* 
 .shelves li:first-child{
@@ -256,4 +269,18 @@
 
 .shelves li:first-child:hover .shelves li:not(:first-child) {
   color: red;
+}
+
+.bookindextableHeader {
+    border-bottom: solid 1px black;
+}
+
+.BookIndexTableHeader th {
+    height: 30px;
+    font-size: 12px;
+}
+
+.bookshelfUL {
+    margin-top: 0;
+    padding-left: 0;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import {requestBooks} from '../../actions/book_actions';
-import BookIndexItem from './book_index_item';
+import BookIndexItemContainer from './book_index_item_container';
 
 class BookIndex extends React.Component {
   constructor(props){
@@ -32,8 +32,9 @@ class BookIndex extends React.Component {
   }
 
   render(){
+    debugger
       let books = Object.values(this.props.books).map((book)=>{
-        return <BookIndexItem book={book} key={book.id}/> // have to pass shelvings, because you don't have a container = REFACTOR
+        return <BookIndexItemContainer book={book} key={book.id}/> // have to pass shelvings, because you don't have a container = REFACTOR
       });
     
     return (
@@ -43,8 +44,7 @@ class BookIndex extends React.Component {
           <th>cover</th>
           <th>title</th>
           <th>author</th>
-          <th>pages</th>  
-          <th>published date</th>
+          <th>bookshelves</th>  
             </thead> 
           {books}
         </table>

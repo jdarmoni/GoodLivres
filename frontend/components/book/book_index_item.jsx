@@ -1,12 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {deleteShelving} from '../../actions/shelving_actions';
+import BookBookshelfContainer from './book_bookshelf_container'
 
 class BookIndexItem extends React.Component {
   constructor(props){
     super(props);
-    this.deleteThisShelf = this.deleteThisShelf.bind(this)
-    this.getImage = this.getImage.bind(this)
+    this.deleteThisShelf = this.deleteThisShelf.bind(this);
+    this.getImage = this.getImage.bind(this);
+    this.state ={
+      bookshelves: []
+    }
   }
 
   componentDidMount(){
@@ -26,10 +30,18 @@ class BookIndexItem extends React.Component {
     } else {
       return <img src="https://images.gr-assets.com/books/1315485290l/2947829.jpg"/>
     }
-  }
+  } 
 
   render(){
-    debugger
+    
+    let bookshelves = [];
+    this.props.book.bookshelves.map((bookshelf) => {
+      
+      bookshelves.push(<Link to={`/bookshelf/${bookshelf.id}`} className="bookshelfTableTitle"> <li> {bookshelf.title}</li> </Link>);
+      bookshelves.push(' ');
+    });
+    bookshelves = bookshelves.slice(0, bookshelves.length -1)
+    
     // these correspond to book_index.jsx!
     return (
       <>
@@ -37,10 +49,10 @@ class BookIndexItem extends React.Component {
 {/* image */}<td>{this.getImage()}</td> 
 {/* title */}<Link to={`/book/${this.props.book.id}`} > <td><span className="bookItemTitle"> {this.props.book.title} </span> </td></Link>
 {/* author */}<td>{this.props.book.author}</td>
-{/* rating */}<td>{this.props.book.pages}</td>
-{/*  */}    <td>{this.props.book.published_date}</td>
+  {/* bookshelves */}<td><ul className="bookshelfUL">{bookshelves}</ul></td>
+
         
-          <td><span onClick={this.deleteThisShelf} className="removeBook">X</span> </td> 
+          {/* <td><span onClick={this.deleteThisShelf} className="removeBook">X</span> </td>  */}
       </tr>
       </>
       )

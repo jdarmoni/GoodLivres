@@ -93,7 +93,7 @@ class Greeting extends React.Component{
                 <ul>
                     <li><img className="logo" src={window.logoURL} /></li>
                     <li><Link to={`/bookshelf`}>Home</Link></li>
-                    <li><Link to={`/bookshelf`}>My Books</Link></li>
+                    <li className="myBooksLink"><Link to={`/bookshelf`}>My Books</Link></li>
                     <li><Link to={`/browse`}>Browse</Link></li>
                     <li>Community</li>
                 </ul>

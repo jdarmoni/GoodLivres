@@ -52,7 +52,7 @@ class BookIndexItem extends React.Component {
   {/* bookshelves */}<td><ul className="bookshelfUL">{bookshelves}</ul></td>
 
         
-          {/* <td><span onClick={this.deleteThisShelf} className="removeBook">X</span> </td>  */}
+          <td><span onClick={this.deleteThisShelf} className="removeBook">x</span> </td> 
       </tr>
       </>
       )

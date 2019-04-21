@@ -257,6 +257,7 @@
     color: #00635d;
     font-size: 14px;
     list-style: none;
+     cursor: pointer; 
 }
 
 .book-row img {
@@ -290,4 +291,5 @@
 
 .individualBookshelf:hover {
     text-decoration: underline;
+     cursor: pointer; 
 }

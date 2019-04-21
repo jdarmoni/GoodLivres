@@ -17,7 +17,7 @@ class EditForm extends React.Component {
     }
     handleSubmit(e) {
         e.preventDefault();
-        debugger
+        
         if (this.props.location.review !== undefined) {
             this.props.updateReview({ content: this.state.body, book_id: this.props.bookId, user_id: this.props.user.id, rating: this.state.rating, id: this.props.location.review.id });
         } else {
@@ -28,13 +28,13 @@ class EditForm extends React.Component {
     }
 
     componentDidMount(){
-        debugger
+        
         this.props.requestBook(this.props.bookId).then((book)=>{
             this.setState({book: book.payload})
         });
     }
     render(){
-        debugger
+        
         if (this.state.book.title) {
             return (
                 <div className="review-container">

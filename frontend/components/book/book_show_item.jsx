@@ -11,6 +11,7 @@ class BookShowItem extends React.Component {
       bookshelves: [],
       rating: 0
     };
+    this.review;
     this.renderBookShelves = this.renderBookShelves.bind(this);
     this.getImage = this.getImage.bind(this);
     this.nextBook = this.nextBook.bind(this);
@@ -31,11 +32,23 @@ class BookShowItem extends React.Component {
     this.props.requestBook(parseInt(this.props.match.params.id)).then((book)=>{
     
     });
-    
-    
+  }
+  toggleStars(){
+    let current_user = this.props.user;
+    Object.values(this.props.reviews).forEach(review => {
+      debugger
+      if (review.user_id === current_user) {
+        debugger
+        this.review = review
+      }
+    });
+    debugger
+    if (this.review === undefined) {return null}
+    document.getElementById(`star${this.review.rating}`).checked = true
   }
 
   componentDidUpdate() {
+    
     if (parseInt(arguments[0].match.params.id) !== parseInt(this.props.match.params.id)) {
       this.props.requestBook(parseInt(this.props.match.params.id))
     }
@@ -72,11 +85,9 @@ class BookShowItem extends React.Component {
   update(e) {
     
       let reviews = Object.values(this.props.reviews);
-      debugger
       for (let i = 0; i < reviews.length; i++) {
         let review = reviews[i];
         if (review.user_id === this.props.user) {
-          debugger
           this.props.updateReview({user_id: review.user_id, id: review.id, content: review.content, book_id: review.book_id, rating: parseInt(e.target.value)})
           return
         }
@@ -84,9 +95,7 @@ class BookShowItem extends React.Component {
       this.props.createReview({user_id: this.props.user, id: review.id, content: "", book_id: this.props.book.id, rating: parseInt(e.target.value)})
   
   }
-  // componentDidUpdate(){
-  //   debugger
-  // }
+ 
 
 
 
@@ -106,10 +115,11 @@ class BookShowItem extends React.Component {
       return null
     } else {
       
+      debugger  
       return (
-        
         <>
   {/* Book Show: */}
+  {this.toggleStars()}
             <div className="book-image-col"> {this.getImage()}
      
                <div className="bookshelf-button" onClick={this.toggleShow}>
@@ -122,18 +132,18 @@ class BookShowItem extends React.Component {
 
             <div className="rating">
               <form action="">
-              <div class="rate">
-                <input type="radio" id="star5" name="rate" value="5" onClick={this.update}/>
-                  <label for="star5" title="text">5 stars</label>
-                <input type="radio" id="star4" name="rate" value="4" onClick={this.update}/>
-                  <label for="star4" title="text">4 stars</label>
-                <input type="radio" id="star3" name="rate" value="3"onClick={this.update} />
-                  <label for="star3" title="text">3 stars</label>
-                <input type="radio" id="star2" name="rate" value="2" onClick={this.update}/>
-                  <label for="star2" title="text">2 stars</label>
-                <input type="radio" id="star1" name="rate" value="1" onClick={this.update}/>
-                  <label for="star1" title="text">1 star</label>
-              </div>
+                <div class="rate">
+                  <input type="radio" id="star5" name="rate" value="5" onClick={this.update}/>
+                    <label for="star5" title="text">5 stars</label>
+                  <input type="radio" id="star4" name="rate" value="4" onClick={this.update}/>
+                    <label for="star4" title="text">4 stars</label>
+                  <input type="radio" id="star3" name="rate" value="3"onClick={this.update} />
+                    <label for="star3" title="text">3 stars</label>
+                  <input type="radio" id="star2" name="rate" value="2" onClick={this.update}/>
+                    <label for="star2" title="text">2 stars</label>
+                  <input type="radio" id="star1" name="rate" value="1" onClick={this.update}/>
+                    <label for="star1" title="text">1 star</label>
+                </div>
               </form>
               {/* <Link to={`/review/edit/${this.props.book.id}`} className="rating-stars" ><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></Link> */}
             </div>

@@ -10,6 +10,7 @@ class BookIndexItem extends React.Component {
     this.getImage = this.getImage.bind(this);
     this.renderRating = this.renderRating.bind(this);
     this.renderAvg = this.renderAvg.bind(this);
+    this.review;
     this.state ={
       bookshelves: []
     }

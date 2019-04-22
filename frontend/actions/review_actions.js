@@ -8,7 +8,7 @@ export const receiveAllReviews = (reviews) => {
     // debugger
     return ({
         type: RECEIVE_ALL_REVIEWS,
-        reviews
+        payload: reviews
     });
 };
 
@@ -30,8 +30,10 @@ export const removeReview = (review) => {
 };
 
 export const requestAllReviews = ()=>(dispatch)=> {
+    
     return (
         APIUtil.fetchAllReivews().then((reviews)=>{
+            
             return dispatch(receiveAllReviews(reviews))
         })
     )

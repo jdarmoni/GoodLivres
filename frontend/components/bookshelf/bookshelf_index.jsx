@@ -25,6 +25,11 @@ class BookshelfIndex extends React.Component{
              
             this.setState({ currentBookshelf: id})
         });
+        this.props.requestAllReviews().then((reviews)=>{
+            
+            console.log(reviews.payload)
+        });
+        
     }
     
     handleSubmit(e){

@@ -5,9 +5,13 @@ class Api::ReviewsController < ApplicationController
         # we already have book_id in params
         # print 'eggs'
         # debugger
-            @book = Book.find_by(id: Integer(params[:bookId]))      
-        # debugger  
-            @reviews = @book.reviews
+            if params[:bookId]
+                @book = Book.find_by(id: Integer(params[:bookId]))      
+            # debugger  
+                @reviews = @book.reviews
+            else
+                @reviews = Review.all
+            end
         # debugger
             render :index
     end

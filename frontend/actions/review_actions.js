@@ -29,6 +29,14 @@ export const removeReview = (review) => {
     };
 };
 
+export const requestAllReviews = ()=>(dispatch)=> {
+    return (
+        APIUtil.fetchAllReivews().then((reviews)=>{
+            return dispatch(receiveAllReviews(reviews))
+        })
+    )
+}
+
 export const requestReviews = (bookId) => (dispatch) => {
 
     return (

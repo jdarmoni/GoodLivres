@@ -1,3 +1,11 @@
+export const fetchAllReivews = () => {
+  // probably need to account for not having a bookId in the controller
+  return $.ajax({
+    method: 'get',
+    url: '/api/reviews',
+  })
+}
+
 export const fetchReviews = (bookId) => {
   // debugger
   // do you need to pass fetchReviews 'reviews' to be able to pass it as data?

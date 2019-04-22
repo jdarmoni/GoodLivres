@@ -263,6 +263,11 @@
 .book-row img {
     height: 16%;
 }
+
+.book-row {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
 /* 
 .shelves li:first-child{
     color: green;

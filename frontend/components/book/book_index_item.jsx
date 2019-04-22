@@ -14,6 +14,7 @@ class BookIndexItem extends React.Component {
   }
 
   componentDidMount(){
+    
     // debugger
     // this.props.requestBook(parseInt(this.props.match.params.id)) // <---- this breaks everything!!
   }

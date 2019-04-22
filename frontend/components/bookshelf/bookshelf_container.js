@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { requestBookshelves, requestBookshelf, createBookshelf, deleteBookshelf } from '../../actions/bookshelf_actions';
 import BookshelfIndex from './bookshelf_index';
 import { withRouter } from 'react-router-dom';
+import { requestAllReviews} from '../../actions/review_actions'
 
 const mapStateToProps = (state, ownProps) => {
    
@@ -17,7 +18,8 @@ const mapDispatchToProps = dispatch => ({
     requestBookshelves: () => dispatch(requestBookshelves()),
     requestBookshelf: (id)=> dispatch(requestBookshelf(id)),
     createBookshelf: (bookshelf)=>dispatch(createBookshelf(bookshelf)),
-    deleteBookshelf: (bookshelfId)=>dispatch(deleteBookshelf(bookshelfId))
+    deleteBookshelf: (bookshelfId)=>dispatch(deleteBookshelf(bookshelfId)),
+    requestAllReviews: ()=>dispatch(requestAllReviews())
 });
 
 export default withRouter(connect(

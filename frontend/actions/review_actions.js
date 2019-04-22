@@ -30,7 +30,7 @@ export const removeReview = (review) => {
 };
 
 export const requestReviews = (bookId) => (dispatch) => {
-    // debugger
+
     return (
         APIUtil.fetchReviews(bookId).then((reviews) => {
             // debugger

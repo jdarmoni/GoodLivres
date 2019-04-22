@@ -7,12 +7,16 @@ class BookShowItem extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      bookshelves: []};
+      review: null,
+      bookshelves: [],
+      rating: 0
+    };
     this.renderBookShelves = this.renderBookShelves.bind(this);
     this.getImage = this.getImage.bind(this);
     this.nextBook = this.nextBook.bind(this);
     this.previousBook = this.previousBook.bind(this);
     this.toggleShow = this.toggleShow.bind(this);
+    this.update = this.update.bind(this);
   }
 
   getImage() {
@@ -25,8 +29,10 @@ class BookShowItem extends React.Component {
   componentDidMount(){
     this.props.requestBookshelves()
     this.props.requestBook(parseInt(this.props.match.params.id)).then((book)=>{
-      this.setState({book: book.payload})
+    
     });
+    
+    
   }
 
   componentDidUpdate() {
@@ -50,6 +56,7 @@ class BookShowItem extends React.Component {
     
     return shelves;
   }
+
   nextBook(){
     // debugger
     // you need to be able to see if this.props.book.id + 1 EXISTS - can't fall off the cliff!
@@ -58,11 +65,41 @@ class BookShowItem extends React.Component {
   previousBook(){
     this.props.history.push(`/book/${(this.props.book.id - 1)}`)
   }
-
   toggleShow(){
     document.getElementById('shelves').classList.toggle("show");
   }
 
+  update(e) {
+    debugger
+    if (this.state.review === null || this.state.review === undefined) {
+      let reviews = Object.values(this.props.reviews);
+      debugger
+      for (let i = 0; i < reviews.length; i++) {
+        let review = reviews[i];
+        if (review.user_id === this.props.user) {
+          debugger
+          this.props.updateReview({user_id: review.user_id, id: review.id, content: review.content, book_id: review.book_id, rating: parseInt(e.target.value)})
+          return
+        }
+      }
+      this.props.createReview({user_id: this.props.user, content: "", book_id: this.props.book.id, rating: parseInt(e.target.value)}).then((review)=>{
+        debugger
+        this.setState({review: review})
+      })
+    }
+
+    // if (this.props.review === undefined){
+    //   this.props.createReview({rating: this.state.rating, user_id: this.props.user, content: "", book_id: this.props.book.id})
+    // } 
+    // console.log(this.state.rating)
+    // if this.props.reviews === undefined
+    // this.props.createReview(rating: this.state.rating, content: "", book_id: this.props.book.id)
+    this.setState({ rating: parseInt(e.target.value) });
+    debugger
+  }
+  // componentDidUpdate(){
+  //   debugger
+  // }
 
 
 
@@ -87,9 +124,7 @@ class BookShowItem extends React.Component {
         <>
   {/* Book Show: */}
             <div className="book-image-col"> {this.getImage()}
-            
-              
-
+     
                <div className="bookshelf-button" onClick={this.toggleShow}>
                 <div className="first-bookshelf"> {this.renderBookShelves()[1]} </div> {/* <--- to grab the first bookshelf */}
                   <button className="shelves-drop-down" ></button>
@@ -101,15 +136,15 @@ class BookShowItem extends React.Component {
             <div className="rating">
               <form action="">
               <div class="rate">
-                <input type="radio" id="star5" name="rate" value="5" />
+                <input type="radio" id="star5" name="rate" value="5" onClick={this.update}/>
                   <label for="star5" title="text">5 stars</label>
-                <input type="radio" id="star4" name="rate" value="4" />
+                <input type="radio" id="star4" name="rate" value="4" onClick={this.update}/>
                   <label for="star4" title="text">4 stars</label>
-                <input type="radio" id="star3" name="rate" value="3" />
+                <input type="radio" id="star3" name="rate" value="3"onClick={this.update} />
                   <label for="star3" title="text">3 stars</label>
-                <input type="radio" id="star2" name="rate" value="2" />
+                <input type="radio" id="star2" name="rate" value="2" onClick={this.update}/>
                   <label for="star2" title="text">2 stars</label>
-                <input type="radio" id="star1" name="rate" value="1" />
+                <input type="radio" id="star1" name="rate" value="1" onClick={this.update}/>
                   <label for="star1" title="text">1 star</label>
               </div>
               </form>

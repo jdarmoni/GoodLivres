@@ -5,7 +5,7 @@ export default (state = {}, action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_ALL_REVIEWS:
-            
+
             return action.reviews
         // IS THIS AN ARRAY OR OBJECT? 
         // the payload came as an array and here in the reducer i'm converting it into an obj so that later I can key into the entities.books IDs (in index) and return the object.title

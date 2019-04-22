@@ -43,7 +43,7 @@ class BookShowItem extends React.Component {
       }
     });
     debugger
-    if (this.review === undefined) {return null}
+    if (this.review === undefined || this.review.rating === 0) {return null}
     document.getElementById(`star${this.review.rating}`).checked = true
   }
 

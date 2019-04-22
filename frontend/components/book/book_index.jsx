@@ -42,8 +42,10 @@ class BookIndex extends React.Component {
         <table className="bookIndexTable">
           <thead className ="BookIndexTableHeader"> 
           <th>cover</th>
-          <th>title</th>
-          <th>author</th>
+          <th className="BookIntexTableHeaderTitle">title</th>
+          <th className="BookIntexTableHeaderAuthor">author</th>
+          <th className="BookIntexTableHeaderAvg">avg. rating</th>
+          <th>rating</th>
           <th>shelves</th>  
             </thead> 
           {books}

@@ -49,6 +49,8 @@ class BookIndexItem extends React.Component {
 {/* image */}<td>{this.getImage()}</td> 
 {/* title */}<Link to={`/book/${this.props.book.id}`} > <td><span className="bookItemTitle"> {this.props.book.title} </span> </td></Link>
 {/* author */}<td>{this.props.book.author}</td>
+  {/* avg rating */} <td></td>
+  {/* rating */} <td></td>
   {/* bookshelves */}<td><ul className="bookshelfUL">{bookshelves}</ul></td>
 
         

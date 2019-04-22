@@ -70,8 +70,7 @@ class BookShowItem extends React.Component {
   }
 
   update(e) {
-    debugger
-    if (this.state.review === null || this.state.review === undefined) {
+    
       let reviews = Object.values(this.props.reviews);
       debugger
       for (let i = 0; i < reviews.length; i++) {
@@ -82,20 +81,8 @@ class BookShowItem extends React.Component {
           return
         }
       }
-      this.props.createReview({user_id: this.props.user, content: "", book_id: this.props.book.id, rating: parseInt(e.target.value)}).then((review)=>{
-        debugger
-        this.setState({review: review})
-      })
-    }
-
-    // if (this.props.review === undefined){
-    //   this.props.createReview({rating: this.state.rating, user_id: this.props.user, content: "", book_id: this.props.book.id})
-    // } 
-    // console.log(this.state.rating)
-    // if this.props.reviews === undefined
-    // this.props.createReview(rating: this.state.rating, content: "", book_id: this.props.book.id)
-    this.setState({ rating: parseInt(e.target.value) });
-    debugger
+      this.props.createReview({user_id: this.props.user, id: review.id, content: "", book_id: this.props.book.id, rating: parseInt(e.target.value)})
+  
   }
   // componentDidUpdate(){
   //   debugger

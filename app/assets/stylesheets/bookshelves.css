@@ -293,3 +293,15 @@
     text-decoration: underline;
      cursor: pointer; 
 }
+
+.BookIntexTableHeaderTitle {
+    width: 25%;
+}
+
+.BookIntexTableHeaderAuthor {
+    width: 20%;
+}
+
+.BookIntexTableHeaderAvg {
+    width: 10%;
+}

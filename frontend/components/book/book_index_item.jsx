@@ -8,6 +8,8 @@ class BookIndexItem extends React.Component {
     super(props);
     this.deleteThisShelf = this.deleteThisShelf.bind(this);
     this.getImage = this.getImage.bind(this);
+    this.renderRating = this.renderRating.bind(this);
+    this.renderAvg = this.renderAvg.bind(this);
     this.state ={
       bookshelves: []
     }
@@ -15,7 +17,7 @@ class BookIndexItem extends React.Component {
 
   componentDidMount(){
     
-    // debugger
+    debugger
     // this.props.requestBook(parseInt(this.props.match.params.id)) // <---- this breaks everything!!
   }
 
@@ -32,13 +34,26 @@ class BookIndexItem extends React.Component {
       return <img src="https://images.gr-assets.com/books/1315485290l/2947829.jpg"/>
     }
   } 
+  renderRating(){
+    if(this.props.review) {
+      if (this.props.review.rating !== undefined) {
 
+        return this.props.review.rating
+      }
+    }
+  }
+  renderAvg(){
+      if (this.props.avg !== undefined) {
+
+        return this.props.avg
+      }
+  }
   render(){
     
     let bookshelves = [];
     this.props.book.bookshelves.map((bookshelf) => {
       
-      bookshelves.push(<Link to={`/bookshelf/${bookshelf.id}`} className="bookshelfTableTitle"> <li> {bookshelf.title}</li> </Link>);
+      bookshelves.push(<Link to={`/bookshelf/${bookshelf.id}`} className="bookshelfTableTitle"> <li> {bookshelf.title.toLowerCase()}</li> </Link>);
       bookshelves.push(' ');
     });
     bookshelves = bookshelves.slice(0, bookshelves.length -1)
@@ -50,8 +65,8 @@ class BookIndexItem extends React.Component {
 {/* image */}<td>{this.getImage()}</td> 
 {/* title */}<Link to={`/book/${this.props.book.id}`} > <td><span className="bookItemTitle"> {this.props.book.title} </span> </td></Link>
 {/* author */}<td>{this.props.book.author}</td>
-  {/* avg rating */} <td></td>
-  {/* rating */} <td></td>
+  {/* avg rating */} <td>{this.renderAvg()}</td>
+  {/* rating */} <td>{this.renderRating()}</td>
   {/* bookshelves */}<td><ul className="bookshelfUL">{bookshelves}</ul></td>
 
         

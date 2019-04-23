@@ -28,7 +28,7 @@ class Api::BookshelfController < ApplicationController
         # it's taking info from database
         # putting into json form (via the json show) 
         # now that its in json form, send it to front end reducers
-          render "api/bookshelves/show" 
+          render :show 
         end
     end
 
@@ -37,7 +37,7 @@ class Api::BookshelfController < ApplicationController
       @bookshelf = Bookshelf.find(params[:id])
       if @bookshelf.title != "All" && @bookshelf.title != "Read" && @bookshelf.title != "Currently Reading" && @bookshelf.title != "Want to Read"
         @bookshelf.destroy
-        render "api/bookshelves/show" 
+        render :show 
       end
     end
 

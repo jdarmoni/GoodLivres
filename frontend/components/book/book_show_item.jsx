@@ -43,7 +43,7 @@ class BookShowItem extends React.Component {
       }
     });
     debugger
-    if (this.review === undefined || this.review.rating === 0) {return null}
+    if (this.review === undefined || this.review.rating === 0 || document.getElementById('rateStars')===null) {return null}
     document.getElementById(`star${this.review.rating}`).checked = true
   }
 
@@ -132,7 +132,7 @@ class BookShowItem extends React.Component {
 
             <div className="rating">
               <form action="">
-                <div class="rate">
+                <div class="rate" id="rateStars">
                   <input type="radio" id="star5" name="rate" value="5" onClick={this.update}/>
                     <label for="star5" title="text">5 stars</label>
                   <input type="radio" id="star4" name="rate" value="4" onClick={this.update}/>
@@ -148,8 +148,8 @@ class BookShowItem extends React.Component {
               {/* <Link to={`/review/edit/${this.props.book.id}`} className="rating-stars" ><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></Link> */}
             </div>
 
-            <button onClick={this.previousBook}>Previous</button>
-            <button onClick={this.nextBook}>Next</button>
+            {/* <button onClick={this.previousBook}>Previous</button>
+            <button onClick={this.nextBook}>Next</button> */}
             </div>
 
             <div className="book-content">

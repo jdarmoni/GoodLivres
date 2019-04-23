@@ -1,0 +1,42 @@
+.myRatingStars{
+    float: left;
+}
+
+.editRate {
+    float: left;
+    margin-left: 0;
+    margin-top: 1.4%;
+    height: 46px;
+    padding: 0 10px;
+}
+
+.editRate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.editRate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    /* font-size:30px; */
+    color:#ccc;
+}
+.editRate:not(:checked) > label:before {
+    content: '★ ';
+}
+.editRate > input:checked ~ label {
+    color: #ffc700;    
+}
+.editRate:not(:checked) > label:hover,
+.editRate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.editRate > input:checked + label:hover,
+.editRate > input:checked + label:hover ~ label,
+.editRate > input:checked ~ label:hover,
+.editRate > input:checked ~ label:hover ~ label,
+.editRate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}

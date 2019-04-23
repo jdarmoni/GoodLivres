@@ -22,6 +22,7 @@ class BookIndexItem extends React.Component {
     // this.props.requestBook(parseInt(this.props.match.params.id)) // <---- this breaks everything!!
   }
 
+
   deleteThisShelf(){
     // debugger
     // this just needs to know the shelving ID - get that from mapStateToProps
@@ -49,6 +50,8 @@ class BookIndexItem extends React.Component {
         return this.props.avg
       }
   }
+
+
   render(){
     
     let bookshelves = [];

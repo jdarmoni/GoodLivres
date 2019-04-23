@@ -45,12 +45,28 @@ class EditForm extends React.Component {
                             <img className ="review-book-image" src={`${this.state.book.image}`}/>
                             <span className="section2">
                                 <h4 className="review-book-title">{this.state.book.title}</h4>
-                                <p className="review-book-author">by {this.state.book.author}</p>
+                             <p className="review-book-author">by {this.state.book.author}</p>
                             </span>
                         </div>
                     </div>
-                    my rating: <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                    <p className="myRatingStars">my rating: </p>
+                    <div className="rating">
+                            <div class="editRate" id="rateStars">
+                                <input type="radio" id="star5" name="rate" value="5" onClick={this.update} />
+                                <label for="star5" title="text">5 stars</label>
+                                <input type="radio" id="star4" name="rate" value="4" onClick={this.update} />
+                                <label for="star4" title="text">4 stars</label>
+                                <input type="radio" id="star3" name="rate" value="3" onClick={this.update} />
+                                <label for="star3" title="text">3 stars</label>
+                                <input type="radio" id="star2" name="rate" value="2" onClick={this.update} />
+                                <label for="star2" title="text">2 stars</label>
+                                <input type="radio" id="star1" name="rate" value="1" onClick={this.update} />
+                                <label for="star1" title="text">1 star</label>
+                            </div>
+                        {/* <Link to={`/review/edit/${this.props.book.id}`} className="rating-stars" ><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></Link> */}
+                    </div>
 
+<br></br>
                         <h4>What did you think?</h4>
 
                         <form onSubmit={this.handleSubmit}>

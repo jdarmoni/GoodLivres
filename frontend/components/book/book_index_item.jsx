@@ -39,11 +39,22 @@ class BookIndexItem extends React.Component {
   renderRating(){
     if(this.props.review) {
       if (this.props.review.rating !== undefined) {
-
-        return this.props.review.rating
+        if (this.props.review.rating === 1) {
+          return (<span>★</span>)
+        } else if (this.props.review.rating === 2) {
+          return (<span>★★</span>)
+        } else if (this.props.review.rating === 3) {
+          return (<span>★★★</span>)
+        } else if (this.props.review.rating === 4) {
+          return (<span>★★★★</span>)
+        } else {
+          return (<span>★★★★★</span>)
+          // ☆☆☆☆☆☆
+        }
       }
     }
   }
+
   renderAvg(){
       if (this.props.avg !== undefined) {
 
@@ -70,7 +81,7 @@ class BookIndexItem extends React.Component {
 {/* title */}<Link to={`/book/${this.props.book.id}`} > <td><span className="bookItemTitle"> {this.props.book.title} </span> </td></Link>
 {/* author */}<td>{this.props.book.author}</td>
   {/* avg rating */} <td>{this.renderAvg()}</td>
-  {/* rating */} <td>{this.renderRating()}</td>
+  {/* rating */} <td className="book-index-item-stars">{this.renderRating()}</td>
   {/* bookshelves */}<td><ul className="bookshelfUL">{bookshelves}</ul></td>
 
         

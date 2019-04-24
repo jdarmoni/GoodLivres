@@ -7,7 +7,10 @@ class EditForm extends React.Component {
             book: {},
             body: "",
             rating: 0
+            // when you're feeling braver, refactor this.state.rating / vs / this.rating
         }
+        this.rating = 0; 
+        this.updateStar = this.updateStar.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     update(field) {
@@ -15,13 +18,17 @@ class EditForm extends React.Component {
             [field]: e.target.value
         })
     }
+    updateStar(e){
+        debugger
+        this.rating = parseInt(e.target.value)
+    }
     handleSubmit(e) {
         e.preventDefault();
-        
+        debugger
         if (this.props.location.review !== undefined) {
-            this.props.updateReview({ content: this.state.body, book_id: this.props.bookId, user_id: this.props.user.id, rating: this.state.rating, id: this.props.location.review.id });
+            this.props.updateReview({ content: this.state.body, book_id: this.props.bookId, user_id: this.props.user.id, rating: this.rating, id: this.props.location.review.id });
         } else {
-            this.props.createReview({ content: this.state.body, book_id: this.props.bookId, user_id: this.props.user.id, rating: this.state.rating });
+            this.props.createReview({ content: this.state.body, book_id: this.props.bookId, user_id: this.props.user.id, rating: this.rating });
         }
         // if create, this.props.createReview; else {editReview({})}
         this.props.history.push(`/book/${this.state.book.id}`)
@@ -34,7 +41,7 @@ class EditForm extends React.Component {
         });
     }
     render(){
-        
+        debugger
         if (this.state.book.title) {
             return (
                 <div className="review-container">
@@ -52,21 +59,20 @@ class EditForm extends React.Component {
                     <p className="myRatingStars">my rating: </p>
                     <div className="rating">
                             <div class="editRate" id="rateStars">
-                                <input type="radio" id="star5" name="rate" value="5" onClick={this.update} />
+                                <input type="radio" id="star5" name="rate" value="5" onClick={this.updateStar} />
                                 <label for="star5" title="text">5 stars</label>
-                                <input type="radio" id="star4" name="rate" value="4" onClick={this.update} />
+                                <input type="radio" id="star4" name="rate" value="4" onClick={this.updateStar} />
                                 <label for="star4" title="text">4 stars</label>
-                                <input type="radio" id="star3" name="rate" value="3" onClick={this.update} />
+                                <input type="radio" id="star3" name="rate" value="3" onClick={this.updateStar} />
                                 <label for="star3" title="text">3 stars</label>
-                                <input type="radio" id="star2" name="rate" value="2" onClick={this.update} />
+                                <input type="radio" id="star2" name="rate" value="2" onClick={this.updateStar} />
                                 <label for="star2" title="text">2 stars</label>
-                                <input type="radio" id="star1" name="rate" value="1" onClick={this.update} />
+                                <input type="radio" id="star1" name="rate" value="1" onClick={this.updateStar} />
                                 <label for="star1" title="text">1 star</label>
                             </div>
                         {/* <Link to={`/review/edit/${this.props.book.id}`} className="rating-stars" ><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></Link> */}
                     </div>
 
-<br></br>
                         <h4>What did you think?</h4>
 
                         <form onSubmit={this.handleSubmit}>

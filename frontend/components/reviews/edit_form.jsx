@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 class EditForm extends React.Component {
     constructor(props){
@@ -47,7 +48,7 @@ class EditForm extends React.Component {
                 <div className="review-container">
                     <div className="review-header-wrapper">
 
-                        <h1 className="review-edit-header"><span className="green">{this.state.book.title}</span> > <span className="green">Review </span> > Edit</h1>
+                        <h1 className="review-edit-header"><span className="green"><Link to={`/book/${this.state.book.id}`}>{this.state.book.title}</Link></span> > <span className="green">Review </span> > Edit</h1>
                         <div className="section1">
                             <img className ="review-book-image" src={`${this.state.book.image}`}/>
                             <span className="section2">
@@ -56,7 +57,7 @@ class EditForm extends React.Component {
                             </span>
                         </div>
                     </div>
-                    <p className="myRatingStars">my rating: </p>
+                    <p className="myRatingStars">My rating: </p>
                     <div className="rating">
                             <div class="editRate" id="rateStars">
                                 <input type="radio" id="star5" name="rate" value="5" onClick={this.updateStar} />
@@ -73,7 +74,7 @@ class EditForm extends React.Component {
                         {/* <Link to={`/review/edit/${this.props.book.id}`} className="rating-stars" ><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></Link> */}
                     </div>
 
-                        <h4>What did you think?</h4>
+                        <p className="whatdidyouthink">What did you think?</p>
 
                         <form onSubmit={this.handleSubmit}>
                             <input className="review-box" placeholder="Enter your review (eggs)" type="textarea" onChange={this.update('body')} />

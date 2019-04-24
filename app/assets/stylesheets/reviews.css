@@ -58,7 +58,6 @@
 
 .review-container{
     min-height: 400px;
-    border: solid 1px black;
     margin: 0 auto;
 }
 
@@ -72,10 +71,11 @@
     font-size: 20px;
 }
 
-.green {
-    color: #00635d
-}
+.green a {
+    color: #00635d;
+    text-decoration: none;
 
+}
 .review-book-title {
     margin: 0;
 }
@@ -95,8 +95,19 @@
 
 }
 .review-box {
-    width: 80%;
-    min-height: 400px;
+    width: 70%;
+    min-height: 200px;
+}
+
+.review-box::placeholder {
+    
+}
+
+.whatdidyouthink{
+    clear: both;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .review-save-button {
@@ -110,4 +121,8 @@
     background-color: #F4F1EA;
     line-height: 1;
     padding: 8px 12px;
+    position: absolute;
+    bottom: 18%;
+    left: 98px;
 }
+

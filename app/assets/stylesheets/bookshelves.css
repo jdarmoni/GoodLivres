@@ -9,13 +9,13 @@
     margin: 0;
     list-style: none;
     padding-left: 0;
-    border-bottom: solid 1px #00635d;
+    border-bottom: solid 1px #D8D8D8;
     float: left;
 }
 
 .bookShelves li:nth-child(5)  {
     padding-bottom: 5px;
-    border-bottom: solid 1px black;
+    border-bottom: solid 1px #D8D8D8;
 }
 
 .bookShelves li:nth-child(6)  {
@@ -116,6 +116,8 @@
 
 .logged-in-header-link {
     /* padding-top: 10px; */
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     height: 40px;

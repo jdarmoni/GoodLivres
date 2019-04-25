@@ -16,3 +16,8 @@
 .browseBookImage {
     width: 100%;
 }
+
+.browseBook a {
+    text-decoration: none;
+    color: #00635d;
+}

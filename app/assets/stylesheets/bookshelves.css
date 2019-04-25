@@ -170,7 +170,7 @@
     list-style-type: none;
     display: flex;
     justify-content: space-between; 
-    width: 30%;
+    width: auto;
     /* color: white; */
     /* padding-top: 10px; */
 }
@@ -189,17 +189,18 @@
 
 .logged-in-header-link li:hover:not(:first-child) {
     background-color: #382110;
- }
-
-.logged-in-header-link li a:hover {
     text-decoration: none;
     color: white;
  }
 
+.logged-in-header-link li:hover a {
+    text-decoration: none;
+    color: white;
+ }
+/* 
 .logged-in-header-link li:hover {
-    text-decoration: none;
-    color: white;
- }
+    
+ } */
 
 
 .logged-in-header-link img {
@@ -240,6 +241,7 @@
 
 .bookIndexTable {
     color: #00635d;
+    border-collapse: collapse
 }
 
 .bookIndexTable th {
@@ -248,7 +250,7 @@
 }
 
 .bookIndexTable td { 
-    padding-top: 0;
+    padding-top: 10px;
     font-size: 14px;
     vertical-align: top;
 }

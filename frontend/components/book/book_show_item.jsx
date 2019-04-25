@@ -32,6 +32,7 @@ class BookShowItem extends React.Component {
     this.props.requestBook(parseInt(this.props.match.params.id)).then((book)=>{
     
     });
+    debugger
   }
   toggleStars(){
     let current_user = this.props.user;
@@ -80,6 +81,15 @@ class BookShowItem extends React.Component {
   }
   toggleShow(){
     document.getElementById('shelves').classList.toggle("show");
+  }
+
+  WriteReview(){
+    
+    if (this.props.review) {
+      return ("Write a Review")
+    } else {
+      return ("Edit Review")
+    }
   }
 
   update(e) {
@@ -145,7 +155,7 @@ class BookShowItem extends React.Component {
                     <label for="star1" title="text">1 star</label>
                 </div>
               </form>
-              {/* <Link to={`/review/edit/${this.props.book.id}`} className="rating-stars" ><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></Link> */}
+              <Link to={`/review/edit/${this.props.book.id}`} className="rating-stars" >Write a Review</Link>
             </div>
 
             {/* <button onClick={this.previousBook}>Previous</button>

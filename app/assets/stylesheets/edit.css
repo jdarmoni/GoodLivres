@@ -20,7 +20,6 @@
     overflow:hidden;
     white-space:nowrap;
     cursor:pointer;
-    /* font-size:30px; */
     color:#ccc;
 }
 .editRate:not(:checked) > label:before {

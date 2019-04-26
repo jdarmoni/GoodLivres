@@ -18,7 +18,7 @@ const msp = (state, ownProps) => {
             }
         }
     });
-    debugger
+    
     return {
         book: ownProps.book,
         bookshelves: Object.values(state.entities.bookshelves),

@@ -2,7 +2,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
-    /* justify-content: space-evenly; */
 }
 .browseBook{
     min-height: 200px;
@@ -10,7 +9,6 @@
     width: 20%;
     height: 40%;
     background-color: blue;
-    border: solid 1px black;
 }
 
 .browseBookImage {
@@ -20,4 +18,7 @@
 .browseBook a {
     text-decoration: none;
     color: #00635d;
+}
+.browseBook h1 {
+    text-align: center;
 }

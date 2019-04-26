@@ -1,6 +1,4 @@
-.reviews{
-    /* border: solid 1px black; */
-}
+
 
 .rating {
     text-align: center;
@@ -99,9 +97,6 @@
     min-height: 200px;
 }
 
-.review-box::placeholder {
-    
-}
 
 .whatdidyouthink{
     clear: both;

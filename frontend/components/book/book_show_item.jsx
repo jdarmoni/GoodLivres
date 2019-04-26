@@ -32,18 +32,18 @@ class BookShowItem extends React.Component {
     this.props.requestBook(parseInt(this.props.match.params.id)).then((book)=>{
     
     });
-    debugger
+    
   }
   toggleStars(){
     let current_user = this.props.user;
     Object.values(this.props.reviews).forEach(review => {
-      debugger
+      
       if (review.user_id === current_user) {
-        debugger
+        
         this.review = review
       }
     });
-    debugger
+    
     if (this.review === undefined || this.review.rating === 0 || document.getElementById('rateStars')===null) {return null}
     document.getElementById(`star${this.review.rating}`).checked = true
   }
@@ -125,7 +125,7 @@ class BookShowItem extends React.Component {
       return null
     } else {
       
-      debugger  
+        
       return (
         <>
   {/* Book Show: */}
@@ -188,7 +188,7 @@ class BookShowItem extends React.Component {
                 <div className="another-about-author">
                   <h1 className="author-name">ABOUT JULIEN DARMONI</h1>
 
-                  <img className="author-photo" src="https://media.licdn.com/dms/image/C4D03AQEedUwaagnfqw/profile-displayphoto-shrink_200_200/0?e=1559779200&v=beta&t=w-v60mGptPjgppeLWBTJpnprSEQiiOab1fRcG-jPn7w"/>
+                <img className="author-photo" src="http://juliendarmoni.com/julien.jpg"/>
                   <span className ="author-name2">Julien Darmoni is the greatest programmer of his generation. Despite this, he remains humble, gracious, and extremely powerful</span>
                 </div>   
               </div>

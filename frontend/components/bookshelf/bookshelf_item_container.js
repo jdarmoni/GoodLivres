@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 import BookshelfIndexItem from './bookshelf_index_item'
 import {requestBookshelf, deleteBookshelf} from '../../actions/bookshelf_actions'
 const msp = (state)=>{
-    debugger
+    
     return {
         bookshelf: state.bookshelf
     }

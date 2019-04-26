@@ -1,18 +1,14 @@
 class Api::ReviewsController < ApplicationController
 
-    def index
-        # debugger
-        # we already have book_id in params
-        # print 'eggs'
-        # debugger
+    def index        
             if params[:bookId]
                 @book = Book.find_by(id: Integer(params[:bookId]))      
-            # debugger  
+            
                 @reviews = @book.reviews
             else
                 @reviews = Review.all
             end
-        # debugger
+        
             render :index
     end
 
@@ -26,8 +22,7 @@ class Api::ReviewsController < ApplicationController
         
         @review = Review.new(review_params)
         if @review.save
-            # @username = @review.user.username
-            # debugger
+
             render :show
         end
     end

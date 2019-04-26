@@ -5,7 +5,7 @@ import {requestBook} from '../../actions/book_actions';
 import {createReview, updateReview} from '../../actions/review_actions'
 
 const msp = (state, ownProps) => {
-    debugger
+    
     // doesn't really need to know about other reviews
     return {
         user: Object.values(state.entities.users)[0],

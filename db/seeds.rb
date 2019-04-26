@@ -9,6 +9,7 @@ User.destroy_all
 Shelving.destroy_all
 Book.destroy_all
 Bookshelf.destroy_all
+Review.destroy_all
 
 User.create!(
     username: 'demo',

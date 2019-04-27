@@ -39,7 +39,6 @@ class BookShowItem extends React.Component {
     Object.values(this.props.reviews).forEach(review => {
       
       if (review.user_id === current_user) {
-        
         this.review = review
       }
     });
@@ -98,8 +97,8 @@ class BookShowItem extends React.Component {
   }
 
   update(e) {
-    
       let reviews = Object.values(this.props.reviews);
+
       for (let i = 0; i < reviews.length; i++) {
         let review = reviews[i];
         if (review.user_id === this.props.user) {
@@ -107,8 +106,9 @@ class BookShowItem extends React.Component {
           return
         }
       }
-      this.props.createReview({user_id: this.props.user, id: review.id, content: "", book_id: this.props.book.id, rating: parseInt(e.target.value)})
-  
+       
+    this.props.createReview({ content: "[no rating]", book_id: this.props.book.id, user_id: this.props.user, rating: parseInt(e.target.value)})
+    // this.props.history.push(`/book/${reviews[0].book_id}`) << need to REFRESH here
   }
  
 
@@ -129,10 +129,8 @@ class BookShowItem extends React.Component {
     if (!this.props.book.title){
       return null
     } else {
-      
-      
-      return (
-        
+    
+      return ( 
         <>
   {/* Book Show: */}
   {this.toggleStars()}

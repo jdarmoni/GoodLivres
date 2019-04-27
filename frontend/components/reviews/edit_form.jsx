@@ -26,17 +26,20 @@ class EditForm extends React.Component {
     }
     toggleStars() {
         let current_user = this.props.user;
+        let reviews = Object.values(this.props.reviews);
         debugger
-        Object.values(this.props.reviews).forEach(review => {
-            debugger
-            if (review.user_id === current_user) {
+        // for each review
+        for (let i = 0; i < reviews.length; i++ ) {
+            if (reviews[i].user_id === current_user.id) {
                 debugger
-                this.review = review
+                this.review = reviews[i];
             }
-        });
-
+        }
+        debugger
         if (this.review === undefined || this.review.rating === 0 || document.getElementById('rateStars') === null) { return null }
-        document.getElementById(`star${this.review.rating}`).checked = true
+        debugger
+        document.getElementById(`star${this.review.rating}`).checked = true;
+        debugger
     }
     handleSubmit(e) {
         e.preventDefault();
@@ -49,18 +52,21 @@ class EditForm extends React.Component {
         // if create, this.props.createReview; else {editReview({})}
         this.props.history.push(`/book/${this.state.book.id}`)
     }
-
+    
     componentDidMount(){
         
         this.props.requestBook(this.props.bookId).then((book)=>{
             this.setState({book: book.payload})
         });
+        // QUESTION: why isn't it waiting for HTML to render before running this.
+        this.toggleStars()
+
     }
     render(){
-        debugger
+        
         if (this.state.book.title) {
             return (
-                
+                <>
                 <div className="review-container">
                     <div className="review-header-wrapper">
 
@@ -96,9 +102,9 @@ class EditForm extends React.Component {
                             <input className="review-box" placeholder="Enter your review (eggs)" type="textarea" onChange={this.update('body')} />
                             {/* <br> */}
                             <input type="submit" className="review-save-button" value="Save" />
-
                         </form>
                 </div>
+                </>
                 
             )
 

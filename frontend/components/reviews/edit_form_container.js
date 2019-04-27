@@ -6,11 +6,10 @@ import {createReview, updateReview} from '../../actions/review_actions'
 
 const msp = (state, ownProps) => {
     
-    // doesn't really need to know about other reviews
     return {
         user: Object.values(state.entities.users)[0],
         bookId: ownProps.match.params.id,
-        
+        reviews: state.entities.reviews      
     }
 }
 

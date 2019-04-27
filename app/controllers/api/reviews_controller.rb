@@ -21,8 +21,8 @@ class Api::ReviewsController < ApplicationController
         # print 'eggs'
         
         @review = Review.new(review_params)
+        
         if @review.save
-
             render :show
         end
     end

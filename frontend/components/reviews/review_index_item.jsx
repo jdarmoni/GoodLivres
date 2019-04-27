@@ -16,7 +16,7 @@ class ReviewsIndexItem extends React.Component {
 
     }
     renderDelete(){
-        debugger
+        
         if(this.props.review.user_id === this.props.user.id){
             return <p className="delete-review" onClick={this.deleteReview}>x</p>
         }

@@ -10,6 +10,7 @@ class EditForm extends React.Component {
             rating: 0
             // when you're feeling braver, refactor this.state.rating / vs / this.rating
         }
+        this.review;
         this.rating = 0; 
         this.updateStar = this.updateStar.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -22,6 +23,20 @@ class EditForm extends React.Component {
     updateStar(e){
         debugger
         this.rating = parseInt(e.target.value)
+    }
+    toggleStars() {
+        let current_user = this.props.user;
+        debugger
+        Object.values(this.props.reviews).forEach(review => {
+            debugger
+            if (review.user_id === current_user) {
+                debugger
+                this.review = review
+            }
+        });
+
+        if (this.review === undefined || this.review.rating === 0 || document.getElementById('rateStars') === null) { return null }
+        document.getElementById(`star${this.review.rating}`).checked = true
     }
     handleSubmit(e) {
         e.preventDefault();
@@ -45,6 +60,7 @@ class EditForm extends React.Component {
         debugger
         if (this.state.book.title) {
             return (
+                
                 <div className="review-container">
                     <div className="review-header-wrapper">
 
@@ -83,6 +99,7 @@ class EditForm extends React.Component {
 
                         </form>
                 </div>
+                
             )
 
         } else {

@@ -15,6 +15,7 @@ class ReviewsIndexItem extends React.Component {
         // debugger
 
     }
+ 
 
     deleteReview(){
         // debugger
@@ -27,22 +28,16 @@ class ReviewsIndexItem extends React.Component {
         }
     }
     render() {
-        // debugger
-        // something like users[this.props.review.user_id]
+        
         return (
+            <>
             <div className="individual-review">
                 <p className="delete-review" onClick={this.deleteReview}>x</p>
-                
-                <Link 
-                    to={{
-                        pathname: `/review/edit/${this.props.book.id}`,
-                        review: this.props.review 
-                }}><p className="edit-review">o</p>
-                </Link>
                 
                 <h1 className="review-header"><span className="review-author">{this.props.review.user_id}</span> rated it: <span className="review-rating">{this.props.review.rating} stars</span> </h1>
                 <p className="review-body">{this.props.review.content}</p>
             </div>
+            </>
         )
     }
 }

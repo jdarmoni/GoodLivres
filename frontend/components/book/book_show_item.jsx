@@ -72,7 +72,6 @@ class BookShowItem extends React.Component {
   }
 
   nextBook(){
-    // debugger
     // you need to be able to see if this.props.book.id + 1 EXISTS - can't fall off the cliff!
     this.props.history.push(`/book/${(this.props.book.id + 1)}`)
   }
@@ -83,13 +82,19 @@ class BookShowItem extends React.Component {
     document.getElementById('shelves').classList.toggle("show");
   }
 
-  WriteReview(){
+  writeReview(){
     
-    if (this.props.review) {
-      return ("Write a Review")
-    } else {
-      return ("Edit Review")
-    }
+    if (this.props.review === undefined) {
+      return (
+        <Link to={`/review/edit/${this.props.book.id}`} className="rating-stars" >Write a Review</Link>
+    )} else {
+        return (
+        <Link to = {{
+              pathname: `/review/edit/${this.props.book.id}`,
+              review: this.props.review 
+              }}> <p className="edit-review">Edit Review</p>
+        </Link >
+      )}
   }
 
   update(e) {
@@ -125,8 +130,9 @@ class BookShowItem extends React.Component {
       return null
     } else {
       
-        
+      debugger
       return (
+        
         <>
   {/* Book Show: */}
   {this.toggleStars()}
@@ -155,11 +161,9 @@ class BookShowItem extends React.Component {
                     <label for="star1" title="text">1 star</label>
                 </div>
               </form>
-              <Link to={`/review/edit/${this.props.book.id}`} className="rating-stars" >Write a Review</Link>
+              {this.writeReview()}
             </div>
 
-            {/* <button onClick={this.previousBook}>Previous</button>
-            <button onClick={this.nextBook}>Next</button> */}
             </div>
 
             <div className="book-content">

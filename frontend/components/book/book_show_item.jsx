@@ -108,6 +108,7 @@ class BookShowItem extends React.Component {
       }
        
     this.props.createReview({ content: "[no rating]", book_id: this.props.book.id, user_id: this.props.user, rating: parseInt(e.target.value)})
+    // QUESTION: Why doesn't this rerender? Even if I setState? 
     // this.props.history.push(`/book/${reviews[0].book_id}`) << need to REFRESH here
   }
  

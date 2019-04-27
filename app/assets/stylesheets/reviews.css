@@ -36,14 +36,10 @@
 }
 
 .edit-review{
-    float: right;
+    clear: both;
     margin-top: 0;   
 }
-.edit-review:hover {
-    color: blue;
-    border: solid 1px blue;
-    border-radius: 48px;
-}
+
 .delete-review {
     float: right;
     margin-top: 0;

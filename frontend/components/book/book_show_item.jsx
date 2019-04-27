@@ -130,7 +130,7 @@ class BookShowItem extends React.Component {
       return null
     } else {
       
-      debugger
+      
       return (
         
         <>

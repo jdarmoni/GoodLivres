@@ -15,10 +15,14 @@ class ReviewsIndexItem extends React.Component {
         // debugger
 
     }
- 
+    renderDelete(){
+        debugger
+        if(this.props.review.user_id === this.props.user.id){
+            return <p className="delete-review" onClick={this.deleteReview}>x</p>
+        }
+    }
 
     deleteReview(){
-        // debugger
         this.props.deleteReview(this.props.review.id) 
     }
     renderDeleteView(){
@@ -32,8 +36,7 @@ class ReviewsIndexItem extends React.Component {
         return (
             <>
             <div className="individual-review">
-                <p className="delete-review" onClick={this.deleteReview}>x</p>
-                
+                {this.renderDelete()}                
                 <h1 className="review-header"><span className="review-author">{this.props.review.user_id}</span> rated it: <span className="review-rating">{this.props.review.rating} stars</span> </h1>
                 <p className="review-body">{this.props.review.content}</p>
             </div>

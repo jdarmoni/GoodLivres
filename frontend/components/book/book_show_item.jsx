@@ -35,6 +35,7 @@ class BookShowItem extends React.Component {
     
   }
   toggleStars(){
+    
     let current_user = this.props.user;
     Object.values(this.props.reviews).forEach(review => {
       
@@ -113,7 +114,7 @@ class BookShowItem extends React.Component {
         }
       }
        
-    this.props.createReview({ content: "[no rating]", book_id: this.props.book.id, user_id: this.props.user, rating: parseInt(e.target.value)})
+    this.props.createReview({ content: " _ ", book_id: this.props.book.id, user_id: this.props.user, rating: parseInt(e.target.value)})
     debugger
     this.props.createShelving({ book_id: this.props.match.params.id, bookshelf_id: this.props.bookshelves[1].id });          
 

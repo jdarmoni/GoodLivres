@@ -14,7 +14,7 @@ class BookBookshelfShow extends React.Component {
     }
 
     addToBookshelf(){
-        // QUESTION: I MAKE TWO AJAX REQUESTS HERE - DUMB?
+        // QUESTION: I MAKE TWO AJAX REQUESTS HERE - ONE FOR All, ONE FOR ACTUAL TARGET?
         
         this.props.createShelving({ book_id: this.props.match.params.id, bookshelf_id: this.props.all });
 

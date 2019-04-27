@@ -3,7 +3,7 @@ import BookShowItem from './book_show_item';
 import { requestBook } from '../../actions/book_actions';
 import { requestBookshelves } from '../../actions/bookshelf_actions';
 import {createReview, updateReview } from '../../actions/review_actions';
-
+import {createShelving} from '../../actions/shelving_actions';
 import {withRouter} from 'react-router-dom';
 
 const msp = (state, ownProps) => {
@@ -26,7 +26,7 @@ const msp = (state, ownProps) => {
     bookshelves: Object.values(state.entities.bookshelves),
     review: review,
     reviews: state.entities.reviews,
-    user: Object.values(state.entities.users)[0].id
+    user: Object.values(state.entities.users)[0].id,
   };
 };
 
@@ -36,7 +36,8 @@ const mdp = (dispatch) => {
     requestBook: (id) => dispatch(requestBook(id)),
     requestBookshelves: ()=> dispatch(requestBookshelves()),
     createReview: (review) => dispatch(createReview(review)),
-    updateReview: (review) => dispatch(updateReview(review))
+    updateReview: (review) => dispatch(updateReview(review)),
+    createShelving: (shelving)=>dispatch(createShelving(shelving))
   })
 };
 

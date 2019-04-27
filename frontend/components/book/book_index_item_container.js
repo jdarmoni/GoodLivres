@@ -8,13 +8,11 @@ const msp = (state, ownProps) => {
     let avg = 0;
     let count = 0;
     Object.values(state.entities.reviews).forEach(review => {
-        
         if (review.book_id === ownProps.book.id){
             avg += review.rating;
             count += 1;
             if (review.user_id === Object.values(state.entities.users)[0].id) {
                 bookReview = review;
-                
             }
         }
     });

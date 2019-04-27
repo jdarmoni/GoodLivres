@@ -44,7 +44,10 @@ class BookShowItem extends React.Component {
     });
     
     if (this.review === undefined || this.review.rating === 0 || document.getElementById('rateStars')===null) {return null}
-    document.getElementById(`star${this.review.rating}`).checked = true
+    document.getElementById(`star${this.review.rating}`).checked = true;
+     
+    // if you rate something, you should create a join
+
   }
 
   componentDidUpdate() {
@@ -103,11 +106,18 @@ class BookShowItem extends React.Component {
         let review = reviews[i];
         if (review.user_id === this.props.user) {
           this.props.updateReview({user_id: review.user_id, id: review.id, content: review.content, book_id: review.book_id, rating: parseInt(e.target.value)})
+          // make a Read shelving, if one doesn't exist
+          debugger
+          this.props.createShelving({ book_id: this.props.match.params.id, bookshelf_id: this.props.bookshelves[1].id });          
           return
         }
       }
        
     this.props.createReview({ content: "[no rating]", book_id: this.props.book.id, user_id: this.props.user, rating: parseInt(e.target.value)})
+    debugger
+    this.props.createShelving({ book_id: this.props.match.params.id, bookshelf_id: this.props.bookshelves[1].id });          
+
+    
     // QUESTION: Why doesn't this rerender? Even if I setState? 
     // this.props.history.push(`/book/${reviews[0].book_id}`) << need to REFRESH here
   }

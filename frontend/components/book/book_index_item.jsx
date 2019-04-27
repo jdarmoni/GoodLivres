@@ -56,10 +56,12 @@ class BookIndexItem extends React.Component {
   }
 
   renderAvg(){
+    debugger
       if (this.props.avg !== undefined) {
-
-        return this.props.avg
-      }
+        if (!isNaN(this.props.avg)) {
+          return this.props.avg
+        }
+      } 
   }
 
 

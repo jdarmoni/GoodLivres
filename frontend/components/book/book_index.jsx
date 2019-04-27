@@ -22,7 +22,7 @@ class BookIndex extends React.Component {
   }
 
   componentDidUpdate(){
-    debugger
+    
     if (this.state.currentBookshelf !== this.props.match.params.id) {
       this.props.requestBooks(this.props.match.params.id).then( ()=>{
         this.setState({currentBookshelf: this.props.match.params.id})

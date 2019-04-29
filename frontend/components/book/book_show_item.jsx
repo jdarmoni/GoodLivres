@@ -12,6 +12,7 @@ class BookShowItem extends React.Component {
       rating: 0
     };
     this.review;
+    debugger
     this.renderBookShelves = this.renderBookShelves.bind(this);
     this.getImage = this.getImage.bind(this);
     this.nextBook = this.nextBook.bind(this);
@@ -30,10 +31,9 @@ class BookShowItem extends React.Component {
   componentDidMount(){
     this.props.requestBookshelves()
     this.props.requestBook(parseInt(this.props.match.params.id)).then((book)=>{
-    
-    });
-    
+    });   
   }
+
   toggleStars(){
     
     let current_user = this.props.user;
@@ -114,16 +114,8 @@ class BookShowItem extends React.Component {
       }
        
     this.props.createReview({ content: " _ ", book_id: this.props.book.id, user_id: this.props.user, rating: parseInt(e.target.value)})
-    debugger
+    
     this.props.createShelving({ book_id: this.props.match.params.id, bookshelf_id: this.props.bookshelves[1].id });          
-    this.setState({rating: 2}, ()=>{
-      console.log(this.state.rating)
-      debugger
-    });
-    debugger
-    // when you rate a book, should refresh. 
-    // QUESTION: Why doesn't this rerender? Even if I setState? 
-    // this.props.history.push(`/book/${reviews[0].book_id}`) << need to REFRESH here
   }
  
 

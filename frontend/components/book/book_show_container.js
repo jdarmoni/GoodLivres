@@ -10,8 +10,11 @@ const msp = (state, ownProps) => {
   let bookId = parseInt(ownProps.match.params.id);
   let book;
   let review; 
+  
   Object.values(state.entities.reviews).forEach((bookReview)=>{
+    
     if (bookReview.user_id === Object.values(state.entities.users)[0].id) {
+      
       review = bookReview;
     }
   })

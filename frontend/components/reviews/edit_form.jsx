@@ -33,6 +33,7 @@ class EditForm extends React.Component {
             if (reviews[i].user_id === current_user.id) {
                 debugger
                 this.review = reviews[i];
+                this.rating = this.review.rating
             }
         }
         debugger
@@ -58,13 +59,14 @@ class EditForm extends React.Component {
         this.props.requestBook(this.props.bookId).then((book)=>{
             this.setState({book: book.payload})
         });
-        // QUESTION: why isn't it waiting for HTML to render before running this.
         this.toggleStars()
 
     }
     render(){
-        
-        if (this.state.book.title) {
+        debugger
+        // if (this.state.book.title) {
+            // culprite is 68
+            debugger
             return (
                 <>
                 <div className="review-container">
@@ -108,9 +110,9 @@ class EditForm extends React.Component {
                 
             )
 
-        } else {
-            return null
-        }
+        // } else {
+        //     return null
+        // }
     }
 }
 export default EditForm

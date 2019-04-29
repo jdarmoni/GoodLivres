@@ -59,7 +59,6 @@ class BookShowItem extends React.Component {
   }
 
   renderBookShelves(){
-    // QUESTION: how can I know if this Book Id is in your 'Read' shelf?  
 
     let all = 0;
     let shelves = this.props.bookshelves.map((bookshelf) => {
@@ -107,8 +106,8 @@ class BookShowItem extends React.Component {
         let review = reviews[i];
         if (review.user_id === this.props.user) {
           this.props.updateReview({user_id: review.user_id, id: review.id, content: review.content, book_id: review.book_id, rating: parseInt(e.target.value)})
-          // make a Read shelving, if one doesn't exist
           debugger
+          // make a Read shelving, if one doesn't exist
           this.props.createShelving({ book_id: this.props.match.params.id, bookshelf_id: this.props.bookshelves[1].id });          
           return
         }
@@ -117,8 +116,12 @@ class BookShowItem extends React.Component {
     this.props.createReview({ content: " _ ", book_id: this.props.book.id, user_id: this.props.user, rating: parseInt(e.target.value)})
     debugger
     this.props.createShelving({ book_id: this.props.match.params.id, bookshelf_id: this.props.bookshelves[1].id });          
-
-    
+    this.setState({rating: 2}, ()=>{
+      console.log(this.state.rating)
+      debugger
+    });
+    debugger
+    // when you rate a book, should refresh. 
     // QUESTION: Why doesn't this rerender? Even if I setState? 
     // this.props.history.push(`/book/${reviews[0].book_id}`) << need to REFRESH here
   }
@@ -185,6 +188,7 @@ class BookShowItem extends React.Component {
             
                 <div className="reviews">
                   <ReviewIndexContainer bookId={this.props.book.id}/>
+                  {/* NOTE: grab bookId from ownProps.match.params */}
                 </div>
 
             </div>

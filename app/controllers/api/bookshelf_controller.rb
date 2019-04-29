@@ -4,7 +4,6 @@ class Api::BookshelfController < ApplicationController
         #no id for when current user is nil 
         @bookshelves = Bookshelf.where(user_id: current_user.id)
         if @bookshelves.first === nil
-            # QUESTION: Can't use these debuggers?? debugger
             Bookshelf.new({user_id: current_user.id, title: "All"}).save;
             Bookshelf.new({user_id: current_user.id, title: "Read"}).save;
             Bookshelf.new({user_id: current_user.id, title: "Want to Read"}).save;

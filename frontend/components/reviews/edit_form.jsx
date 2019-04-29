@@ -53,7 +53,13 @@ class EditForm extends React.Component {
         // if create, this.props.createReview; else {editReview({})}
         this.props.history.push(`/book/${this.state.book.id}`)
     }
-    
+    getImage() {
+        if (this.state.book.image !== null) {
+            return <img className="review-book-image" src={`${this.state.book.image}`} />
+        } else {
+            return <img className="review-book-image" src="https://images.gr-assets.com/books/1315485290l/2947829.jpg" />
+        }
+    }
     componentDidMount(){
         
         this.props.requestBook(this.props.bookId).then((book)=>{
@@ -74,7 +80,7 @@ class EditForm extends React.Component {
 
                         <h1 className="review-edit-header"><span className="green"><Link to={`/book/${this.state.book.id}`}>{this.state.book.title}</Link></span> > <span className="green">Review </span> > Edit</h1>
                         <div className="section1">
-                            <img className ="review-book-image" src={`${this.state.book.image}`}/>
+                            {this.getImage()}
                             <span className="section2">
                                 <h4 className="review-book-title">{this.state.book.title}</h4>
                              <p className="review-book-author">by {this.state.book.author}</p>

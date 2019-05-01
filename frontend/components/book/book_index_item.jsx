@@ -66,7 +66,7 @@ class BookIndexItem extends React.Component {
 
 
   render(){
-    
+    debugger
     let bookshelves = [];
     this.props.book.bookshelves.map((bookshelf) => {
       

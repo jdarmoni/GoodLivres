@@ -21,7 +21,7 @@ const mapDispatchToProps = dispatch => ({
     createBookshelf: (bookshelf)=>dispatch(createBookshelf(bookshelf)),
     deleteBookshelf: (bookshelfId)=>dispatch(deleteBookshelf(bookshelfId)),
     requestAllReviews: ()=>dispatch(requestAllReviews()),
-    requestShelvings: (bookId)=>dispatch(requestShelvings(bookId))
+    requestShelvings: ()=>dispatch(requestShelvings())
 });
 
 export default withRouter(connect(

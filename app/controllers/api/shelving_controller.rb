@@ -1,13 +1,14 @@
 class Api::ShelvingController < ApplicationController
 
   def index
-    @shelf = Shelving.all.where(bookshelf_id: params[:bookshelfId])
+    @shelves = Shelving.all
     # debugger
-    render :index #I rendered the JSON of shelf because the index view wasn't working (undefined method error :book_id???)
+    render :index 
   end
 
   def show 
-    
+      @shelf = Shelving.all.where(bookshelf_id: params[:bookshelfId])
+      render :show
   end
 
   def create

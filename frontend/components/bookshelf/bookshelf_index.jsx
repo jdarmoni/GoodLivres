@@ -29,7 +29,7 @@ class BookshelfIndex extends React.Component{
             
             console.log(reviews.payload)
         });     
-           
+        this.props.requestShelvings()  
     }
     
     handleSubmit(e){
@@ -87,7 +87,7 @@ class BookshelfIndex extends React.Component{
         });
 
         let currentBookshelf = this.props.match.params.id || this.state.currentBookshelf; 
-        // debugger
+        
         return (
             // THIS IS SPGAHETTI I THINK:  HAVE OWN CONTAINER FOR BOOKSHELF INDEXITEM
             <div className="bookshelfContainer">

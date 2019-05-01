@@ -30,21 +30,21 @@ export const removeshelving = (shelving) => {
 };
 
 
-export const requestShelvings = (bookshelfId) => (dispatch) => {
-  debugger
+export const requestShelvings = () => (dispatch) => {
+  
   return (
-    APIUtil.fetchShelvings(bookshelfId).then((shelvings) => {
-      debugger
+    APIUtil.fetchShelvings().then((shelvings) => {
+      
       return dispatch(receiveAllShelvings(shelvings))
     })
   );
 };
 
 export const requestShelving = (id) => (dispatch) => {
-
+  
   return (
     APIUtil.fetchShelving(id).then((shelving) => {
-
+      
       return dispatch(receiveShelving(shelving))
     }
 

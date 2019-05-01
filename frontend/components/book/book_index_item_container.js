@@ -3,7 +3,9 @@ import BookIndexItem from './book_index_item'
 import { requestBook } from '../../actions/book_actions';
 import { withRouter } from 'react-router-dom';
 const msp = (state, ownProps) => {
+    debugger
     let bookReview;
+    let shelvings =[];
     let avg = 0;
     let count = 0;
     Object.values(state.entities.reviews).forEach(review => {
@@ -15,12 +17,18 @@ const msp = (state, ownProps) => {
             }
         }
     });
-    
+    Object.values(state.entities.shelvings).forEach(shelving=>{
+        if (shelving.book_id === Object.values(state.entities.books)[0].id && shelving.bookshelf_id === parseInt(ownProps.match.params.id)) {
+            shelvings.push(shelving);
+        }
+    })
+    debugger
     return {
         book: ownProps.book,
         bookshelves: Object.values(state.entities.bookshelves),
         review: bookReview,
-        avg: avg/count
+        avg: avg/count,
+        shelvings: shelvings
     };
 };
 

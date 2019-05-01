@@ -2,8 +2,10 @@ import { connect } from 'react-redux';
 import BookIndexItem from './book_index_item'
 import { requestBook } from '../../actions/book_actions';
 import { withRouter } from 'react-router-dom';
+import { deleteShelving} from '../../actions/shelving_actions';
+
 const msp = (state, ownProps) => {
-    debugger
+    
     let bookReview;
     let shelvings =[];
     let avg = 0;
@@ -22,13 +24,13 @@ const msp = (state, ownProps) => {
             shelvings.push(shelving);
         }
     })
-    debugger
+    
     return {
         book: ownProps.book,
         bookshelves: Object.values(state.entities.bookshelves),
         review: bookReview,
         avg: avg/count,
-        shelvings: shelvings
+        shelvings: shelvings[0]
     };
 };
 
@@ -36,6 +38,7 @@ const mdp = (dispatch) => {
 
     return ({
         requestBook: (id) => dispatch(requestBook(id)),
+        deleteShelving: (id)=>dispatch(deleteShelving(id))
     });
 };
 

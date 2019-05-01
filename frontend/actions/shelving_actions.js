@@ -21,7 +21,7 @@ export const receiveShelving = (payload) => {
 };
 
 export const removeshelving = (shelving) => {
-
+      debugger  
   return {
 
     type: REMOVE_SHELVING,
@@ -66,9 +66,9 @@ export const updateShelving = (id) => (dispatch) => {
 };
 
 export const deleteShelving = (shelvingId) => (dispatch) => {
-
+        debugger
   return APIUtil.removeShelving(shelvingId).then((shelving) => {
-
+    debugger
     dispatch(removeShelving(shelving));
   }
   );

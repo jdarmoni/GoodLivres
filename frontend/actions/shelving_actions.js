@@ -20,12 +20,13 @@ export const receiveShelving = (payload) => {
   };
 };
 
-export const removeshelving = (shelving) => {
+export const removeShelving = (shelving) => {
       debugger  
   return {
 
     type: REMOVE_SHELVING,
-    shelvingId: shelving.id
+    shelvingId: shelving.id,
+    bookId: shelving.book_id
   };
 };
 
@@ -66,7 +67,7 @@ export const updateShelving = (id) => (dispatch) => {
 };
 
 export const deleteShelving = (shelvingId) => (dispatch) => {
-        debugger
+        
   return APIUtil.removeShelving(shelvingId).then((shelving) => {
     debugger
     dispatch(removeShelving(shelving));

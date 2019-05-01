@@ -24,11 +24,10 @@ class BookIndexItem extends React.Component {
 
 
   deleteThisShelf(){
-
-    debugger
-    this.props.deleteShelving(this.props.shelvings.id)
-    // this just needs to know the shelving ID - get that from mapStateToProps
-    // deleteShelving
+    
+    this.props.deleteShelving(this.props.shelvings.id).then(()=>{
+      console.log('bye!')
+    })
   }
   getImage(){
     // debugger

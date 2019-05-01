@@ -6,6 +6,10 @@ class Api::ShelvingController < ApplicationController
     render :index #I rendered the JSON of shelf because the index view wasn't working (undefined method error :book_id???)
   end
 
+  def show 
+    
+  end
+
   def create
     # if you are adding it to 
     @newShelf = Shelving.new(shelving_params)

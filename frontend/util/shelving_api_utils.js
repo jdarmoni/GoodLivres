@@ -1,8 +1,8 @@
-export const fetchShelvings = () => {
-  // debugger
+export const fetchShelvings = (bookId) => {
+  debugger
   return $.ajax({
     method: 'get',
-    url: '/api/shelving'
+    url: `/api/shelving/${bookId}`
   })
 }
 

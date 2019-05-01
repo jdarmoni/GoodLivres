@@ -15,9 +15,10 @@ class BookIndex extends React.Component {
       // debugger
       this.props.requestBooks(this.props.currentBookshelf)
     }     
-    // debugger
+
     // why don't I have this from book_container mdp?
-    this.props.requestShelvings(this.state.currentBookshelf);
+    this.props.requestShelvings(this.state.currentBookshelf)
+    
     
   }
 

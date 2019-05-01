@@ -24,7 +24,8 @@ class BookIndexItem extends React.Component {
 
 
   deleteThisShelf(){
-    // debugger
+
+    debugger
     // this just needs to know the shelving ID - get that from mapStateToProps
     // deleteShelving
   }

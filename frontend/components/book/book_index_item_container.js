@@ -3,7 +3,6 @@ import BookIndexItem from './book_index_item'
 import { requestBook } from '../../actions/book_actions';
 import { withRouter } from 'react-router-dom';
 const msp = (state, ownProps) => {
-    
     let bookReview;
     let avg = 0;
     let count = 0;

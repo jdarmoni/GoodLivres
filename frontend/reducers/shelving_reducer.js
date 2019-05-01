@@ -6,7 +6,7 @@ export default (state={}, action)=> {
     Object.freeze(state);
     switch(action.type){
         case RECEIVE_ALL_SHELVINGS:
-            // debugger
+            debugger
             return action.shelvings
         case RECEIVE_SHELVING:
             // debugger    

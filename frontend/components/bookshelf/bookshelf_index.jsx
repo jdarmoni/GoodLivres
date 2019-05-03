@@ -36,6 +36,9 @@ class BookshelfIndex extends React.Component{
         // debugger
         e.preventDefault();
         this.props.createBookshelf({title: this.state.title, user_id: this.state.user_id});
+        this.setState({ addBookShelf: false, title: "" })
+        
+      
     }
 
     update(title){
@@ -53,7 +56,7 @@ class BookshelfIndex extends React.Component{
             return (
                 <form onSubmit={this.handleSubmit}>    
                 <span className="addBookshelfText">Add a Shelf:</span>
-                <input type="text" className="addBookshelfInput" value={this.state.title} onChange={this.update('title')}></input>
+                <input type="text" className="addBookshelfInput" id="add-bookshelf-input" value={this.state.title} onChange={this.update('title')}></input>
                 <input type="submit" className="addBookButton" value="add"></input>
             </form>)
         } else {
@@ -81,12 +84,12 @@ class BookshelfIndex extends React.Component{
     // }
 
     render (){
-
         let bookshelves = Object.values(this.props.bookshelves).map((bookshelf)=>{
             return <BookshelfIndexItem key={bookshelf.id} bookshelf={bookshelf} requestBookshelf={this.props.requestBookshelf} deleteBookshelf={this.props.deleteBookshelf}/>
         });
-
+        
         let currentBookshelf = this.props.match.params.id || this.state.currentBookshelf; 
+        
         
         return (
             // THIS IS SPGAHETTI I THINK:  HAVE OWN CONTAINER FOR BOOKSHELF INDEXITEM

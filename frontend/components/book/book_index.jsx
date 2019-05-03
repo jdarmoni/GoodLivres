@@ -4,7 +4,7 @@ import BookIndexItemContainer from './book_index_item_container';
 
 class BookIndex extends React.Component {
   constructor(props){
-    debugger
+    
     super(props);
     this.state = {currentBookshelf: this.props.currentBookshelf};
   }
@@ -32,7 +32,7 @@ class BookIndex extends React.Component {
   }
 
   render(){
-      debugger
+      
       let books = Object.values(this.props.books).map((book)=>{
         return <BookIndexItemContainer book={book} key={book.id}/> // have to pass shelvings, because you don't have a container = REFACTOR
       });

@@ -59,7 +59,7 @@ class BookShowItem extends React.Component {
   }
 
   renderBookShelves(){
-
+    debugger
     let all = 0;
     let shelves = this.props.bookshelves.map((bookshelf) => {
       
@@ -106,7 +106,6 @@ class BookShowItem extends React.Component {
         let review = reviews[i];
         if (review.user_id === this.props.user) {
           this.props.updateReview({user_id: review.user_id, id: review.id, content: review.content, book_id: review.book_id, rating: parseInt(e.target.value)})
-          debugger
           // make a Read shelving, if one doesn't exist
           this.props.createShelving({ book_id: this.props.match.params.id, bookshelf_id: this.props.bookshelves[1].id });          
           return
@@ -127,7 +126,6 @@ class BookShowItem extends React.Component {
 
 
   render(){
-    
     let bookImages = [<Link to={`/book/8`}><img src="https://images.gr-assets.com/books/1433739086l/33313.jpg" /></Link>, 
                       <Link to={`/book/4`}><img src="https://images.gr-assets.com/books/1529845599l/34051011.jpg" /></Link>,
                         // THESE NEED TO BE BOOK SHOW ITEMS, THAT HAVE ON CLICKS LINKING TO THEIR IDS. YOU CAN .SAMPLE FROM ARRAY TO MAKE RANDOM

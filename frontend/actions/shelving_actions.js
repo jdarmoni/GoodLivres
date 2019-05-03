@@ -69,7 +69,7 @@ export const updateShelving = (id) => (dispatch) => {
 export const deleteShelving = (shelvingId) => (dispatch) => {
         
   return APIUtil.removeShelving(shelvingId).then((shelving) => {
-    debugger
+    
     dispatch(removeShelving(shelving));
   }
   );

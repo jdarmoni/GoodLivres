@@ -7,14 +7,13 @@ import {createShelving} from '../../actions/shelving_actions';
 import {withRouter} from 'react-router-dom';
 
 const msp = (state, ownProps) => {
+  debugger 
   let bookId = parseInt(ownProps.match.params.id);
   let book;
   let review; 
   
   Object.values(state.entities.reviews).forEach((bookReview)=>{
-    
     if (bookReview.user_id === Object.values(state.entities.users)[0].id) {
-      
       review = bookReview;
     }
   })
@@ -24,6 +23,7 @@ const msp = (state, ownProps) => {
   } else {
      book = state.entities.books
   } 
+  
   return {
     book: book,
     bookshelves: Object.values(state.entities.bookshelves),

@@ -5,6 +5,7 @@ import Root from './components/root'
 import {signup, login, logout} from './actions/session_actions'
 import configureStore from './store/store';
 import {fetchBookshelves} from './util/bookshelf_api_utils'
+
 document.addEventListener('DOMContentLoaded', () => {
     let store;
     if (window.currentUser) {

@@ -30,7 +30,7 @@ export default (state = {}, action) => {
     case REMOVE_SHELVING:
       
       newState = merge({}, state);
-      debugger
+      
       delete newState[action.bookId];
       return newState;
 

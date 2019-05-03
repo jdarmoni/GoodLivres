@@ -32,7 +32,7 @@ export const updateShelving = (shelving) => {
 }
 
 export const removeShelving = (shelvingId) => {
-  debugger
+  
   return $.ajax({
     method: 'delete',
     url: `api/shelving/${shelvingId}`,

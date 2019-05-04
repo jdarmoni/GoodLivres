@@ -85,7 +85,7 @@ class BookShowItem extends React.Component {
   }
 
   writeReview(){
-    
+    debugger
     if (this.props.review === undefined) {
       return (
         <Link to={`/review/edit/${this.props.book.id}`} className="rating-stars" >Write a Review</Link>

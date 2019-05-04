@@ -27,7 +27,7 @@ class EditForm extends React.Component {
     toggleStars() {
         let current_user = this.props.user;
         let reviews = Object.values(this.props.reviews);
-        debugger
+        
         // for each review
         for (let i = 0; i < reviews.length; i++ ) {
             if (reviews[i].user_id === current_user.id) {
@@ -36,11 +36,8 @@ class EditForm extends React.Component {
                 this.rating = this.review.rating
             }
         }
-        debugger
         if (this.review === undefined || this.review.rating === 0 || document.getElementById('rateStars') === null) { return null }
-        debugger
         document.getElementById(`star${this.review.rating}`).checked = true;
-        debugger
     }
     handleSubmit(e) {
         e.preventDefault();
@@ -60,19 +57,23 @@ class EditForm extends React.Component {
             return <img className="review-book-image" src="https://images.gr-assets.com/books/1315485290l/2947829.jpg" />
         }
     }
+    nickLasagna(){
+        debugger
+        if (this.props.review !== undefined) {
+            document.getElementsByClassName('review-box')[0].value = this.props.review.content
+        }
+    }
     componentDidMount(){
         
         this.props.requestBook(this.props.bookId).then((book)=>{
             this.setState({book: book.payload})
         });
+        debugger
+        this.props.requestReviews(parseInt(this.props.bookId));
         this.toggleStars()
-
     }
     render(){
         debugger
-        // if (this.state.book.title) {
-            // culprite is 68
-            debugger
             return (
                 <>
                 <div className="review-container">
@@ -108,7 +109,7 @@ class EditForm extends React.Component {
 
                         <form onSubmit={this.handleSubmit}>
                             <input className="review-box" placeholder="Enter your review (eggs)" type="textarea" onChange={this.update('body')} />
-                            {/* <br> */}
+                            {this.nickLasagna()}
                             <input type="submit" className="review-save-button" value="Save" />
                         </form>
                 </div>

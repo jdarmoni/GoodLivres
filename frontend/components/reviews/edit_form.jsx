@@ -59,7 +59,7 @@ class EditForm extends React.Component {
     }
     nickLasagna(){
         debugger
-        if (this.props.review !== undefined) {
+        if (this.props.review !== undefined && document.getElementsByClassName('review-box')[0]!== undefined) {
             document.getElementsByClassName('review-box')[0].value = this.props.review.content
         }
     }
@@ -70,7 +70,8 @@ class EditForm extends React.Component {
         });
         debugger
         this.props.requestReviews(parseInt(this.props.bookId));
-        this.toggleStars()
+        this.toggleStars();
+        this.nickLasagna();
     }
     render(){
         debugger

@@ -121,10 +121,9 @@
 }
 
 .my-activity-span {
-    color: #382110;
-    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 12px;
-    font-weight: bold;
+    font-size: 14px;
+    border-bottom: 1px solid #DFDFDF;
+    padding-bottom: 8px;
     text-transform: uppercase;
 }
 

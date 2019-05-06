@@ -69,10 +69,10 @@ class BookIndexItem extends React.Component {
     
     let bookshelves = [];
     this.props.book.bookshelves.map((bookshelf) => {
-      
+      debugger
       bookshelves.push(<Link to={`/bookshelf/${bookshelf.id}`} className="bookshelfTableTitle"> <li> {bookshelf.title.toLowerCase()}</li> </Link>);
       bookshelves.push(' ');
-    });
+    }, this);
     bookshelves = bookshelves.slice(0, bookshelves.length -1)
     
     // these correspond to book_index.jsx!

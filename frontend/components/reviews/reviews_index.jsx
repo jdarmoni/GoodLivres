@@ -1,5 +1,6 @@
 import React from 'react';
 import ReviewsIndexItemContainer from './review_index_item_container';
+import { Link } from 'react-router-dom';
 
 class ReviewsIndex extends React.Component {
     constructor(props){
@@ -45,17 +46,35 @@ class ReviewsIndex extends React.Component {
     }
 
     render(){
-        // debugger
+        
+        let bookshelves = [];
+        
+        this.props.book.bookshelves.map((bookshelf) => {
+            bookshelves.push(<Link to={`/bookshelf/${bookshelf.id}`} className="bookshelfTableTitle"> <li> {bookshelf.title.toLowerCase()}</li> </Link>);
+            bookshelves.push(' ');
+        });
+        bookshelves = bookshelves.slice(0, bookshelves.length - 1);
+
         const reviews = Object.values(this.props.reviews).map((review) => {
             
-            return <ReviewsIndexItemContainer key={review.id} review={review} />
-        })
+            if (review.user_id !== this.props.user.id) {
+                return <ReviewsIndexItemContainer key={review.id} review={review}  />
+            }
+        }, this)
+
+        const myReviews = Object.values(this.props.reviews).map((review) => {
+            
+            if (review.user_id === this.props.user.id) {
+                return <ReviewsIndexItemContainer key={review.id} review={review} bookshelves={bookshelves} />
+            }
+        }, this)
         return (
             <div>
                 {this.renderWriteReview()}
+                <h1 className="my-activity-span">My Activity</h1>
+                  <ul>{myReviews}</ul>
                 <h1 className="reviews-index-header">COMMUNITY REVIEWS <span className="reviews-showing-numbers">showing 1-{reviews.length}</span></h1>
-
-                <ul>{reviews}</ul>
+                  <ul>{reviews}</ul>
             </div>
         )
     }

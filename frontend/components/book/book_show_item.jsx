@@ -12,7 +12,7 @@ class BookShowItem extends React.Component {
       rating: 0
     };
     this.review;
-    debugger
+    
     this.renderBookShelves = this.renderBookShelves.bind(this);
     this.getImage = this.getImage.bind(this);
     this.nextBook = this.nextBook.bind(this);
@@ -59,7 +59,7 @@ class BookShowItem extends React.Component {
   }
 
   renderBookShelves(){
-    debugger
+    
     let all = 0;
     let shelves = this.props.bookshelves.map((bookshelf) => {
       
@@ -85,7 +85,7 @@ class BookShowItem extends React.Component {
   }
 
   writeReview(){
-    debugger
+    
     if (this.props.review === undefined) {
       return (
         <Link to={`/review/edit/${this.props.book.id}`} className="rating-stars" >Write a Review</Link>
@@ -139,7 +139,7 @@ class BookShowItem extends React.Component {
         <>
   {/* Book Show: */}
           <div className="book-show-top">
-  {this.toggleStars()}
+            {this.toggleStars()}
             <div className="book-image-col"> {this.getImage()}
      
                <div className="bookshelf-button" onClick={this.toggleShow}>
@@ -182,13 +182,11 @@ class BookShowItem extends React.Component {
 </div>
 
               
-                <div className="reviews">
-              <div className="my-activity-header">
-                <span className="my-activity-span">My Activity</span>
-              </div>
+            <div className="reviews">
+              
                   <ReviewIndexContainer bookId={this.props.book.id}/>
                   {/* NOTE: grab bookId from ownProps.match.params */}
-                </div>
+            </div>
 
             </div>
             

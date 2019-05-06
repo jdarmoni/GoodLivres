@@ -1,6 +1,7 @@
 import React from 'react';
 import ReviewsIndexItemContainer from './review_index_item_container';
 import { Link } from 'react-router-dom';
+import MyReviewItemContainer from './my_review_item_container';
 
 class ReviewsIndex extends React.Component {
     constructor(props){
@@ -46,14 +47,6 @@ class ReviewsIndex extends React.Component {
     }
 
     render(){
-        
-        let bookshelves = [];
-        
-        this.props.book.bookshelves.map((bookshelf) => {
-            bookshelves.push(<Link to={`/bookshelf/${bookshelf.id}`} className="bookshelfTableTitle"> <li> {bookshelf.title.toLowerCase()}</li> </Link>);
-            bookshelves.push(' ');
-        });
-        bookshelves = bookshelves.slice(0, bookshelves.length - 1);
 
         const reviews = Object.values(this.props.reviews).map((review) => {
             
@@ -65,7 +58,7 @@ class ReviewsIndex extends React.Component {
         const myReviews = Object.values(this.props.reviews).map((review) => {
             
             if (review.user_id === this.props.user.id) {
-                return <ReviewsIndexItemContainer key={review.id} review={review} bookshelves={bookshelves} />
+                return <MyReviewItemContainer key={review.id} review={review} />
             }
         }, this)
         return (

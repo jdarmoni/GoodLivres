@@ -249,6 +249,7 @@
     font-size: 14px;
     list-style: none;
     cursor: pointer; 
+    text-decoration: none;
 }
 
 .book-row img {

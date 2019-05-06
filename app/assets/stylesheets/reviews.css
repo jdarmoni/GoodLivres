@@ -136,12 +136,12 @@
 }
 
 .myReview-content {
-    display: flex;
     font-size: 14px;
 }
 
 .myReview-suffix {
-    width: 6em;
+    width: 125px;
+    float: left;
 }
 .review-body {
     width: 75%;

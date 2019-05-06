@@ -138,7 +138,7 @@ class BookShowItem extends React.Component {
       return ( 
         <>
   {/* Book Show: */}
-          <div className="book-show-top">
+    <div className="book-show-top">
             {this.toggleStars()}
             <div className="book-image-col"> {this.getImage()}
      
@@ -175,40 +175,36 @@ class BookShowItem extends React.Component {
               <h1 className="book-title">{this.props.book.title}</h1>
               <span className="book-author">by {this.props.book.author}</span>
               <p>{this.props.book.description}</p>
-              
-
-
-
-</div>
-
-              
-            <div className="reviews">
-              
-                  <ReviewIndexContainer bookId={this.props.book.id}/>
-                  {/* NOTE: grab bookId from ownProps.match.params */}
+    
             </div>
 
-            </div>
-            
-
-{/* Right Portion:  */}
-
-            <div className ="Readers-Also">
-              <div className ="books-carousel">
-              <span className='readers-also-text'><h2>READERS ALSO ENJOYED</h2></span>
-                   <ul>{bookImages}</ul>
+            <div className="Readers-Also">
+              <div className="books-carousel">
+                <span className='readers-also-text'><h2>READERS ALSO ENJOYED</h2></span>
+                <ul>{bookImages}</ul>
               </div>
 
-              <div className ="about-author">
+              <div className="about-author">
                 <div className="another-about-author">
                   <h1 className="author-name">ABOUT JULIEN DARMONI</h1>
 
-                <img className="author-photo" src="http://juliendarmoni.com/julien.jpg"/>
-                  <span className ="author-name2">Julien Darmoni is the greatest programmer of his generation. Despite this, he remains humble, gracious, and extremely powerful</span>
-                </div>   
+                  <img className="author-photo" src="http://juliendarmoni.com/julien.jpg" />
+                  <span className="author-name2">Julien Darmoni is the greatest programmer of his generation. Despite this, he remains humble, gracious, and extremely powerful</span>
+                </div>
               </div>
-
             </div>
+          
+    </div>
+    <div className="reviews">
+
+      <ReviewIndexContainer bookId={this.props.book.id} />
+      {/* NOTE: grab bookId from ownProps.match.params */}
+    </div>
+        
+
+{/* Right Portion:  */}
+
+            
         </>
     )
   }

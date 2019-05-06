@@ -17,6 +17,7 @@
 }
 
 .book-image-col {
+    min-width: 150px;
     width: 23%;
     height: 400px;
     float: left;
@@ -26,18 +27,15 @@
 .book-content {
     float: left;
     padding-left: 2%;
-    width: 60%;
+    padding-right: 2%;
+    min-width: 250px;
+    width: 55%;
 }
 
 .Readers-Also {
-    position: absolute;
-    margin-top: 3%;
-    right: 0;
-    top: 36px;
     width: 30%;
     height: 500px;
 }
-
 
 .readers-also-text {
     font-size: 7px;
@@ -45,12 +43,16 @@
 }
 
 .Readers-Also img {
-    width: 25%;
+    width: 29%;
     margin: 0 2% 0 2%;
     float: left;
 }
 .books-carousel {
     height: 45%;
+}
+
+.books-carousel ul {
+    padding-left: 0;
 }
 
 .author-name {
@@ -187,5 +189,6 @@
 }
 
 .book-show-top{
-    width: 75%;
+    width: 100%;
+    display: flex;
 }

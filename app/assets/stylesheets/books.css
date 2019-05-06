@@ -30,14 +30,17 @@
 }
 
 .Readers-Also {
+    position: absolute;
     margin-top: 3%;
-    float: right;
+    right: 0;
+    top: 36px;
     width: 30%;
     height: 500px;
 }
 
+
 .readers-also-text {
-    font-size: 12px;
+    font-size: 7px;
     font-weight: bold;
 }
 
@@ -169,4 +172,16 @@
 
 .show {
     display: block;
+}
+
+.rate-this-book {
+    font-size: 11px;
+    height: 16px;
+    line-height: 14px;
+    margin: 0 3em;
+    padding: 3px 6px 0 6px;
+    width: 100px;
+    color: #999999;
+    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+    text-align: center;
 }

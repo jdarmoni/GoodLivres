@@ -138,6 +138,7 @@ class BookShowItem extends React.Component {
       return ( 
         <>
   {/* Book Show: */}
+          <div className="book-show-top">
   {this.toggleStars()}
             <div className="book-image-col"> {this.getImage()}
      
@@ -148,7 +149,7 @@ class BookShowItem extends React.Component {
                         {this.renderBookShelves()}
                     </ul>
               </div>
-
+            <span class="rate-this-book">Rate this book</span>
             <div className="rating">
               <form action="">
                 <div class="rate" id="rateStars">
@@ -175,8 +176,16 @@ class BookShowItem extends React.Component {
               <span className="book-author">by {this.props.book.author}</span>
               <p>{this.props.book.description}</p>
               
-            
+
+
+
+</div>
+
+              
                 <div className="reviews">
+              <div className="my-activity-header">
+                <span className="my-activity-span">My Activity</span>
+              </div>
                   <ReviewIndexContainer bookId={this.props.book.id}/>
                   {/* NOTE: grab bookId from ownProps.match.params */}
                 </div>
@@ -188,7 +197,7 @@ class BookShowItem extends React.Component {
 
             <div className ="Readers-Also">
               <div className ="books-carousel">
-                <span className='readers-also-text'>READERS ALSO ENJOYED</span>
+              <span className='readers-also-text'><h2>READERS ALSO ENJOYED</h2></span>
                    <ul>{bookImages}</ul>
               </div>
 

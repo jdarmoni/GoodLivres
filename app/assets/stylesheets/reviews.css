@@ -8,6 +8,9 @@
     border-bottom: 1px solid #DFDFDF;
     padding-bottom: 8px;
 }
+.reviews {
+    clear: both;
+}
 
 .reviews-index-header {
     font-size: 14px;
@@ -117,3 +120,14 @@
     left: 98px;
 }
 
+.my-activity-span {
+    color: #382110;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.my-activity-header {    
+    border-bottom: 1px solid #DFDFDF;
+    padding-bottom: 8px;}

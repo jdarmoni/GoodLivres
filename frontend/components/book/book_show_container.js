@@ -7,7 +7,7 @@ import {createShelving} from '../../actions/shelving_actions';
 import {withRouter} from 'react-router-dom';
 
 const msp = (state, ownProps) => {
-  debugger 
+   
   let bookId = parseInt(ownProps.match.params.id);
   let book;
   let review; 

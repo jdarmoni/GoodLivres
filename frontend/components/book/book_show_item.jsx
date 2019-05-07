@@ -88,7 +88,7 @@ class BookShowItem extends React.Component {
     
     if (this.props.review === undefined) {
       return (
-        <Link to={`/review/edit/${this.props.book.id}`} className="rating-stars" >Write a Review</Link>
+        <Link to={`/review/edit/${this.props.book.id}`} className="rating-stars" >Add a Review</Link>
     )} else {
         return (
         <Link to = {{

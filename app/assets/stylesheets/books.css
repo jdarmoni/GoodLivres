@@ -19,7 +19,6 @@
 .book-image-col {
     min-width: 150px;
     width: 23%;
-    height: 400px;
     float: left;
     padding-top: 3%;
 }
@@ -34,7 +33,7 @@
 
 .Readers-Also {
     width: 30%;
-    height: 500px;
+    /* height: 500px; */
 }
 
 .readers-also-text {
@@ -48,7 +47,8 @@
     float: left;
 }
 .books-carousel {
-    height: 45%;
+    height: 35%;
+    margin-top: 37%;
 }
 
 .books-carousel ul {

@@ -88,13 +88,13 @@ class BookShowItem extends React.Component {
     
     if (this.props.review === undefined) {
       return (
-        <Link to={`/review/edit/${this.props.book.id}`} className="rating-stars" >Add a Review</Link>
+        <Link to={`/review/edit/${this.props.book.id}`} className="rating-stars" >Add a review</Link>
     )} else {
         return (
         <Link to = {{
               pathname: `/review/edit/${this.props.book.id}`,
               review: this.props.review 
-              }}> <p className="edit-review">Edit Review</p>
+              }}> <p className="edit-review">see review</p>
         </Link >
       )}
   }
@@ -165,7 +165,7 @@ class BookShowItem extends React.Component {
                     <label for="star1" title="text">1 star</label>
                 </div>
               </form>
-              {this.writeReview()}
+              {/* {this.writeReview()} */}
             </div>
 
             </div>

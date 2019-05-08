@@ -6,7 +6,7 @@ class EditForm extends React.Component {
         super(props)      
         this.state ={
             book: {},
-            body: "",
+            body: undefined,
             rating: 0
             // when you're feeling braver, refactor this.state.rating / vs / this.rating
         }
@@ -57,10 +57,13 @@ class EditForm extends React.Component {
             return <img className="review-book-image" src="https://images.gr-assets.com/books/1315485290l/2947829.jpg" />
         }
     }
-    nickLasagna(){
+    writeReview(){
         debugger
         if (this.props.review !== undefined && document.getElementsByClassName('review-box')[0]!== undefined) {
-            document.getElementsByClassName('review-box')[0].value = this.props.review.content
+            if (this.state.body === undefined) {
+                this.setState({body: this.props.review.content})
+                document.getElementsByClassName('review-box')[0].value = this.props.review.content
+            }
         }
     }
     componentDidMount(){
@@ -71,7 +74,7 @@ class EditForm extends React.Component {
         debugger
         this.props.requestReviews(parseInt(this.props.bookId));
         this.toggleStars();
-        this.nickLasagna();
+        this.writeReview();
     }
     render(){
         debugger
@@ -110,7 +113,7 @@ class EditForm extends React.Component {
 
                         <form onSubmit={this.handleSubmit}>
                             <input className="review-box" placeholder="Enter your review (eggs)" type="textarea" onChange={this.update('body')} />
-                            {this.nickLasagna()}
+                            {this.writeReview()}
                             
                             <input type="submit" className="review-save-button" value="Save" />
                         </form>

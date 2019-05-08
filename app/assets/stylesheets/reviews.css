@@ -16,6 +16,10 @@
     clear: both;
 }
 
+.reviews ul {
+    padding-left: 0;
+}
+
 .reviews-index-header {
     font-size: 14px;
     border-bottom: 1px solid #DFDFDF;
@@ -45,6 +49,16 @@
 .edit-review{
     clear: both;
     margin-top: 0;   
+    margin-left: 125px;
+}
+
+.myReview-content a {
+    text-decoration: none;
+    color: #00635d;
+}
+
+.myReview-content a:hover {
+    text-decoration: underline;
 }
 
 .delete-review {

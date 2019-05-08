@@ -31,6 +31,24 @@ class MyReviewItem extends React.Component {
             return <p className="delete-review" onClick={this.deleteReview}>x</p>
         }
     }
+    writeReview() {
+        debugger
+        if (this.props.review === undefined) {
+            return (
+                <Link to={`/review/edit/${this.props.book.id}`} className="rating-stars" >Add a review</Link>
+            )
+        } else {
+            return (
+                <Link to={{
+                    pathname: `/review/edit/${this.props.book.id}`,
+                    review: this.props.review
+                }}> <p className="edit-review">see review</p>
+                </Link >
+            )
+        }
+    }
+
+
     render() {
         let bookshelves = [];
         this.props.book.bookshelves.map((bookshelf) => {
@@ -51,6 +69,7 @@ class MyReviewItem extends React.Component {
                         <br></br>
                         <span className="myReview-suffix">Review:</span>
                         <span className="review-body">{this.props.review.content}</span>
+                        {this.writeReview()}
                     </div>
                 </div>
             </>

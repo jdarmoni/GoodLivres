@@ -59,12 +59,14 @@ class ReviewsIndex extends React.Component {
             
             if (review.user_id === this.props.user.id) {
                 return <MyReviewItemContainer key={review.id} review={review} />
-            }
+            } 
+            // else, render MyEmptyReviewItemContainer
         }, this)
         return (
             <div>
                 {this.renderWriteReview()}
                 <h1 className="my-activity-span">My Activity</h1>
+                  {/*  */}
                   <ul>{myReviews}</ul>
                 <h1 className="reviews-index-header">COMMUNITY REVIEWS <span className="reviews-showing-numbers">showing 1-{reviews.length}</span></h1>
                   <ul>{reviews}</ul>

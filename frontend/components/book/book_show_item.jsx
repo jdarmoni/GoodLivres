@@ -196,13 +196,12 @@ class BookShowItem extends React.Component {
           
     </div>
     <div className="reviews">
-
+        
       <ReviewIndexContainer bookId={this.props.book.id} />
       {/* NOTE: grab bookId from ownProps.match.params */}
     </div>
         
 
-{/* Right Portion:  */}
 
             
         </>

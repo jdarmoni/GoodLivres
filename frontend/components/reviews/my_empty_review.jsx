@@ -57,7 +57,7 @@ class MyEmptyReview extends React.Component {
         });
         bookshelves = bookshelves.slice(0, bookshelves.length - 1);
 
-        debugger
+        
         return (
             <>
                 <div className="my-individual-review">

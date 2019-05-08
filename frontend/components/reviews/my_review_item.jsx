@@ -49,7 +49,7 @@ class MyReviewItem extends React.Component {
 
 
     render() {
-        debugger
+        
         let bookshelves = [];
         this.props.book.bookshelves.map((bookshelf) => {
             bookshelves.push(<Link to={`/bookshelf/${bookshelf.id}`} className="bookshelfTableTitle"> {bookshelf.title.toLowerCase()}</Link>);

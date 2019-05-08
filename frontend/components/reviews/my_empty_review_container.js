@@ -11,7 +11,7 @@ const msp = (state, ownProps) => {
         review: ownProps.review,
         user: Object.values(state.entities.users)[0],
         users: state.entities.users,
-        book: Object.values(state.entities.books)[0],
+        book: state.entities.books[ownProps.book],
         bookshelves: state.entities.bookshelves,
 
 

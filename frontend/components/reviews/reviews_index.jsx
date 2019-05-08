@@ -49,19 +49,25 @@ class ReviewsIndex extends React.Component {
 
     render(){
 
-        const reviews = Object.values(this.props.reviews).map((review) => {
-            
+        const reviews = Object.values(this.props.reviews).map((review) => {      
             if (review.user_id !== this.props.user.id) {
                 return <ReviewsIndexItemContainer key={review.id} review={review}  />
             }
         }, this)
 
         let myReviews = Object.values(this.props.reviews).map((review) => {
+            debugger
             if (review.user_id === this.props.user.id) {
                 return <MyReviewItemContainer key={review.id} review={review} book={this.props.book.id}/>
             } 
-        }, this);
+        }, this);        
+        
+        // if you don't find a match, i.e., if myReviews.length === 0, return MyEmptyReviewItemContainer
+        if (myReviews.length === 0) {
+            return <MyEmptyReviewContainer book={this.props.book.id} />
+        }
         debugger
+
         return (
             <div>
                 {this.renderWriteReview()}

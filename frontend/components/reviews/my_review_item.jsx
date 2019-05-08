@@ -12,7 +12,6 @@ class MyReviewItem extends React.Component {
     }
 
     componentDidUpdate() {
-        // debugger
 
     }
     renderDelete() {
@@ -32,7 +31,7 @@ class MyReviewItem extends React.Component {
         }
     }
     writeReview() {
-        debugger
+        
         if (this.props.review === undefined) {
             return (
                 <Link to={`/review/edit/${this.props.book.id}`} className="rating-stars" >Add a review</Link>
@@ -50,6 +49,7 @@ class MyReviewItem extends React.Component {
 
 
     render() {
+        debugger
         let bookshelves = [];
         this.props.book.bookshelves.map((bookshelf) => {
             bookshelves.push(<Link to={`/bookshelf/${bookshelf.id}`} className="bookshelfTableTitle"> {bookshelf.title.toLowerCase()}</Link>);
@@ -57,11 +57,11 @@ class MyReviewItem extends React.Component {
         });
         bookshelves = bookshelves.slice(0, bookshelves.length - 1);
         
-        debugger
+        
         return (
             <>
                 <div className="my-individual-review">
-                    {this.renderDelete()}
+                    {/* {this.renderDelete()} */}
                         {/* <h1 className="review-header"><span className="review-author">{this.props.review.user_id}</span> rated it: <span className="review-rating">{this.props.review.rating} stars</span> </h1> */}
                     <div className="myReview-content">
                         <span className="myReview-suffix">Shelves:</span>

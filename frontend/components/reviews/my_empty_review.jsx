@@ -32,7 +32,7 @@ class MyEmptyReview extends React.Component {
         }
     }
     writeReview() {
-        debugger
+        
         if (this.props.review === undefined) {
             return (
                 <Link to={`/review/edit/${this.props.book.id}`} className="rating-stars" >Add a review</Link>
@@ -61,7 +61,7 @@ class MyEmptyReview extends React.Component {
         return (
             <>
                 <div className="my-individual-review">
-                    {this.renderDelete()}
+                    {/* {this.renderDelete()} */}
                     {/* <h1 className="review-header"><span className="review-author">{this.props.review.user_id}</span> rated it: <span className="review-rating">{this.props.review.rating} stars</span> </h1> */}
                     <div className="myReview-content">
                         <span className="myReview-suffix">Shelves:</span>

@@ -2,6 +2,7 @@ import React from 'react';
 import ReviewsIndexItemContainer from './review_index_item_container';
 import { Link } from 'react-router-dom';
 import MyReviewItemContainer from './my_review_item_container';
+import MyEmptyReviewContainer from './my_empty_review_container'
 
 class ReviewsIndex extends React.Component {
     constructor(props){
@@ -55,13 +56,12 @@ class ReviewsIndex extends React.Component {
             }
         }, this)
 
-        const myReviews = Object.values(this.props.reviews).map((review) => {
-            
+        let myReviews = Object.values(this.props.reviews).map((review) => {
             if (review.user_id === this.props.user.id) {
-                return <MyReviewItemContainer key={review.id} review={review} />
+                return <MyReviewItemContainer key={review.id} review={review} book={this.props.book.id}/>
             } 
-            // else, render MyEmptyReviewItemContainer
-        }, this)
+        }, this);
+        debugger
         return (
             <div>
                 {this.renderWriteReview()}

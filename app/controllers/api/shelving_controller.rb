@@ -16,7 +16,6 @@ class Api::ShelvingController < ApplicationController
     @current_user = Bookshelf.find_by(id: shelving_params[:bookshelf_id]).user_id
     @bookshelfTitle = Bookshelf.find_by(id: @newShelf.bookshelf_id).title
     # @newShelf is the new Joins btwn book and bookshelf
-    # @shelvingToKill is 
     if @newShelf.save
           # this should only run if the new shelving is creating a default bookshelf
           if @bookshelfTitle == "Read" || @bookshelfTitle == "Currently Reading" || @bookshelfTitle == "Want to Read"

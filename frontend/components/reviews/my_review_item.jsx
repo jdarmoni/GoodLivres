@@ -52,8 +52,11 @@ class MyReviewItem extends React.Component {
         
         let bookshelves = [];
         this.props.book.bookshelves.map((bookshelf) => {
-            bookshelves.push(<Link to={`/bookshelf/${bookshelf.id}`} className="bookshelfTableTitle"> {bookshelf.title.toLowerCase()}</Link>);
-            bookshelves.push(', ');
+            if (bookshelf.title !== 'All') {
+
+                bookshelves.push(<Link to={`/bookshelf/${bookshelf.id}`} className="bookshelfTableTitle"> {bookshelf.title.toLowerCase()}</Link>);
+                bookshelves.push(', ');
+            }
         });
         bookshelves = bookshelves.slice(0, bookshelves.length - 1);
         

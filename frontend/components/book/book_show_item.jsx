@@ -72,7 +72,7 @@ class BookShowItem extends React.Component {
     
     let all = 0;
     let shelves = this.props.bookshelves.map((bookshelf) => {
-      debugger
+      
       
       if (bookshelf.title === 'All') {
         all = bookshelf.id 

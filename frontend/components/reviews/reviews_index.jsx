@@ -17,7 +17,7 @@ class ReviewsIndex extends React.Component {
     }
 
     componentDidMount(){
-        // debugger
+        // 
         this.props.requestReviews(this.props.bookId)
     }
     update(field) {
@@ -56,7 +56,7 @@ class ReviewsIndex extends React.Component {
         }, this)
 
         let myReviews = Object.values(this.props.reviews).map((review) => {
-            debugger
+            
             if (review.user_id === this.props.user.id) {
                 return <MyReviewItemContainer key={review.id} review={review} book={this.props.book.id}/>
             } 
@@ -66,7 +66,7 @@ class ReviewsIndex extends React.Component {
         if (myReviews.length === 0) {
             return <MyEmptyReviewContainer book={this.props.book.id} />
         }
-        debugger
+        
 
         return (
             <div>

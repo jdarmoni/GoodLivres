@@ -4,8 +4,7 @@ import { requestReview, deleteReview } from '../../actions/review_actions'
 
 
 const msp = (state, ownProps) => {
-    
-    debugger
+
     return {
         reviews: state.entities.reviews,
         review: ownProps.review,
@@ -19,7 +18,7 @@ const msp = (state, ownProps) => {
 }
 
 const mdp = (dispatch) => {
-    // debugger
+    
     return {
         requestReview: (id) => dispatch(requestReview(id)),
         deleteReview: (reviewId) => dispatch(deleteReview(reviewId))

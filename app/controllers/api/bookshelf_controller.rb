@@ -21,14 +21,10 @@ class Api::BookshelfController < ApplicationController
 
     def create  
       @bookshelf = Bookshelf.new(bookshelf_params)
+       
       if @bookshelf.save
-        # render @bookshelf
-        # this doesn't render in the traditional sense 
-        # it's taking info from database
-        # putting into json form (via the json show) 
-        # now that its in json form, send it to front end reducers
           render :show 
-        end
+      end
     end
 
     def destroy

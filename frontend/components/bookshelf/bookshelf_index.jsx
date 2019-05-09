@@ -85,6 +85,7 @@ class BookshelfIndex extends React.Component{
 
     render (){
         let bookshelves = Object.values(this.props.bookshelves).map((bookshelf)=>{
+            
             return <BookshelfIndexItem key={bookshelf.id} bookshelf={bookshelf} requestBookshelf={this.props.requestBookshelf} deleteBookshelf={this.props.deleteBookshelf}/>
         });
         

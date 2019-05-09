@@ -60,14 +60,10 @@ class BookShowItem extends React.Component {
   }
 
   renderBookShelfButton(){
-    let all = 0;
     let shelves = this.props.book.bookshelves.map((bookshelf) => {
-      debugger
 
-      if (bookshelf.title === 'All') {
-        all = bookshelf.id
-      } else {
-        return <BookBookshelfContainer bookshelf={bookshelf} all={all} />;
+      if (bookshelf.title === 'Read' || bookshelf.title === 'Want to Read' || bookshelf.title === 'Currently Reading') {
+        return <BookBookshelfContainer bookshelf={bookshelf}  />;
       }
     }, this)
     return shelves;
@@ -157,7 +153,7 @@ class BookShowItem extends React.Component {
             <div className="book-image-col"> {this.getImage()}
      
                <div className="bookshelf-button" onClick={this.toggleShow}>
-                <div className="first-bookshelf"> {this.renderBookShelfButton()[1]} </div> {/* <--- to grab the first bookshelf */}
+                <div className="first-bookshelf"> {this.renderBookShelfButton()} </div> {/* <--- to grab the first bookshelf */}
                   <button className="shelves-drop-down" ></button>
                     <ul className="shelves" id="shelves">
                         {this.renderBookShelves()}

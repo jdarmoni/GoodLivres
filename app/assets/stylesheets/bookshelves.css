@@ -110,10 +110,11 @@
     display: inline-block;
 }
 
-/* **** from MyBooks formerly**** */
 
 .logged-in-header-link {
-    
+    /* position: fixed;
+    width: 100%;
+    margin-bottom: 14px; */
     display: flex;
     justify-content: space-between;
     height: 40px;

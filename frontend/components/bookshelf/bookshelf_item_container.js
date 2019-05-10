@@ -5,12 +5,13 @@ import {requestBookshelf, deleteBookshelf} from '../../actions/bookshelf_actions
 const msp = (state)=>{
     debugger
     return {
-        bookshelf: state.bookshelf
+        bookshelf: state.entities.bookshelves
     }
 }
 
 const mdp = (dispatch)=>{
     return {
+        
         requestBookshelf: (id) => dispatch(requestBookshelf(id)),     
         deleteBookshelf: (id) => dispatch(deleteBookshelf(id))
     }

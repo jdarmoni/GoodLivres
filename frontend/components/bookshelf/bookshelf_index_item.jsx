@@ -25,14 +25,14 @@ class BookshelfIndexItem extends React.Component {
 
 
     update(){
-        // debugger
-        this.setState({[this.props.bookshelf]: this.props.bookshelf})
-        this.props.history.push(`/bookshelf/${this.props.bookshelf.id}`);
+        debugger
+        this.setState({ bookshelf: this.props.bookshelf[this.props.number]})
+        this.props.history.push(`/bookshelf/${this.props.number}`);
     }   
 
     render() {
-        
-        return (<li ><span onClick={this.update} className="individualBookshelf"> {this.props.bookshelf.title} </span> <span className="deleteMe" onClick={this.deleteBookshelf}> x </span></li>)
+        debugger
+        return (<li ><span onClick={this.update} className="individualBookshelf"> {this.props.bookshelf[this.props.number].title}</span> <span className="deleteMe" onClick={this.deleteBookshelf}> x </span></li>)
         }
 
 };

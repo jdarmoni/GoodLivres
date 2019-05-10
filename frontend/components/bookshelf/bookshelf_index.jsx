@@ -1,6 +1,7 @@
 import React from 'react';
 import BookshelfIndexItem from './bookshelf_index_item';
 import BookContainer from '../book/book_container';
+import BookshelfItemContainer from './bookshelf_item_container'
 
 class BookshelfIndex extends React.Component{
     constructor(props) {
@@ -33,7 +34,7 @@ class BookshelfIndex extends React.Component{
     }
     
     handleSubmit(e){
-        // debugger
+        
         e.preventDefault();
         this.props.createBookshelf({title: this.state.title, user_id: this.state.user_id});
         this.setState({ addBookShelf: false, title: "" })
@@ -42,13 +43,13 @@ class BookshelfIndex extends React.Component{
     }
 
     update(title){
-        // debugger
+        
         return e => this.setState({
             [title]: e.target.value
         });
     }
     addBookShelf(){
-        // debugger
+        
         this.setState({addBookShelf: true, user_id: this.props.currentUser.id})
     }    
     renderAddBookshelfInput(){
@@ -66,10 +67,11 @@ class BookshelfIndex extends React.Component{
         }
     }
     renderCurrentBooks() {
-        // debugger
+        
         if (this.state.currentBookshelf > 0) {
             return (<>
                 {/* should books be being rendered in BookIndex Item? Is doing everything in this component, 'spaghetti'? */}
+                
                 <BookContainer currentBookshelf={this.state.currentBookshelf} />
             </>)
         }
@@ -77,7 +79,6 @@ class BookshelfIndex extends React.Component{
 
     // ********************* BUGGING OUT!!!!!! ********************
     renderBookshelfTitle(){
-        debugger
         if (this.props.match.params.id) {
             if (Object.values(this.props.bookshelves).length > 0) {
 
@@ -87,16 +88,17 @@ class BookshelfIndex extends React.Component{
     }
 
     render (){
-        let bookshelves = Object.values(this.props.bookshelves).map((bookshelf)=>{
+        let bookshelves = Object.values(this.props.bookshelves).map((bookshelf)=>{ 
+            // THIS IS SPGAHETTI:  HAVE OWN CONTAINER FOR BOOKSHELF INDEX ITEM
+            // return <BookshelfIndexItem key={bookshelf.id} bookshelf={bookshelf} requestBookshelf={this.props.requestBookshelf} deleteBookshelf={this.props.deleteBookshelf} />
             
-            return <BookshelfIndexItem key={bookshelf.id} bookshelf={bookshelf} requestBookshelf={this.props.requestBookshelf} deleteBookshelf={this.props.deleteBookshelf}/>
+            return <BookshelfItemContainer key={bookshelf.id} number={bookshelf.id} bookshelf={bookshelf}/>
         });
         
         let currentBookshelf = this.props.match.params.id || this.state.currentBookshelf; 
         
         
         return (
-            // THIS IS SPGAHETTI I THINK:  HAVE OWN CONTAINER FOR BOOKSHELF INDEXITEM
             <div className="bookshelfContainer">
                 <div id="myBooksCol">
                 

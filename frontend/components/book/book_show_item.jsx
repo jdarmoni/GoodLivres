@@ -81,15 +81,19 @@ class BookShowItem extends React.Component {
         if (bookshelf.title === 'Read' || bookshelf.title === 'Want to Read' || bookshelf.title === 'Currently Reading') {
           return <BookBookshelfContainer bookshelf={bookshelf}  />;
         }
-      }, this)  
-    } else {
-      
-      
+      }, this);
+    } else if (this.props.newBookshelves !== undefined) {
       shelves = this.props.newBookshelves.map((bookshelf) => {
         if (bookshelf.title === 'Read' || bookshelf.title === 'Want to Read' || bookshelf.title === 'Currently Reading') {
           return <BookBookshelfContainer bookshelf={bookshelf} />;
         }
-      }, this)  
+      }, this);
+    } else {
+      shelves = this.props.book.bookshelves.map((bookshelf) => {
+        if (bookshelf.title === 'Read' || bookshelf.title === 'Want to Read' || bookshelf.title === 'Currently Reading') {
+          return <BookBookshelfContainer bookshelf={bookshelf} />;
+        }
+      }, this);
     }
     return shelves;
   }

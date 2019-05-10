@@ -60,8 +60,17 @@ class MyReviewItem extends React.Component {
                     bookshelves.push(', ');
                 }
             });
-        } else {
+        } else if (this.props.newBookshelves !== undefined){
             this.props.newBookshelves.map((bookshelf) => {
+                if (bookshelf.title !== 'All') {
+
+                    bookshelves.push(<Link to={`/bookshelf/${bookshelf.id}`} className="bookshelfTableTitle"> {bookshelf.title.toLowerCase()}</Link>);
+                    bookshelves.push(', ');
+                }
+            });
+        } else {
+            debugger
+            this.props.book.bookshelves.map((bookshelf) => {
                 if (bookshelf.title !== 'All') {
 
                     bookshelves.push(<Link to={`/bookshelf/${bookshelf.id}`} className="bookshelfTableTitle"> {bookshelf.title.toLowerCase()}</Link>);

@@ -24,7 +24,7 @@ class BookIndexItem extends React.Component {
 
 
   deleteThisShelf(){
-    
+    debugger
     this.props.deleteShelving(this.props.shelvings.id).then(()=>{
       console.log('bye!')
     })
@@ -59,7 +59,7 @@ class BookIndexItem extends React.Component {
   renderAvg(){
       if (this.props.avg !== undefined) {
         if (!isNaN(this.props.avg)) {
-          return this.props.avg
+          return this.props.avg.toString().slice(0, 4)
         }
       } 
   }
@@ -84,7 +84,7 @@ class BookIndexItem extends React.Component {
 {/* image */}<td>{this.getImage()}</td> 
 {/* title */}<Link to={`/book/${this.props.book.id}`} > <td><span className="bookItemTitle"> {this.props.book.title} </span> </td></Link>
 {/* author */}<td>{this.props.book.author}</td>
-  {/* avg rating */} <td>{this.renderAvg().toString().slice(0, 4)}</td>
+  {/* avg rating */} <td>{this.renderAvg()}</td>
   {/* rating */} <td className="book-index-item-stars">{this.renderRating()}</td>
   {/* bookshelves */}<td><ul className="bookshelfUL">{bookshelves}</ul></td>
 

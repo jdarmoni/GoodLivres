@@ -84,6 +84,7 @@ class BookShowItem extends React.Component {
       }, this)  
     } else {
       
+      
       shelves = this.props.newBookshelves.map((bookshelf) => {
         if (bookshelf.title === 'Read' || bookshelf.title === 'Want to Read' || bookshelf.title === 'Currently Reading') {
           return <BookBookshelfContainer bookshelf={bookshelf} />;

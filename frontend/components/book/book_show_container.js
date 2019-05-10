@@ -15,6 +15,7 @@ const msp = (state, ownProps) => {
   let newBookshelves = Object.values(state.entities.bookshelves);
   // to check if new bookshelves are returned from the shelving controller
   
+  debugger
   if (Object.values(state.entities.shelvings)[0] ) {
     // since the controller can return an increasing number of shelving objects, select the latest one
     newBookshelves = Object.values(state.entities.shelvings)[Object.values(state.entities.shelvings).length - 1].bookshelves

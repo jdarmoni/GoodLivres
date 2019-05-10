@@ -20,6 +20,7 @@ const msp = (state, ownProps) => {
         }
     });
     Object.values(state.entities.shelvings).forEach(shelving=>{
+        
         if (shelving.book_id === Object.values(state.entities.books)[0].id && shelving.bookshelf_id === parseInt(ownProps.match.params.id)) {
             shelvings.push(shelving);
         }

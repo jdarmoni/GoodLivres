@@ -42,7 +42,7 @@ class Api::ShelvingController < ApplicationController
             
             @shelves = Book.find_by(id: shelving_params[:book_id]).bookshelves.where(user_id: @current_user) 
           end
-          debugger
+          
           render :show
       # render json: @newShelf
     end

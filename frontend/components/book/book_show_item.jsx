@@ -9,7 +9,7 @@ class BookShowItem extends React.Component {
     this.state = {
       review: null,
       bookshelves: [],
-      rating: 0
+      rating: 0,
     };
     this.review;
     
@@ -32,7 +32,8 @@ class BookShowItem extends React.Component {
   componentDidMount(){
     this.props.requestBookshelves()
     this.props.requestBook(parseInt(this.props.match.params.id)).then((book)=>{
-    });   
+    });  
+ 
   }
 
   toggleStars(){
@@ -57,15 +58,38 @@ class BookShowItem extends React.Component {
     if (parseInt(arguments[0].match.params.id) !== parseInt(this.props.match.params.id)) {
       this.props.requestBook(parseInt(this.props.match.params.id))
     }
-  }
+    // check to see if the shelving.bookshelf_id is in the book.bookshelves array; if it's not, basically refresh the page
+    // if (this.props.book.bookshelves && this.props.shelving) {
+    //   this.props.book.bookshelves.forEach((bookshelf) => {
+    //     debugger
+    //     if (bookshelf.id === this.props.shelving.bookshelf_id) {
+    //       return
+    //     }
+    //   }, this)
+
+      // this.props.requestBookshelves()
+    // }
+
+    }
+  
 
   renderBookShelfButton(){
-    let shelves = this.props.book.bookshelves.map((bookshelf) => {
-
-      if (bookshelf.title === 'Read' || bookshelf.title === 'Want to Read' || bookshelf.title === 'Currently Reading') {
-        return <BookBookshelfContainer bookshelf={bookshelf}  />;
-      }
-    }, this)
+    let shelves;
+    
+    if (this.props.newBooks === false) {
+      shelves = this.props.book.bookshelves.map((bookshelf) => {
+        if (bookshelf.title === 'Read' || bookshelf.title === 'Want to Read' || bookshelf.title === 'Currently Reading') {
+          return <BookBookshelfContainer bookshelf={bookshelf}  />;
+        }
+      }, this)  
+    } else {
+      debugger
+      shelves = this.props.newBookshelves.map((bookshelf) => {
+        if (bookshelf.title === 'Read' || bookshelf.title === 'Want to Read' || bookshelf.title === 'Currently Reading') {
+          return <BookBookshelfContainer bookshelf={bookshelf} />;
+        }
+      }, this)  
+    }
     return shelves;
   }
   renderBookShelves(){

@@ -15,9 +15,10 @@ class Api::ShelvingController < ApplicationController
     @newShelf = Shelving.new(shelving_params)
     @current_user = Bookshelf.find_by(id: shelving_params[:bookshelf_id]).user_id
     @bookshelfTitle = Bookshelf.find_by(id: @newShelf.bookshelf_id).title
-    # @newShelf is the new Joins btwn book and bookshelf
+
     if @newShelf.save
           # this should only run if the new shelving is creating a default bookshelf
+          # if you select another default bookshelf, find other defaults and destroy their join
           if @bookshelfTitle == "Read" || @bookshelfTitle == "Currently Reading" || @bookshelfTitle == "Want to Read"
             @shelves = Book.find_by(id: shelving_params[:book_id]).bookshelves.where(user_id: @current_user)
             
@@ -27,12 +28,23 @@ class Api::ShelvingController < ApplicationController
                 @shelvingToKill = Bookshelf.find_by(id: shelf.id).shelvings.where(book_id: shelving_params[:book_id])[0]
                 
                 if @newShelf.id != @shelvingToKill.id
+                  
                   @shelvingToKill.destroy
+                  
+                  # Book.find_by(id: shelving_params[:book_id]).bookshelves.where(user_id: @current_user) 
+                  # will now have the bookshelves minus the one you destroy
                 end
               end
             end
+            
           end
-      render json: @newShelf
+          if @shelves
+            
+            @shelves = Book.find_by(id: shelving_params[:book_id]).bookshelves.where(user_id: @current_user) 
+          end
+          debugger
+          render :show
+      # render json: @newShelf
     end
   end
 

@@ -1,6 +1,6 @@
 import { RECEIVE_BOOK, RECEIVE_ALL_BOOKS, REMOVE_BOOK} from '../actions/book_actions';
 import merge from 'lodash/merge'
-import { REMOVE_SHELVING } from '../actions/shelving_actions';
+import { REMOVE_SHELVING, RECEIVE_SHELVING } from '../actions/shelving_actions';
 
 export default (state = {}, action) => {
   Object.freeze(state);
@@ -30,9 +30,11 @@ export default (state = {}, action) => {
     case REMOVE_SHELVING:
       
       newState = merge({}, state);
-      debugger
       delete newState[action.bookId];
       return newState;
+
+    case RECEIVE_SHELVING:      
+      return merge({}, state);
 
     default:
       return state;

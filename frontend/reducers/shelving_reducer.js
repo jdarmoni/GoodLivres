@@ -9,7 +9,7 @@ export default (state={}, action)=> {
             
             return action.shelvings
         case RECEIVE_SHELVING:
-                
+            
             return merge({}, state, {[action.payload.id]: action.payload});
         case REMOVE_SHELVING:
         

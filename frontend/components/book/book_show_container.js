@@ -7,11 +7,19 @@ import {createShelving} from '../../actions/shelving_actions';
 import {withRouter} from 'react-router-dom';
 
 const msp = (state, ownProps) => {
-   
+  
   let bookId = parseInt(ownProps.match.params.id);
   let book;
   let review; 
+  let newBooks = false
+  let newBookshelves = Object.values(state.entities.bookshelves);
+  // to check if new bookshelves are returned from the shelving controller
   
+  if (Object.values(state.entities.shelvings)[0] ) {
+    newBookshelves = Object.values(state.entities.shelvings)[0].bookshelves
+    newBooks = true;
+  }
+
   Object.values(state.entities.reviews).forEach((bookReview)=>{
     if (bookReview.user_id === Object.values(state.entities.users)[0].id) {
       review = bookReview;
@@ -30,6 +38,9 @@ const msp = (state, ownProps) => {
     review: review,
     reviews: state.entities.reviews,
     user: Object.values(state.entities.users)[0].id,
+    shelving: Object.values(state.entities.shelvings)[0],
+    newBooks: newBooks,
+    newBookshelves: newBookshelves
   };
 };
 

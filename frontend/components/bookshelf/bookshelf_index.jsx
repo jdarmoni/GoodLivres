@@ -79,7 +79,10 @@ class BookshelfIndex extends React.Component{
     renderBookshelfTitle(){
         debugger
         if (this.props.match.params.id) {
-            return this.props.bookshelves[this.props.match.params.id].title
+            if (Object.values(this.props.bookshelves).length > 0) {
+
+                return this.props.bookshelves[this.props.match.params.id].title
+            }
         }
     }
 

@@ -60,7 +60,8 @@ class MyReviewItem extends React.Component {
                     bookshelves.push(', ');
                 }
             });
-        } else if (this.props.newBookshelves !== undefined){
+        } else if (this.props.newBookshelves !== undefined && this.props.newBookshelves !== null){
+            debugger
             this.props.newBookshelves.map((bookshelf) => {
                 if (bookshelf.title !== 'All') {
 

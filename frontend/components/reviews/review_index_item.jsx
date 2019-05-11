@@ -32,7 +32,7 @@ class ReviewsIndexItem extends React.Component {
         }
     }
     render() {
-        
+
         return (
             <>
             <div className="individual-review">

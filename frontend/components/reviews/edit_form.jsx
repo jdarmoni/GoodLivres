@@ -21,7 +21,7 @@ class EditForm extends React.Component {
         })
     }
     updateStar(e){
-        debugger
+        
         this.rating = parseInt(e.target.value)
     }
     toggleStars() {
@@ -31,7 +31,7 @@ class EditForm extends React.Component {
         // for each review
         for (let i = 0; i < reviews.length; i++ ) {
             if (reviews[i].user_id === current_user.id) {
-                debugger
+                
                 this.review = reviews[i];
                 this.rating = this.review.rating
             }
@@ -41,7 +41,7 @@ class EditForm extends React.Component {
     }
     handleSubmit(e) {
         e.preventDefault();
-        debugger
+        
         if (this.props.location.review !== undefined) {
             this.props.updateReview({ content: this.state.body, book_id: this.props.bookId, user_id: this.props.user.id, rating: this.rating, id: this.props.location.review.id });
         } else {
@@ -58,7 +58,7 @@ class EditForm extends React.Component {
         }
     }
     writeReview(){
-        debugger
+        
         if (this.props.review !== undefined && document.getElementsByClassName('review-box')[0]!== undefined) {
             if (this.state.body === undefined) {
                 this.setState({body: this.props.review.content})
@@ -71,13 +71,13 @@ class EditForm extends React.Component {
         this.props.requestBook(this.props.bookId).then((book)=>{
             this.setState({book: book.payload})
         });
-        debugger
+        
         this.props.requestReviews(parseInt(this.props.bookId));
         this.toggleStars();
         this.writeReview();
     }
     render(){
-        debugger
+        
             return (
                 <>
                 <div className="review-container">

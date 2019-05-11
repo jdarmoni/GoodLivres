@@ -12,7 +12,6 @@ class MyEmptyReview extends React.Component {
     }
 
     componentDidUpdate() {
-        // debugger
 
     }
     renderDelete() {

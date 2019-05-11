@@ -16,7 +16,6 @@ const msp = (state, ownProps) => {
 }
 
 const mdp = (dispatch) => {
-    // debugger
     return {
         requestReview: (id) => dispatch(requestReview(id)),
         deleteReview: (reviewId)=> dispatch(deleteReview(reviewId))

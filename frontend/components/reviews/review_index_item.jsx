@@ -12,7 +12,6 @@ class ReviewsIndexItem extends React.Component {
     }
 
     componentDidUpdate(){
-        // debugger
 
     }
     renderDelete(){

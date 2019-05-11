@@ -7,11 +7,9 @@ class BrowseBook extends React.Component {
         this.getImage = this.getImage.bind(this)
     }
     componentDidMount(){
-        // debugger
         
     }
     getImage() {
-        // debugger
         if (this.props.book.image !== null) {
             return <img src={this.props.book.image} className="browseBookImage"/>
         } else {

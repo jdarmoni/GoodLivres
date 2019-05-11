@@ -24,13 +24,11 @@ class BookIndexItem extends React.Component {
 
 
   deleteThisShelf(){
-    debugger
     this.props.deleteShelving(this.props.shelvings.id).then(()=>{
       console.log('bye!')
     })
   }
   getImage(){
-    // debugger
     if (this.props.book.image !== null ) {
       return <img src={this.props.book.image}/>
     } else {

@@ -2,7 +2,6 @@ class Api::ShelvingController < ApplicationController
 
   def index
     @shelves = Shelving.all
-    # debugger
     render :index 
   end
 

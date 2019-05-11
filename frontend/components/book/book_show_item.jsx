@@ -61,7 +61,6 @@ class BookShowItem extends React.Component {
     // check to see if the shelving.bookshelf_id is in the book.bookshelves array; if it's not, basically refresh the page
     // if (this.props.book.bookshelves && this.props.shelving) {
     //   this.props.book.bookshelves.forEach((bookshelf) => {
-    //     debugger
     //     if (bookshelf.id === this.props.shelving.bookshelf_id) {
     //       return
     //     }

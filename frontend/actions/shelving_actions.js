@@ -5,7 +5,6 @@ export const RECEIVE_SHELVING = "RECEIVE_SHELVING";
 export const REMOVE_SHELVING = "REMOVE_SHELVING";
 
 export const receiveAllShelvings = (shelvings) => {
-  // debugger
   return ({
     type: RECEIVE_ALL_SHELVINGS,
     shelvings

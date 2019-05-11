@@ -10,11 +10,9 @@ class BookIndex extends React.Component {
   }
 
   componentDidMount(){
-    // debugger
     
     if (this.props.currentBookshelf > 0) {
-      // debugger
-      this.props.requestBooks(this.props.currentBookshelf)
+        this.props.requestBooks(this.props.currentBookshelf)
     }     
 
     this.props.requestShelvings(this.state.currentBookshelf)

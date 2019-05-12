@@ -207,14 +207,14 @@
     margin-top: 1%;
 }
 
-.header-group img {
+/* .header-group img {
     padding-top: 0; 
     border-radius: 48px;
 }
 
 .header-image:hover {
     width: 200px;
-}
+} */
 
 .header-image:hover .header-button {
     color: red;

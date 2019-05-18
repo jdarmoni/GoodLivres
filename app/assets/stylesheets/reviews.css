@@ -127,8 +127,8 @@
 .whatdidyouthink{
     clear: both;
     font-size: 14px;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
 
 .review-save-button {
@@ -142,9 +142,6 @@
     background-color: #F4F1EA;
     line-height: 1;
     padding: 8px 12px;
-    position: absolute;
-    bottom: 18%;
-    left: 12.5%;
 }
 
 .my-activity-span {

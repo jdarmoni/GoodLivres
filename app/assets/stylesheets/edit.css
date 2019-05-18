@@ -1,13 +1,21 @@
 .myRatingStars{
+    margin-top: 3px;
     float: left;
 }
 
 .editRate {
     float: left;
     margin-left: 0;
-    margin-top: 1.4%;
+    /* margin-top: 11.4%; */
     height: auto;
     padding: 0 10px;
+}
+.my-rating-section {
+    display: flex;
+    border-bottom: solid 1px #eee;
+    width: 70.5%;
+    height: 22px;
+    
 }
 
 .editRate:not(:checked) > input {

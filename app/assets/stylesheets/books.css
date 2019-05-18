@@ -189,6 +189,8 @@
 }
 
 .book-show-top{
-    width: 100%;
+    width: 65%;
+    min-width: 900px;
+    margin: auto;
     display: flex;
 }

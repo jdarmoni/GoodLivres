@@ -12,7 +12,9 @@
     padding-bottom: 8px;
 }
 .reviews {
-    width: 70%;
+    margin: auto;
+    min-width: 900px;
+    width: 65%;
     clear: both;
 }
 

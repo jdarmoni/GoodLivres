@@ -90,6 +90,7 @@ class Greeting extends React.Component{
         
         return (
             <nav className="logged-in-header-link">
+                <div className="header-link-container">
                 <ul>
                     <li><img className="logo" src={window.logoURL} /></li>
                     <li><Link to={`/bookshelf`}>Home</Link></li>
@@ -105,6 +106,7 @@ class Greeting extends React.Component{
                     {/* <img className ="header-image" src ="https://secure.gravatar.com/avatar/ee9daacbf73553c82285907caadd3d8a?secure=true&size=300"/>  */}
                     <button className="header-button" onClick={this.logOut}>Log Out</button>
                 </hgroup>
+                </div>
             </nav>
     ) };
     

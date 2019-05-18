@@ -219,6 +219,11 @@
 .header-image:hover .header-button {
     color: red;
 }
+.header-link-container {
+    width: 75%;
+    display: flex;
+    margin: auto;
+}
 
 .logged-in-header-link ul li:not(:first-child) {
     padding: 15px 15px 10px 15px;

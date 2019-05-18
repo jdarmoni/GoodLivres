@@ -113,7 +113,7 @@ class EditForm extends React.Component {
                         <p className="whatdidyouthink">What did you think?</p>
 
                         <form onSubmit={this.handleSubmit}>
-                            <textarea className="review-box" placeholder="Enter your review (eggs)" type="textarea" onChange={this.update('body')} />
+                            <textarea className="review-box" placeholder="Enter your review" type="textarea" onChange={this.update('body')} />
                             {this.writeReview()}
                             
                             <input type="submit" className="review-save-button" value="Save" />

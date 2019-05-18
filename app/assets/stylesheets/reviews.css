@@ -73,12 +73,12 @@
 
 .review-container{
     min-height: 400px;
-    margin: 0 auto;
+    width: 70%;
 }
 
 .review-book-image {
     float: left;
-    width: 5%;
+    width: 7%;
     height: 10%;
     padding-right: 5px;
 }
@@ -110,8 +110,17 @@
 
 }
 .review-box {
-    width: 70%;
     min-height: 200px;
+    resize: vertical;
+    width: 100%;
+    height: auto;
+    font-family: "Merriweather", "Georgia", serif;
+    font-size: 14px;
+    line-height: 21px;
+    border-radius: 3px;
+    border: #DCD6CC 1px solid;
+    color: #333333;
+    padding: 2px;
 }
 
 

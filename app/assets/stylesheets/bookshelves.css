@@ -1,5 +1,8 @@
 .bookshelfContainer{
     height: 400px;
+    min-width: 860px;
+    width: 67%;
+    margin: auto;
 }
 
 .bookShelves{

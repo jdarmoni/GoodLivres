@@ -92,6 +92,7 @@ class EditForm extends React.Component {
                             </span>
                         </div>
                     </div>
+                
                     <p className="myRatingStars">My rating: </p>
                     <div className="rating">
                             <div class="editRate" id="rateStars">

@@ -103,7 +103,6 @@ class Greeting extends React.Component{
                 </form> 
 
                 <hgroup className="header-group">
-                    {/* <img className ="header-image" src ="https://secure.gravatar.com/avatar/ee9daacbf73553c82285907caadd3d8a?secure=true&size=300"/>  */}
                     <button className="header-button" onClick={this.logOut}>Logout</button>
                 </hgroup>
                 </div>

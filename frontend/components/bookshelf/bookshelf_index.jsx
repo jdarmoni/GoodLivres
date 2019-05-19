@@ -70,7 +70,6 @@ class BookshelfIndex extends React.Component{
         
         if (this.state.currentBookshelf > 0) {
             return (<>
-                {/* should books be being rendered in BookIndex Item? Is doing everything in this component, 'spaghetti'? */}
                 
                 <BookContainer currentBookshelf={this.state.currentBookshelf} />
             </>)

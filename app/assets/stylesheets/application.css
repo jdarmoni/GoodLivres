@@ -33,14 +33,16 @@
  }
  
  .slogan {
-     margin: 50px 0 0 95px;
-     float: left;
+    margin: 50px 14px 0 95px;
+    width: 50%;
+    height: 23%;
  }
 
     /* SIGN UP */
 
 .signup-form-container{
     height: 500px;
+    display: flex;
 }
 
 .signup-submit { 

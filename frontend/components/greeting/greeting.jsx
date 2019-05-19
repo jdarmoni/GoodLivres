@@ -23,7 +23,7 @@ class Greeting extends React.Component{
                         <LoginFormContainer />
                     </header>
                 </div>
-                <footer className="splashFooter">
+                {/* <footer className="splashFooter">
                     
                         <div className="footer-wrapper">
                             <div className="left-footer-container">
@@ -48,16 +48,12 @@ class Greeting extends React.Component{
                                 </div>
                                 <div className="socials">
                             <a class="responsiveSiteFooter__socialLink" href="https://www.facebook.com/Goodreads/"><img alt="Goodreads on Facebook" src="https://s.gr-assets.com/assets/site_footer/footer_facebook-ea4ab848f8e86c5f5c98311bc9495a1b.svg"/>
-                                {/* <img alt="Goodreads on Facebook" src="https://s.gr-assets.com/assets/site_footer/footer_facebook-ea4ab848f8e86c5f5c98311bc9495a1b.svg"/> */}
                             </a>
                             <a class="responsiveSiteFooter__socialLink" href="https://twitter.com/goodreads"><img alt="Goodreads on Twitter" src="https://s.gr-assets.com/assets/site_footer/footer_twitter-126b3ee80481a763f7fccb06ca03053c.svg"/>
-                                {/* <img alt="Goodreads on Twitter" src="https://s.gr-assets.com/assets/site_footer/footer_twitter-126b3ee80481a763f7fccb06ca03053c.svg"/>  */}
                             </a>
                             <a class="responsiveSiteFooter__socialLink" href="https://www.instagram.com/goodreads/"><img alt="Goodreads on Instagram" src="https://s.gr-assets.com/assets/site_footer/footer_instagram-d59e3887020f12bcdb12e6c539579d85.svg"/>
-                                {/* <img alt="Goodreads on Instagram" src="https://s.gr-assets.com/assets/site_footer/footer_instagram-d59e3887020f12bcdb12e6c539579d85.svg"/> */}
                             </a>
                             <a class="responsiveSiteFooter__socialLink" href="https://www.linkedin.com/company/goodreads-com/"><img alt="Goodreads on LinkedIn" src="https://s.gr-assets.com/assets/site_footer/footer_linkedin-5b820f4703eff965672594ef4d10e33c.svg"/>
-                                {/* <img alt="Goodreads on LinkedIn" src="https://s.gr-assets.com/assets/site_footer/footer_linkedin-5b820f4703eff965672594ef4d10e33c.svg"/> */}
                             </a>
                         </div>
                             </div>
@@ -76,7 +72,7 @@ class Greeting extends React.Component{
                                 </ul>
                             </div>
                         </div>
-                </footer>
+                </footer> */}
             </>
             )}
             

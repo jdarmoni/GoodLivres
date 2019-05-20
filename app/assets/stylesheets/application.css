@@ -140,6 +140,7 @@
 }
 
 .DemoButton {
+    border-radius: 4px;
     background-color: #fdd05f;
     font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
 

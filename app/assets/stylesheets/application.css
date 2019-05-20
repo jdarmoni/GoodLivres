@@ -39,6 +39,7 @@
  .slogan {
     margin: 50px 14px 0 95px;
     width: 50%;
+    max-width: 500px;
     height: 23%;
  }
 

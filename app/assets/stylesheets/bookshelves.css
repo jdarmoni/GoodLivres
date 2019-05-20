@@ -132,12 +132,15 @@
 }
 
 .searchbooks {
-    padding-top: 1%;
+    padding-top: 5px;
     width: 77%;
 }
 .searchbooks input {
     height: 64%;
     width: 88%;
+    padding-left: 10px;
+    margin-left: 10px;
+    max-width: 500px; 
 }
 
 #myBooksCol h2 {
@@ -191,7 +194,7 @@
 
 
 .logged-in-header-link img {
-    padding-top: 7%;
+    padding-top: 8px;
     height: 29px;
 }
 

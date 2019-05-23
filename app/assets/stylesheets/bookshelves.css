@@ -279,6 +279,7 @@
 }
 
 .bookshelfUL {
+    max-width: 100px;
     margin-top: 0;
     padding-left: 0;
 }

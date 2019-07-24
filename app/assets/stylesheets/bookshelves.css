@@ -124,7 +124,7 @@
 
 
 .header-group {
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 .header-name {
@@ -195,6 +195,7 @@
 
 .logged-in-header-link img {
     padding-top: 8px;
+    padding-right: 5px;
     height: 29px;
 }
 
@@ -221,6 +222,8 @@
     width: 75%;
     display: flex;
     margin: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .logged-in-header-link ul li:not(:first-child) {

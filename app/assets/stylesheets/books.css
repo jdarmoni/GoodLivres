@@ -98,11 +98,12 @@
 }
 
 .shelves {
+    position: absolute;
     display: none;
     max-height: 215px;
     margin: 2px 0 0 0;
-    overflow-x: hidden;
-    overflow-y: auto;
+    /* overflow-x: hidden;
+    overflow-y: auto; */
     padding-bottom: 2px;
     background: #ffffff;
     border-color: #cccccc;
@@ -118,9 +119,9 @@
     max-height: 250px;
     overflow: hidden;
     padding: 0;
-    right: 0;
+    /* right: 0; */
     text-align: left;
-    top: 28px;
+    top: 365px;
     width: 180px;
 }
 
